@@ -111,10 +111,10 @@ export default defineUserConfig({
       git: isProd,
       katex: true,
       giscus: {
-        repo: "This-is-an-Apple/blog-giscus-comments",
-        repoId: "R_kgDOGl2SjQ",
-        category: "Announcements",
-        categoryId: "DIC_kwDOGl2Sjc4CAcxK",
+        repo: process.env.GISCUS_REPO!,
+        repoId: process.env.GISCUS_REPO_ID!,
+        category: process.env.GISCUS_CATEGORY!,
+        categoryId: process.env.GISCUS_CATEGORY_ID!,
         darkTheme: "https://blog.haydenhayden.com/styles/giscus-dark.css"
       },
       mdPlus: {

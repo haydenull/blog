@@ -12,6 +12,10 @@ jobs:
 
     env:
       NODE_VERSION: '16'
+      GISCUS_REPO: ${{ secrets.GISCUS_REPO }}
+      GISCUS_REPO_ID: ${{ secrets.GISCUS_REPO_ID }}
+      GISCUS_CATEGORY: ${{ secrets.GISCUS_CATEGORY }}
+      GISCUS_CATEGORY_ID: ${{ secrets.GISCUS_CATEGORY_ID }}
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -19,7 +23,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install pnpm
+      - name: Setup pnpm
         uses: pnpm/action-setup@v2
         with:
           version: 7
@@ -29,6 +33,11 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: pnpm
+        env:
+          GISCUS_REPO: ${{ env.GISCUS_REPO }}
+          GISCUS_REPO_ID: ${{ env.GISCUS_REPO_ID }}
+          GISCUS_CATEGORY: ${{ env.GISCUS_CATEGORY }}
+          GISCUS_CATEGORY_ID: ${{ env.GISCUS_CATEGORY_ID }}
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -36,7 +45,7 @@ jobs:
       - name: Build site
         run: pnpm build
 
-      - name: Deploy
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
