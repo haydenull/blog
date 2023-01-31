@@ -54,7 +54,7 @@ export default defineUserConfig({
     personalInfo: {
       name: "Hayden Chen",
       avatar: "/img/avatar.jpg",
-      description: "战斗的罪孽，由我来背负",
+      description: "沙达克的伙伴",
       sns: {
         github: "Haydenull",
         twitter: "Haydenull",
