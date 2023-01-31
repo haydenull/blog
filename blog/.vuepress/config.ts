@@ -52,7 +52,7 @@ export default defineUserConfig({
 
     // personal information
     personalInfo: {
-      name: "Haydenull",
+      name: "Hayden Chen",
       avatar: "/img/avatar.jpg",
       description: "战斗的罪孽，由我来背负",
       sns: {
@@ -144,23 +144,23 @@ export default defineUserConfig({
         link: "/links/",
         icon: "fa-satellite-dish"
       },
-      {
-        text: "About",
-        link: "https://zxh.io",
-        icon: "fa-paw"
-      },
-      {
-        text: "Portfolio",
-        link: "https://portfolio.zxh.io/",
-        icon: "oi-rocket"
-      }
+      // {
+      //   text: "About",
+      //   link: "https://zxh.io",
+      //   icon: "fa-paw"
+      // },
+      // {
+      //   text: "Portfolio",
+      //   link: "https://portfolio.zxh.io/",
+      //   icon: "oi-rocket"
+      // }
     ],
 
     footer: `
-      &copy; <a href="https://github.com/Haydenull" target="_blank">Haydenull</a> 2018-2022
+      &copy; <a href="https://github.com/Haydenull" target="_blank">Haydenull</a> 2022-2023
       <br>
       Powered by <a href="https://v2.vuepress.vuejs.org" target="_blank">VuePress</a> &
-      <a href="https://github.com/Haydenull/vuepress-theme-gungnir" target="_blank">Gungnir</a>
+      <a href="https://github.com/Renovamen/vuepress-theme-gungnir" target="_blank">Gungnir</a>
     `
   }),
 
@@ -169,7 +169,7 @@ export default defineUserConfig({
       level: [2, 3, 4, 5]
     },
     code: {
-      lineNumbers: false
+      lineNumbers: true
     }
   }
 });
