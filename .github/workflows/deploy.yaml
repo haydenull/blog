@@ -16,6 +16,8 @@ jobs:
       GISCUS_REPO_ID: ${{ secrets.GISCUS_REPO_ID }}
       GISCUS_CATEGORY: ${{ secrets.GISCUS_CATEGORY }}
       GISCUS_CATEGORY_ID: ${{ secrets.GISCUS_CATEGORY_ID }}
+      GOOGLE_ANALYTICS: ${{ secrets.GOOGLE_ANALYTICS }}
+      BAIDU_ANALYTICS: ${{ secrets.BAIDU_ANALYTICS }}
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -38,6 +40,8 @@ jobs:
           GISCUS_REPO_ID: ${{ env.GISCUS_REPO_ID }}
           GISCUS_CATEGORY: ${{ env.GISCUS_CATEGORY }}
           GISCUS_CATEGORY_ID: ${{ env.GISCUS_CATEGORY_ID }}
+          GOOGLE_ANALYTICS: ${{ env.GOOGLE_ANALYTICS }}
+          BAIDU_ANALYTICS: ${{ env.BAIDU_ANALYTICS }}
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile

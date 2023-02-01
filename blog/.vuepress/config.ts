@@ -54,7 +54,7 @@ export default defineUserConfig({
     personalInfo: {
       name: "Hayden Chen",
       avatar: "/img/avatar.jpg",
-      description: "沙达克的伙伴",
+      description: "银河在上",
       sns: {
         github: "Haydenull",
         twitter: "Haydenull",
@@ -120,8 +120,8 @@ export default defineUserConfig({
       mdPlus: {
         all: true
       },
-      ga: "G-HCQSX53XFG",
-      ba: "75381d210789d3eaf855fa16246860cc",
+      ga: process.env.GOOGLE_ANALYTICS!,
+      ba: process.env.BAIDU_ANALYTICS!,
       rss: {
         siteURL: "https://blog.haydenhayden.com",
         copyright: "Haydenull 2022-2023"
