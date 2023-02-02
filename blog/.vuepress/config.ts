@@ -67,24 +67,28 @@ export default defineUserConfig({
     // header images on home page
     homeHeaderImages: [
       {
-        path: "/img/home-bg/1.jpg",
+        path: "https://pocket.haydenhayden.com/blog/202302021327315.jpg",
         mask: "rgba(40, 57, 101, .4)"
       },
       {
-        path: "/img/home-bg/2.jpg",
+        path: "https://pocket.haydenhayden.com/blog/202302021328469.jpg",
         mask: "rgba(196, 176, 131, .1)"
       },
       {
-        path: "/img/home-bg/3.jpg",
+        path: "https://pocket.haydenhayden.com/blog/202302021329272.jpg",
         mask: "rgba(68, 74, 83, .1)"
       },
       {
-        path: "/img/home-bg/4.jpg",
+        path: "https://pocket.haydenhayden.com/blog/202302021329032.jpg",
         mask: "rgba(19, 75, 50, .2)"
       },
       {
-        path: "/img/home-bg/5.jpg"
-      }
+        path: "https://pocket.haydenhayden.com/blog/202302021329644.jpg",
+      },
+      {
+        path: "https://pocket.haydenhayden.com/blog/202302021335895.png",
+        mask: "rgba(19, 75, 50, .3)",
+      },
     ],
 
     // other pages
@@ -92,7 +96,7 @@ export default defineUserConfig({
       tags: {
         subtitle: "Black Sheep Wall",
         bgImage: {
-          path: "/img/pages/tags.jpg",
+          path: "https://pocket.haydenhayden.com/blog/202302021331636.jpg",
           mask: "rgba(211, 136, 37, .5)"
         }
       },
@@ -100,7 +104,7 @@ export default defineUserConfig({
         subtitle:
           "When you are looking at the stars, please put the brightest star shining night sky as my soul.",
         bgImage: {
-          path: "/img/pages/links.jpg",
+          path: "https://pocket.haydenhayden.com/blog/202302021330454.jpg",
           mask: "rgba(64, 118, 190, 0.5)"
         }
       }
