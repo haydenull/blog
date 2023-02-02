@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-1a24184d","path":"/tags/typescript/","title":"TypeScript | Tags","lang":"en-US","frontmatter":{"title":"TypeScript | Tags","layout":"Tags","blog":{"type":"category","name":"TypeScript","key":"tag"}},"excerpt":"","headers":[],"git":{},"filePathRelative":null}');export{t as data};
