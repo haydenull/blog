@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-28c299b2","path":"/tags/personal-review/","title":"Personal Review | Tags","lang":"en-US","frontmatter":{"title":"Personal Review | Tags","layout":"Tags","blog":{"type":"category","name":"Personal Review","key":"tag"}},"excerpt":"","headers":[],"git":{},"filePathRelative":null}');export{e as data};
