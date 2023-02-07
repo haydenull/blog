@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-45940550","path":"/tags/flight-rules/","title":"Flight Rules | Tags","lang":"en-US","frontmatter":{"title":"Flight Rules | Tags","layout":"Tags","blog":{"type":"category","name":"Flight Rules","key":"tag"}},"excerpt":"","headers":[],"git":{},"filePathRelative":null}');export{t as data};
