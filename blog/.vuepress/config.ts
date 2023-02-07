@@ -107,7 +107,7 @@ export default defineUserConfig({
           path: "https://pocket.haydenhayden.com/blog/202302021330454.jpg",
           mask: "rgba(64, 118, 190, 0.5)"
         }
-      }
+      },
     },
 
     themePlugins: {
@@ -146,6 +146,11 @@ export default defineUserConfig({
       {
         text: "Links",
         link: "/links/",
+        icon: "fa-satellite-dish"
+      },
+      {
+        text: "Pocket",
+        link: "/pocket/",
         icon: "fa-satellite-dish"
       },
       // {
