@@ -57,4 +57,42 @@ tags:
 
 ## State 是什么，为什么需要它，为什么有时候它的值与预期总是不一致？
 
+组件需要响应用户的操作，而用户的操作会导致组件的状态发生变化。因此我们需要一个地方来存储组件的状态，这就是 state。
+
+**当 state 发生变化时，React 会重新渲染组件。** 这就是 State 的运行机制。
+
+同时这也是为什么 state 的值与预期不一致的原因，因为每一次的重新渲染都是一次函数执行，在每次函数执行中，state 都有不同的值。所有这些渲染中，state 都是独立的，互不影响。
+
+下面是一个例子：
+
+```jsx
+const Counter = () => {
+  const [count, setCount] = useState(0)
+
+  const onClick = () => {
+    setInterval(() => {
+      setCount(count + 1)
+    }, 1000)
+  }
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={onClick}>Click me</button>
+    </div>
+  )
+}
+```
+
+点击按钮后，每隔一秒，计数器的值会增加 1。但是我们会发现，计数器的值会一直停留在 1。
+
+![](https://pocket.haydenhayden.com/blog/202302100840588.png)
+
+我们可以看到，定时器只在第一次渲染函数的运行时里，而这里的 state 是 0，所以每一次定时器执行取到的 state 都是 0，那么页面上的值就会一直是 0 + 1 = 1。
+
+我们可以将 state 理解为函数状态快照，每次渲染都会有一份新快照，而这些快照是互不影响的。
+
+## useMemo 是什么，我需要使用它吗？
+
+
 更新中...
