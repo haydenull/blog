@@ -177,4 +177,66 @@ const TodoList = React.memo(({ todos, onClick }) => {
 
 ## useEffect 是什么，它有什么用？
 
+useEffect 是一个 Hook，它可以用来处理副作用。
+
+默认情况下它在每次组件渲染后执行，但可以接收一个依赖项数组，只有当依赖项发生变化时，才去执行。
+
+**`useEffect`的设计目标并不是在函数组件中提供类似于生命周期的功能，而是用来处理副作用，也就是让组件的状态与外部世界同步。**
+
+我们看一个官网的例子：
+
+```jsx
+const ChatRoom = ({ roomId }) => {
+  useEffect(() => {
+    const connection = createConnection(roomId) // 创建连接
+    connection.connect()
+
+    return () => {
+      connection.disconnect() // 断开连接
+    }
+  }, [roomId])
+}
+
+// roomId 默认值 'general'
+// 第一次操作 'general' 变为 'travel'
+// 第二次操作 'travel' 变为 'music'
+```
+
+如果我们从组件的角度出发，它的行为是这样的：
+
+1. 组件第一次渲染时，触发 useEffect，连接到 'general' 房间
+2. roomId 变为 'travel'，组件重新渲染，触发 useEffect，断开 'general' 房间的连接，连接到 'travel' 房间
+3. roomId 变为 'music'，组件重新渲染，触发 useEffect，断开 'travel' 房间的连接，连接到 'music' 房间
+4. 组件卸载时，触发 useEffect，断开 'music' 房间的连接
+
+![](https://pocket.haydenhayden.com/blog/202302121545747.png)
+
+看起来很完美，但是如果我们从 useEffect 的角度出发，它的行为是这样的：
+
+1. Effect 连接到 'general' 房间，直到断开连接
+2. Effect 连接到 'travel' 房间，直到断开连接
+3. Effect 连接到 'music' 房间，直到断开连接
+
+![](https://pocket.haydenhayden.com/blog/202302121551549.png)
+
+当我们从组件的角度来看待 useEffect 时，useEffect 就变成了一种在组件渲染完成后或者卸载前执行的一种**回调函数、生命周期**。
+
+而从 useEffect 的角度出发，我们**只关心应用如何开始或终止与外部世界的同步**。就像写组件的 rendering 代码一样，接收 state，返回 JSX。我们不会考虑 rendering 代码在 mount、update、unmount 时会发生什么。我们只关注单次的渲染它应该是什么样的。
+
+最后，我们来看有这样一种说法：
+
+> The question is not "when does this effect run" the question is "with which state does this effect synchronize with"
+>
+> useEffect(fn) // all state
+> 
+> useEffect(fn, []) // no state
+> 
+> useEffect(fn, [these, states])
+>
+> https://twitter.com/ryanflorence/status/1125041041063665666
+
+重要的不是 useEffect 什么时候执行，而是同步了哪些状态。
+
+## 一个前端应用应该是什么样的？useEffect 带来新的编程模型又是什么？
+
 更新中...
