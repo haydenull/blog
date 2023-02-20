@@ -227,7 +227,7 @@ const timeInputValue = isCustomTime ? value : timeInputValueBackRef.current
 ```tsx
 const [timePickerValue, setTimePickerValue] = useState<Dayjs>()
 
-if (isCustomTime) setTimePickerValue(value)
+if (isCustomTime && timePickerValue !== value) setTimePickerValue(value)
 
 // ...
 <TimeInput
@@ -235,7 +235,7 @@ if (isCustomTime) setTimePickerValue(value)
 />
 ```
 
-只需要在我们的初版代码里加上一行代码就行: `if (isCustomTime) setTimePickerValue(value)`。
+只需要在我们的初版代码里加上一行代码就行: `if (isCustomTime && timePickerValue !== value) setTimePickerValue(value)`。
 
 为什么我又放弃了 useRef 改用 useState 了呢?
 
@@ -250,9 +250,9 @@ if (isCustomTime) setTimePickerValue(value)
 
 多读文档还是有好处的, coding 的时候也需要多思考, 不能一味地套用已有的知识。函数式组件与类组件的 mental model 是不一样的, 我们需要把它们的区别理解透彻, 才能写出更好的代码。
 
-回到第四版代码上, 为什么我一开始就没有想到这个方案呢? 因为我下意识排斥在 rendering 中使用 setState, 因为这样会导致无限循环。
+回到第四版代码上, 为什么我一开始就没有想到这个方案呢? 因为我下意识排斥在 rendering 中使用 setState, 因为这样会导致无限循环(在本例中, 我们使用 if 避免了这种情况)。
 
-[React 自己也是这么讲的](https://beta.reactjs.org/reference/react/useState#storing-information-from-previous-renders), 应当避免这样的行为, 在大多数情况下应该在事件回调中修改 state, 只有少数情况需要修改 state 来适应 rendering (也就是我们遇到的情况)。
+[React 文档也是这么讲的](https://beta.reactjs.org/reference/react/useState#storing-information-from-previous-renders), 应当避免这样的行为, 在大多数情况下应该在事件回调中修改 state, 只有少数情况需要修改 state 来适应 rendering (也就是我们遇到的情况)。
 
 那这么做相比第一版使用 useEffect 的好处是什么呢?
 - 更符合 React 的 mental model
