@@ -1,6 +1,6 @@
 ---
 layout: Post
-title: React Flight Rules
+title: React Flight Rules - 基础知识与概念
 subtitle: React 项目的个人实践
 author: Haydenull
 date: 2023-02-07
@@ -8,6 +8,7 @@ useHeaderImage: true
 headerImage: https://pocket.haydenhayden.com/blog/202302070801422.png
 headerMask: rgb(14, 21, 5, .2)
 permalinkPattern: /post/:year/:month/:day/:slug/
+# hide: true
 tags:
   - Flight Rules
   - React
@@ -15,7 +16,10 @@ tags:
 
 > 如果没有特别说明，文中的组件都是指函数组件。
 
-## 应该如何看待函数式组件，他与类组件有什么区别？
+
+## 基础概念
+
+### 1. 应该如何看待函数式组件，他与类组件有什么区别？
 
 函数式组件与类组件是完全不用的心智模型(mental model)。
 
@@ -27,7 +31,7 @@ tags:
 
 一个纯函数是没有副作用的，而我们的应用必须要有副作用才有意义。因此 React 提供了 `useEffect` 来处理副作用。
 
-## 为什么组件会重复渲染？
+### 2. 为什么组件会重复渲染？
 
 这是 React 的一个特性，它会在每次 props 或 state 变化时重新渲染组件。以此来保证组件的状态与视图保持一致。
 
@@ -55,7 +59,7 @@ tags:
 - [Why React Re-Renders](https://www.joshwcomeau.com/react/why-react-re-renders/)
   - 每隔一段时间再读总有收获
 
-## State 是什么，为什么需要它，为什么有时候它的值与预期总是不一致？
+### 3. State 是什么，为什么需要它，为什么有时候它的值与预期总是不一致？
 
 组件需要响应用户的操作，而用户的操作会导致组件的状态发生变化。因此我们需要一个地方来存储组件的状态，这就是 state。
 
@@ -92,7 +96,7 @@ const Counter = () => {
 
 我们可以将 state 理解为函数状态快照，每次渲染都会有一份新快照，而这些快照是互不影响的。
 
-## useMemo 是什么，我需要使用它吗？
+### 4. useMemo 是什么，我需要使用它吗？
 
 `useMemo` 是一个 Hook，它可以用来缓存函数的返回值。
 
@@ -129,7 +133,7 @@ console.timeEnd('filter array');
 
 我们之前说过，React 通过重复执行函数来实现组件的更新，而 `useMemo` 会跳过某些函数的执行，这就会导致组件的行为变得不可预测。维护者需要去理解这些跳过的函数，这会增加维护成本。
 
-## useCallback 是什么，我需要使用它吗？
+### 5. useCallback 是什么，我需要使用它吗？
 
 useCallback 和 useMemo 的作用是一样的，都是用来缓存一些计算结果，但是它们的使用场景不同。
 
@@ -175,7 +179,7 @@ const TodoList = React.memo(({ todos, onClick }) => {
 })
 ```
 
-## useEffect 是什么，它有什么用？
+### 6. useEffect 是什么，它有什么用？
 
 useEffect 是一个 Hook，它可以用来处理副作用。
 
