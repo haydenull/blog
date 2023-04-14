@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-00ba9758","path":"/tags/code-review/","title":"Code Review | Tags","lang":"en-US","frontmatter":{"title":"Code Review | Tags","layout":"Tags","blog":{"type":"category","name":"Code Review","key":"tag"}},"excerpt":"","headers":[],"git":{},"filePathRelative":null}');export{e as data};
