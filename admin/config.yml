@@ -4,8 +4,8 @@ backend:
   branch: main
   auth_scope: repo
   open_authoring: true
-  publish_mode: editorial_workflow
 
+publish_mode: editorial_workflow
 media_folder: blog/.vuepress/public/img/upload
 public_folder: blog/.vuepress/public
 # logo_url:
