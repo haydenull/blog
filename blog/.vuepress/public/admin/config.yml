@@ -1,0 +1,67 @@
+backend:
+  name: github
+  repo: haydenull/blog
+  branch: main
+  auth_scope: repo
+  open_authoring: true
+
+publish_mode: editorial_workflow
+media_folder: blog/.vuepress/public/img/upload
+public_folder: blog/.vuepress/public
+# logo_url:
+
+collections:
+  - name: "post"
+    label: "Post"
+    folder: blog/posts
+    create: true
+    identifier_field: fileName
+    fields:
+      - {
+          label: "File Name",
+          name: "fileName",
+          widget: "string",
+          required: true,
+          pattern:
+            [
+              "^[a-zA-Z0-9_-]+$",
+              "Only alphanumeric characters, hyphens, and underscores",
+            ],
+        }
+      - {
+          label: "Layout",
+          name: "layout",
+          widget: "select",
+          default: "Post",
+          options: ["Post", "Links"],
+        }
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Subtitle", name: "subtitle", widget: "string" }
+      - { author: "Author", name: "author", widget: "list" }
+      - { label: "Date", name: "date", widget: "date" }
+      - {
+          label: "UseHeaderImage",
+          name: "useHeaderImage",
+          widget: "boolean",
+          default: true,
+        }
+      - { label: "HeaderImage", name: "headerImage", widget: "image" }
+      - {
+          label: "HeaderMask",
+          name: "headerMask",
+          widget: "select",
+          options: ["rgb(14, 21, 5, .2)"],
+        }
+      - {
+          label: "Permalink",
+          name: "permalinkPattern",
+          widget: "select",
+          options: ["/post/:year/:month/:day/:slug/"],
+        }
+      - {
+          label: "Tags",
+          name: "tags",
+          widget: "list",
+          default: ["Personal Review", "React", "TypeScript"],
+        }
+      - { label: "Draft", name: "draft", widget: "boolean", default: true }
