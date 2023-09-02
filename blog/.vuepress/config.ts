@@ -85,10 +85,6 @@ export default defineUserConfig({
       {
         path: "https://pocket.haydenhayden.com/blog/202302021329644.jpg",
       },
-      {
-        path: "https://pocket.haydenhayden.com/blog/202302021335895.png",
-        mask: "rgba(19, 75, 50, .3)",
-      },
     ],
 
     // other pages
