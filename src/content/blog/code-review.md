@@ -6,7 +6,7 @@ pubDatetime: 2023-04-14
 useHeaderImage: true
 headerImage: https://pocket.haydenhayden.com/blog/202304141335006.jpeg
 headerMask: rgb(14, 21, 5, .2)
-permalinkPattern: /post/:year/:month/:day/:slug/
+postSlug: code-review
 tags:
   - Code Review
 ---

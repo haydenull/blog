@@ -10,6 +10,7 @@ import getPostsByTag from "@utils/getPostsByTag";
 import slugify from "@utils/slugify";
 import { SITE } from "@config";
 import getSortedPosts from "@utils/getSortedPosts";
+import getPosts from "@utils/getPosts";
 
 export interface Props {
   post: CollectionEntry<"blog">;
@@ -17,7 +18,7 @@ export interface Props {
 }
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blog");
+  const posts = await getPosts();
 
   const tags = getUniqueTags(posts);
 
@@ -31,7 +32,7 @@ export async function getStaticPaths() {
 
 const { tag } = Astro.props;
 
-const posts = await getCollection("blog", ({ data }) => !data.draft);
+const posts = await getPosts(({ data }) => !data.draft);
 
 const tagPosts = getPostsByTag(posts, tag);
 

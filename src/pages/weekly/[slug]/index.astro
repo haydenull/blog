@@ -9,7 +9,7 @@ import { SITE } from "@config";
 import getPosts from "@utils/getPosts";
 
 export interface Props {
-  post: CollectionEntry<"blog">;
+  post: CollectionEntry<"weekly">;
 }
 
 export async function getStaticPaths() {
@@ -51,7 +51,7 @@ const paginatedPosts = sortedPosts.slice(startPost, lastPost);
     <PostDetails post={post} />
   ) : (
     <Posts
-      type="posts"
+      type="weekly"
       posts={paginatedPosts}
       pageNum={currentPage}
       totalPages={totalPages.length}

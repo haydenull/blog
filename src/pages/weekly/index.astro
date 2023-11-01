@@ -5,8 +5,9 @@ import getSortedPosts from "@utils/getSortedPosts";
 import getPageNumbers from "@utils/getPageNumbers";
 
 import getPosts from "@utils/getPosts";
+import { getCollection } from "astro:content";
 
-const posts = await getPosts()
+const posts = await getCollection("weekly")
 
 const sortedPosts = getSortedPosts(posts);
 
@@ -15,4 +16,4 @@ const totalPages = getPageNumbers(sortedPosts.length);
 const paginatedPosts = sortedPosts.slice(0, SITE.postPerPage);
 ---
 
-<Posts type="posts" posts={paginatedPosts} pageNum={1} totalPages={totalPages.length} />
+<Posts type="weekly" posts={paginatedPosts} pageNum={1} totalPages={totalPages.length} />

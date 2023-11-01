@@ -1,12 +1,12 @@
 ---
 title: 2023 年 5 月及 6 月总结
-description: 拿到驾照啦
+description: 终于拿到驾照了
 author: Haydenull
 pubDatetime: 2023-07-03
 useHeaderImage: true
 headerImage: https://pocket.haydenhayden.com/blog/202302030851669.png
 headerMask: rgba(14, 21, 5, .2)
-permalinkPattern: /post/:year/:month/:day/:slug/
+postSlug: monthly-review-2023-05
 tags:
   - Personal Review
 ---

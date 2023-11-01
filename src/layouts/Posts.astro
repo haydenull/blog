@@ -9,21 +9,30 @@ import LinkButton from "@components/LinkButton.astro";
 import slugify from "@utils/slugify";
 import type { CollectionEntry } from "astro:content";
 
+const pageTitleMap = {
+  posts: "Posts",
+  weekly: "十五周刊",
+}
+const pageDescMap = {
+  posts: "All the articles I've posted.",
+  weekly: "All the weekly articles I've posted.",
+}
 export interface Props {
   pageNum: number;
   totalPages: number;
-  posts: CollectionEntry<"blog">[];
+  posts: CollectionEntry<"blog" | 'weekly'>[];
+  type: "posts" | "weekly";
 }
 
-const { pageNum, totalPages, posts } = Astro.props;
+const { pageNum, totalPages, posts, type } = Astro.props;
 
 const prev = pageNum > 1 ? "" : "disabled";
 const next = pageNum < totalPages ? "" : "disabled";
 ---
 
 <Layout title={`Posts | ${SITE.title}`}>
-  <Header activeNav="posts" />
-  <Main pageTitle="Posts" pageDesc="All the articles I've posted.">
+  <Header activeNav={type} />
+  <Main pageTitle={pageTitleMap[type]} pageDesc={pageDescMap[type]}>
     <ul>
       {
         posts.map(({ data }) => (
@@ -47,6 +56,7 @@ const next = pageNum < totalPages ? "" : "disabled";
           </svg>
           Prev
         </LinkButton>
+        <div>{pageNum} of {totalPages}</div>
         <LinkButton
           disabled={next === "disabled"}
           href={`/posts/${pageNum + 1}`}

@@ -6,7 +6,7 @@ pubDatetime: 2023-01-03
 useHeaderImage: true
 headerImage: https://pocket.haydenhayden.com/blog/202302030851669.png
 headerMask: rgb(14, 21, 5, .2)
-permalinkPattern: /post/:year/:month/:day/:slug/
+postSlug: yearly-review-2022
 tags:
   - Personal Review
 ---

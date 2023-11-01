@@ -6,8 +6,7 @@ pubDatetime: 2023-08-20
 useHeaderImage: true
 headerImage: https://pocket.haydenhayden.com/blog/202302030851669.png
 headerMask: rgba(14, 21, 5, .2)
-permalinkPattern: /post/:year/:month/:day/:slug/
-postSlug: how-to-add-July-2023
+postSlug: monthly-review-2023-07
 featured: false
 draft: false
 tags:

@@ -6,7 +6,7 @@ pubDatetime: 2023-02-07
 useHeaderImage: true
 headerImage: https://pocket.haydenhayden.com/blog/202302070801422.png
 headerMask: rgb(14, 21, 5, .2)
-permalinkPattern: /post/:year/:month/:day/:slug/
+postSlug: react-flight-rules-base
 tags:
   - Flight Rules
   - React

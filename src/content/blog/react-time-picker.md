@@ -6,7 +6,7 @@ pubDatetime: 2023-02-18
 useHeaderImage: true
 headerImage: https://pocket.haydenhayden.com/blog/202302182111910.png
 headerMask: rgb(14, 21, 5, .2)
-permalinkPattern: /post/:year/:month/:day/:slug/
+postSlug: react-time-picker
 tags:
   - React
 ---

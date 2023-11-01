@@ -1,12 +1,15 @@
 ---
 title: Agenda 分享 ics 订阅
+# title: Agenda Share ICS
 description: 使用私有 github 仓库及 Cloudflare Worker 实现私人 ics 订阅
 pubDatetime: 2023-11-01
-permalinkPattern: /post/:year/:month/:day/:slug/
+postSlug: agenda-share-ics
 tags:
   - ics
   - Agenda
 ---
+
+![](https://pocket.haydenhayden.com/blog/202311011926953.png)
 
 ## Table of Contents
 
@@ -79,7 +82,7 @@ Github 方案既能保证用户隐私，又能让用户自己掌控数据，同�
 
 ### Cloudflare Worker 完整代码
 
-至此整个过程就结束了，以下是完整的 Cloudflare Worker 代码，用户可以使用此代码自部署，而无需一来 Agenda 的服务。
+至此整个过程就结束了，以下是完整的 Cloudflare Worker 代码，用户可以使用此代码自部署，而无需依赖 Agenda 的服务。
 
 ```js
 const USER_AGENT = "Agenda ICS Cloudflare Worker";

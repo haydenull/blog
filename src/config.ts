@@ -7,7 +7,7 @@ export const SITE: Site = {
   title: "Hayden",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
-  postPerPage: 9,
+  postPerPage: 6,
 };
 
 // export const LOCALE = ["en-EN"]; // set to [] to use the environment default
