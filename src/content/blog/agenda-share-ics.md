@@ -70,6 +70,10 @@ Github 方案既能保证用户隐私，又能让用户自己掌控数据，同�
 
 解码的过程就是上一步编码步骤反过来：`atob(decodeURIComponent(escape(fileContent)))`
 
+生成链接后建议使用 [iCalendar validator](https://icalendar.org/validator.html) 校验一下有没有错误。 
+
+另外提示下 Google Calendar 订阅会缓存同一个链接的结果，也就是说当你的订阅链接返回的结果有部分小错误时，接下来几个小时同一个链接会一直有这个错误，即使你修复了也没用。我就是因为有两个任务的循环信息部分格式错误，导致在 Google Calendar 一直上不显示循环任务，其实我很早就已经修复了。
+
 ### Cloudflare Worker 完整代码
 至此整个过程就结束了，以下是完整的 Cloudflare Worker 代码，用户可以使用此代码自部署，而无需一来 Agenda 的服务。
 
