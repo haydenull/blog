@@ -8,6 +8,8 @@ tags:
   - Agenda
 ---
 
+## Table of Contents
+
 ## 现状
 
 我使用本地软件 logseq 做笔记以及任务管理，一直有一个比较大的痛点：没办法随时随地查看任务。
@@ -41,6 +43,7 @@ Github 方案既能保证用户隐私，又能让用户自己掌控数据，同�
 为什么需要 Cloudflare Worker 呢，因为我们要实现在任意支持 ics 订阅的第三方软件访问订阅链接，
 
 完整的功能应该包括：
+
 1. 用户点击按钮，在前端生成ics文件，然后通过 Github API 上传到指定仓库
 2. 访问订阅链接，通过 API 配合 token 读取文件，返回给第三方日历软件
 
@@ -70,47 +73,49 @@ Github 方案既能保证用户隐私，又能让用户自己掌控数据，同�
 
 解码的过程就是上一步编码步骤反过来：`atob(decodeURIComponent(escape(fileContent)))`
 
-生成链接后建议使用 [iCalendar validator](https://icalendar.org/validator.html) 校验一下有没有错误。 
+生成链接后建议使用 [iCalendar validator](https://icalendar.org/validator.html) 校验一下有没有错误。
 
 另外提示下 Google Calendar 订阅会缓存同一个链接的结果，也就是说当你的订阅链接返回的结果有部分小错误时，接下来几个小时同一个链接会一直有这个错误，即使你修复了也没用。我就是因为有两个任务的循环信息部分格式错误，导致在 Google Calendar 一直上不显示循环任务，其实我很早就已经修复了。
 
 ### Cloudflare Worker 完整代码
+
 至此整个过程就结束了，以下是完整的 Cloudflare Worker 代码，用户可以使用此代码自部署，而无需一来 Agenda 的服务。
 
 ```js
-const USER_AGENT = 'Agenda ICS Cloudflare Worker'
-const allowedOrigins = ['https://agenda.haydenhayden.com']
+const USER_AGENT = "Agenda ICS Cloudflare Worker";
+const allowedOrigins = ["https://agenda.haydenhayden.com"];
 
-addEventListener('fetch', event => {
+addEventListener("fetch", event => {
   event.respondWith(handleRequest(event.request));
 });
 
 async function handleRequest(request) {
-  
-  const rawOrigin = request.headers.get('Origin')
+  const rawOrigin = request.headers.get("Origin");
   if (rawOrigin && !allowedOrigins.includes(rawOrigin)) {
-    return new Response(`Forbidden Origin ${request.headers.get('Origin')}`, { status: 403 });
+    return new Response(`Forbidden Origin ${request.headers.get("Origin")}`, {
+      status: 403,
+    });
   }
   const url = new URL(request.url);
 
-  if (request.method === 'GET') {
+  if (request.method === "GET") {
     const queryParams = url.searchParams;
-    const repoName = queryParams.get('repo');
-    const token = queryParams.get('token');
+    const repoName = queryParams.get("repo");
+    const token = queryParams.get("token");
 
     if (!repoName || !token) {
-      return new Response('Missing required parameters', { status: 400 });
+      return new Response("Missing required parameters", { status: 400 });
     }
 
     const apiUrl = `https://api.github.com/repos/${repoName}/contents/agenda.ics`;
 
     const headers = {
-      'Authorization': `Bearer ${token}`,
-      'User-Agent': USER_AGENT,
+      Authorization: `Bearer ${token}`,
+      "User-Agent": USER_AGENT,
     };
 
     const response = await fetch(apiUrl, {
-      headers
+      headers,
     });
 
     if (response.ok) {
@@ -118,9 +123,11 @@ async function handleRequest(request) {
       const fileContent = atob(fileData.content);
       return new Response(decodeURIComponent(escape(fileContent)));
     } else {
-      return new Response('Failed to retrieve file content', { status: response.status });
+      return new Response("Failed to retrieve file content", {
+        status: response.status,
+      });
     }
-  } else if (request.method === 'POST') {
+  } else if (request.method === "POST") {
     const body = await request.json();
 
     const repoName = body.repo;
@@ -128,37 +135,37 @@ async function handleRequest(request) {
     const fileContent = body.file;
 
     if (!repoName || !token || !fileContent) {
-      return new Response('Missing required parameters', { status: 400 });
+      return new Response("Missing required parameters", { status: 400 });
     }
 
     const apiUrl = `https://api.github.com/repos/${repoName}/contents/agenda.ics`;
 
     const headers = {
-      'Authorization': `Bearer ${token}`,
-      'Content-Type': 'application/json',
-      'User-Agent': USER_AGENT,
+      Authorization: `Bearer ${token}`,
+      "Content-Type": "application/json",
+      "User-Agent": USER_AGENT,
     };
 
     const existingFileResponse = await fetch(apiUrl, {
-      headers
+      headers,
     });
 
     const existingFileData = await existingFileResponse.json();
 
-    const timestamp = new Date().toLocaleString('en-US', {
-      year: 'numeric',
-      month: '2-digit',
-      day: '2-digit',
-      hour: '2-digit',
-      minute: '2-digit',
-      second: '2-digit',
-      timeZone: 'UTC'
+    const timestamp = new Date().toLocaleString("en-US", {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      timeZone: "UTC",
     });
-    
+
     const payload = {
       message: `[Agenda]: update agenda.ics ${timestamp}`,
       content: btoa(unescape(encodeURIComponent(fileContent))),
-      encoding: 'utf-8',
+      encoding: "utf-8",
     };
 
     if (existingFileData.sha) {
@@ -166,20 +173,22 @@ async function handleRequest(request) {
     }
 
     const fileResponse = await fetch(apiUrl, {
-      method: 'PUT',
+      method: "PUT",
       headers,
-      body: JSON.stringify(payload)
+      body: JSON.stringify(payload),
     });
 
-    console.log('fileResponse', JSON.stringify(fileResponse))
+    console.log("fileResponse", JSON.stringify(fileResponse));
 
-    const response = fileResponse.ok ? new Response('File upload successful') : new Response('File upload failed', { status: fileResponse.status })
-    response.headers.set('Access-Control-Allow-Origin', rawOrigin);
-    response.headers.set('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-    response.headers.append('Access-Control-Allow-Headers', 'Content-Type');
-    return response
+    const response = fileResponse.ok
+      ? new Response("File upload successful")
+      : new Response("File upload failed", { status: fileResponse.status });
+    response.headers.set("Access-Control-Allow-Origin", rawOrigin);
+    response.headers.set("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+    response.headers.append("Access-Control-Allow-Headers", "Content-Type");
+    return response;
   } else {
-    return new Response('Unsupported request method', { status: 405 });
+    return new Response("Unsupported request method", { status: 405 });
   }
 }
 ```

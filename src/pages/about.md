@@ -3,34 +3,20 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-AstroPaper is a minimal, responsive and SEO-friendly Astro blog theme. I designed and crafted this based on [my personal blog](https://satnaing.dev/blog).
+Hi there! 👋 **I'm Hyaden**, a front-end developer with a passion for using technology to increase personal efficiency and productivity 💡.
 
-This theme is aimed to be accessible out of the box. Light and dark mode are supported by
-default and additional color schemes can also be configured.
+Here's what I'm all about:
 
-This theme is self-documented \_ which means articles/posts in this theme can also be considered as documentations. So, see the documentation for more info.
+- 💻 I've created a collection of Logseq plugins, including Agenda (Calendar & Task Management), available at [the repo](https://github.com/haydenull/logseq-plugin-agenda).
+- ⏰ My toolkit includes the Pomodoro Technique and Lyubichev time statistics, which I use to manage my time and track my productivity effectively.
+- 🔧 I believe in the power of open source software and am constantly striving to create work that will help others.
 
-<div>
-  <img src="/assets/dev.svg" class="sm:w-1/2 mx-auto" alt="coding dev illustration">
-</div>
+If you'd like to connect with me:
 
-## Tech Stack
+- 🐦 Reach out via Twitter at [@haydenull](https://twitter.com/haydenull).
+- 📧 Send an email to hayden.chen.dev@gmail.com.
+- 💻 Check out my blog, [haydenhayden.com](https://blog.haydenhayden.com), to learn more about my work and thoughts on personal productivity.
 
-This theme is written in vanilla JavaScript (+ TypeScript for type checking) and a little bit of ReactJS for some interactions. TailwindCSS is used for styling; and Markdown is used for blog contents.
+If you'd like to support me:
 
-## Features
-
-Here are certain features of this site.
-
-- fully responsive and accessible
-- SEO-friendly
-- light & dark mode
-- fuzzy search
-- super fast performance
-- draft posts
-- pagination
-- sitemap & rss feed
-- highly customizable
-
-If you like this theme, you can star/contribute to the [repo](https://github.com/satnaing/astro-paper).  
-Or you can even give any feedback via my [email](mailto:contact@satnaing.dev).
+- 💖 Buy me a coffee at [buymeacoffee.com/haydenull](https://www.buymeacoffee.com/haydenull) or [爱发电](https://afdian.net/a/haydenull) to show your appreciation.
