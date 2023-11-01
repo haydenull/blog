@@ -23,7 +23,7 @@ tags:
 
 <!-- <img src="https://pocket.haydenhayden.com/blog/202305051911712.png" width="300" /> -->
 
-![](https://pocket.haydenhayden.com/blog/202305051911712.png)
+![](https://pocket.haydenhayden.com/blog/202305051911712.png?x-oss-process=image/resize,w_300,m_lfit)
 
 ![](https://pocket.haydenhayden.com/blog/202305051918665.png)
 
@@ -37,7 +37,7 @@ tags:
 
 <!-- <img src="https://pocket.haydenhayden.com/blog/202305051934672.png" width="300" /> -->
 
-![](https://pocket.haydenhayden.com/blog/202305051934672.png)
+![](https://pocket.haydenhayden.com/blog/202305051934672.png?x-oss-process=image/resize,w_300,m_lfit)
 
 - Code Review blog 完成
 - [yoshi](https://github.com/haydenull/yoshi) MVP 完成

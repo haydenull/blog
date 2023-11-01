@@ -25,9 +25,7 @@ tags:
 - 有记录天数 22 天
 - 平均每天记录时长 6 小时 16 分钟
 
-<!-- <img src="https://pocket.haydenhayden.com/blog/202303061135524.png" width="300" /> -->
-
-![](https://pocket.haydenhayden.com/blog/202303061135524.png)
+![](https://pocket.haydenhayden.com/blog/202303061135524.png?x-oss-process=image/resize,w_300,m_lfit)
 
 ![](https://pocket.haydenhayden.com/blog/202303061133679.png)
 
@@ -35,9 +33,7 @@ tags:
 
 ### 1.1 看书 🌈
 
-<!-- <img src="https://pocket.haydenhayden.com/blog/202303061308326.jpg" width="300" /> -->
-
-![](https://pocket.haydenhayden.com/blog/202303061308326.jpg)
+![](https://pocket.haydenhayden.com/blog/202303061308326.jpg?x-oss-process=image/resize,w_300,m_lfit)
 
 打卡 17/28 天, 时长 535 分钟。
 

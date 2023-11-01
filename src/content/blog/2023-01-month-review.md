@@ -21,17 +21,13 @@ tags:
 - 有记录天数 32 天
 - 平均每天记录时长 3 小时 30 分钟
 
-<!-- <img src="https://pocket.haydenhayden.com/blog/202302031421364.png" width="300" /> -->
-
-![](https://pocket.haydenhayden.com/blog/202302031421364.png)
+![](https://pocket.haydenhayden.com/blog/202302031421364.png?x-oss-process=image/resize,w_300,m_lfit)
 
 ## O1 学习
 
 ### 1.1 看书
 
-<!-- <img src="https://pocket.haydenhayden.com/blog/202302031429509.PNG" width="300" /> -->
-
-![](https://pocket.haydenhayden.com/blog/202302031429509.PNG)
+![](https://pocket.haydenhayden.com/blog/202302031429509.PNG?x-oss-process=image/resize,w_300,m_lfit)
 
 1 月阅读时长已达标。
 

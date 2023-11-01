@@ -25,25 +25,15 @@ tags:
 
 一共攒了 20538 个酷币，用免费酷币兑换了不背大会员😼。
 
-<!-- <img src="https://pocket.haydenhayden.com/blog/202302030822395.jpg" width="300px" /> -->
+![](https://pocket.haydenhayden.com/blog/202302030822395.jpg?x-oss-process=image/resize,w_300,m_lfit)
 
-![](https://pocket.haydenhayden.com/blog/202302030822395.jpg)
+![](https://pocket.haydenhayden.com/blog/202302030828380.jpg?x-oss-process=image/resize,w_300,m_lfit)
 
-<!-- <img src="https://pocket.haydenhayden.com/blog/202302030828380.jpg" width="300px" /> -->
+![](https://pocket.haydenhayden.com/blog/202302030829372.jpg?x-oss-process=image/resize,w_300,m_lfit)
 
-![](https://pocket.haydenhayden.com/blog/202302030828380.jpg)
+![](https://pocket.haydenhayden.com/blog/202302030829785.jpg?x-oss-process=image/resize,w_300,m_lfit)
 
-<!-- <img src="https://pocket.haydenhayden.com/blog/202302030829372.jpg" width="300px" /> -->
-
-![](https://pocket.haydenhayden.com/blog/202302030829372.jpg)
-
-<!-- <img src="https://pocket.haydenhayden.com/blog/202302030829785.jpg" width="300px" /> -->
-
-![](https://pocket.haydenhayden.com/blog/202302030829785.jpg)
-
-<!-- <img src="https://pocket.haydenhayden.com/blog/202302030830534.jpg" width="300px" /> -->
-
-![](https://pocket.haydenhayden.com/blog/202302030830534.jpg)
+![](https://pocket.haydenhayden.com/blog/202302030830534.jpg?x-oss-process=image/resize,w_300,m_lfit)
 
 ## 1.2 参与开源，第一次打造自己的产品
 

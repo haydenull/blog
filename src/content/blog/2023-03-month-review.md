@@ -21,7 +21,7 @@ tags:
 - 有记录天数 31 天
 - 平均每天记录时长 5 小时 58 分钟
 
-<img src="https://pocket.haydenhayden.com/blog/202304030758301.png" width="300" />
+![](https://pocket.haydenhayden.com/blog/202304030758301.png?x-oss-process=image/resize,w_300,m_lfit)
 
 ![](https://pocket.haydenhayden.com/blog/202304022233230.png)
 
@@ -32,7 +32,7 @@ tags:
   - 本月完成阅读 1 本书：《银河之心 3》
   - 书中描述了人类在太空时代与异族战斗的故事，视角新颖。但结局略显遗憾，艾博之子的部分还有很多可以讲的，银河人的集体自杀原因令人费解。最后的新巡逻者体系虽然有情感，但恰恰可能因此导致未来和平的脆弱。
 
-<img src="https://pocket.haydenhayden.com/blog/202304022220304.jpg" width="300" />
+![](https://pocket.haydenhayden.com/blog/202304022220304.jpg?x-oss-process=image/resize,w_300,m_lfit)
 
 - Code Review 细则
   - 未完成 🚨
@@ -60,7 +60,7 @@ tags:
   - 认真对待每一次演讲，必须提前一天准备好 PPT 和相关内容，没有准备的内容绝对不讲
   - 优先处理紧急且重要的任务，其他任务可以暂时推迟。严格按照计划执行，如果在规定时间内未完成计划任务，应优先完成重要任务，而非紧急任务。
 
-  2.4 Code Review 花费了很长时间
+    2.4 Code Review 花费了很长时间
 
 - 现象: 最后一周 5 个工作日, 花费了 7 小时进行 code review
 - 原因：
@@ -73,7 +73,7 @@ tags:
     - 其实这个流程下来差不多就会让一个 MR 拖两到三天
   - 其实这次的卡点有不少是常见的业务场景，需要积累相关的组内最佳实践
 
-  2.5 工作目标未达成
+    2.5 工作目标未达成
 
 - 原因：
   - 3 月被 AI 疯狂轰炸, 每天被各种信息和想法围绕, 无法专注工作, 抑制不住地想写点东西实现「绝妙」的点子
