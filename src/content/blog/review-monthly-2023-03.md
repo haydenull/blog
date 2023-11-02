@@ -1,5 +1,5 @@
 ---
-title: 2023 年 3 月总结
+title: "总结: 2023 年 3 月"
 description: AI 狂潮下的 3 月
 pubDatetime: 2023-04-03
 useHeaderImage: true

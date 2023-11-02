@@ -4,7 +4,6 @@ import Posts from "@layouts/Posts.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import getPageNumbers from "@utils/getPageNumbers";
 
-import getPosts from "@utils/getPosts";
 import { getCollection } from "astro:content";
 
 const posts = await getCollection("weekly")

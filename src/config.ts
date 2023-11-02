@@ -11,7 +11,7 @@ export const SITE: Site = {
 };
 
 // export const LOCALE = ["en-EN"]; // set to [] to use the environment default
-export const LOCALE = ["zh-CN"]; // set to [] to use the environment default
+export const LOCALE = ["en-EN", "zh-CN"]; // set to [] to use the environment default
 
 export const LOGO_IMAGE = {
   enable: false,

@@ -1,5 +1,5 @@
 ---
-title: 2023 年 7 月总结
+title: "总结: 2023 年 7 月"
 description: 7 月的总结
 author: Haydenull
 pubDatetime: 2023-08-20

@@ -1,6 +1,7 @@
 import { slugifyStr } from "@utils/slugify";
 import Datetime from "./Datetime";
 import type { CollectionEntry } from "astro:content";
+import { convertToPinyin } from "@utils/pinyin";
 
 export interface Props {
   href?: string;
@@ -12,7 +13,7 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
   const { title, pubDatetime, description } = frontmatter;
 
   const headerProps = {
-    style: { viewTransitionName: slugifyStr(title) },
+    style: { viewTransitionName: slugifyStr(convertToPinyin(title)) },
     className: "text-lg font-medium decoration-dashed hover:underline",
   };
 

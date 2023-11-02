@@ -1,5 +1,5 @@
 ---
-title: 2023 年 2 月总结
+title: "总结: 2023 年 2 月"
 description: 学习任务完成，工作任务不达标，如何调整？
 author: Haydenull
 pubDatetime: 2023-03-06

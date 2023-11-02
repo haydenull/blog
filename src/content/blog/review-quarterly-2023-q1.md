@@ -1,5 +1,5 @@
 ---
-title: 2023 年 Q1 总结
+title: "总结: 2023 年 Q1"
 description: 在 AI 浪潮中不断成长与寻找方向
 author: Haydenull
 pubDatetime: 2023-04-05

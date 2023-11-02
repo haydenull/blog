@@ -1,5 +1,5 @@
 ---
-title: 2022 年终总结
+title: "年终总结: 2022"
 description: 迟到的 2022 年终总结
 author: Haydenull
 pubDatetime: 2023-01-03
