@@ -192,7 +192,7 @@ return (
 
 [爱发电](https://afdian.net/a/haydenull)支持支付宝和微信的付款方式，对国内用户更加友好。与 buymeacoffee 不同的是它的赞助方案都是订阅制。不过可以再赞助后取消订阅达到一次性付费的效果。
 
-<iframe src="https://afdian.net/leaflet?slug=haydenull" width="640" scrolling="no" height="200" frameborder="0"></iframe>
+<iframe src="https://afdian.net/leaflet?slug=haydenull" width="100%" scrolling="no" height="200" frameborder="0"></iframe>
 
 ### Agenda3 从爱发电获得补能
 
