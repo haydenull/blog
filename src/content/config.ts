@@ -23,4 +23,4 @@ const post = defineCollection({
     }),
 });
 
-export const collections = { blog: post, weekly: post };
+export const collections = { blog: post, weekly: post, talk: post };

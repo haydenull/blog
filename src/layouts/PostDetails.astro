@@ -9,7 +9,7 @@ import { slugifyStr } from "@utils/slugify";
 import { convertToPinyin } from '@utils/pinyin';
 
 export interface Props {
-  post: CollectionEntry<"blog"|"weekly">;
+  post: CollectionEntry<"blog"|"weekly"|"talk">;
 }
 
 const { post } = Astro.props;

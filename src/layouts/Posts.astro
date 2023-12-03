@@ -12,16 +12,23 @@ import type { CollectionEntry } from "astro:content";
 const pageTitleMap = {
   posts: "Posts",
   weekly: "十五周刊",
+  talks: "Talks",
 }
 const pageDescMap = {
   posts: "All the articles I've posted.",
   weekly: "All the weekly articles I've posted.",
+  talks: "All the talks I've given.",
+}
+const prefixPathMap = {
+  posts: "posts",
+  weekly: "weekly",
+  talks: "talks",
 }
 export interface Props {
   pageNum: number;
   totalPages: number;
-  posts: CollectionEntry<"blog" | 'weekly'>[];
-  type: "posts" | "weekly";
+  posts: CollectionEntry<"blog" | 'weekly' | "talk">[];
+  type: "posts" | "weekly" | "talks";
 }
 
 const { pageNum, totalPages, posts, type } = Astro.props;
@@ -36,7 +43,7 @@ const next = pageNum < totalPages ? "" : "disabled";
     <ul>
       {
         posts.map(({ data }) => (
-          <Card href={`/posts/${slugify(data)}`} frontmatter={data} />
+          <Card href={`/${prefixPathMap[type]}/${slugify(data)}`} frontmatter={data} />
         ))
       }
     </ul>
