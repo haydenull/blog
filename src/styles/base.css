@@ -75,8 +75,8 @@
     prose-figcaption:!text-skin-base prose-figcaption:opacity-70
     prose-strong:!text-skin-base
 
-    prose-h2:!mt-12 prose-h2:!mb-6 prose-h2:!text-3xl
-    prose-h3:!mt-8 prose-h3:!mb-3 prose-h3:!text-2xl
+    prose-h2:!mt-12 prose-h2:!mb-6 prose-h2:!text-2xl
+    prose-h3:!mt-8 prose-h3:!mb-3 prose-h3:!text-xl
     prose-code:rounded prose-code:bg-skin-card 
     prose-code:bg-opacity-75 prose-code:p-1 prose-code:!text-skin-base 
     prose-code:before:!content-[''] prose-code:after:!content-['']
