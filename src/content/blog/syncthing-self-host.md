@@ -2,13 +2,15 @@
 title: 自建 syncthing 服务
 description: 使用 docker 自建 syncthing 发现服务与中继服务
 author: Haydenull
-pubDatetime: 2023-12-03T20:08:00+08:00
+pubDatetime: 2023-12-10T17:58:00+08:00
 postSlug: syncthing-self-host
 tags:
   - syncthing
   - sync
   - p2p
 ---
+
+## Table of Contents
 
 ## 背景
 
@@ -97,3 +99,47 @@ default,https://<服务器 IP>:8443/?id=<发现服务 ID>
 ![](https://pocket.haydenhayden.com/blog/202312032035222.png)
 
 ![](https://pocket.haydenhayden.com/blog/202312032032414.png)
+
+> 以下内容为 12 月 10 日 补充
+
+## 搭建 Syncthing 客户端
+
+试用几天发现之前理解错了，Syncthing 的中继服务器是用于两台设备保持连接的，本身并不存储数据，这就意味着两台设备必须同时在线才能同步数据。
+
+但很明显我无法做到两台设备同时在线，所以需要一个 24 小时在线的设备做中转。
+
+![](https://pocket.haydenhayden.com/blog/202312101805967.png?x-oss-process=image/resize,w_1000,m_lfit)
+
+如上图所示，我在 vps 上搭建了一个 Syncthing 客户端：
+
+1. 设备 A 修改文件，发送到 VPS，等到晚上回家打开设备 B 时，设备 B 从 VPS 上同步数据
+2. 反之，设备 B 修改文件，发送到 VPS，等到第二天上班打开设备 A 时，设备 A 从 VPS 上同步数据
+
+搭建之前建议先阅读 [Syncthing 官方文档](https://github.com/syncthing/syncthing/blob/main/README-Docker.md)。
+
+我们使用 `docker-compose` 部署 Syncthing 客户端，配置文件如下：
+
+```yaml
+version: "3"
+services:
+  syncthing:
+    image: syncthing/syncthing
+    container_name: syncthing-client
+    hostname: syncthing-client
+    environment:
+      - PUID=1000
+      - PGID=1000
+    volumes:
+      - ~/.syncthing/data:/var/syncthing
+    ports:
+      - 8384:8384 # Web UI
+      - 22000:22000/tcp # TCP file transfers
+      - 22000:22000/udp # QUIC file transfers
+      - 21027:21027/udp # Receive local discovery broadcasts
+    network_mode: host
+    restart: unless-stopped
+```
+
+`~/.syncthing/data` 这里的路径是 Syncthing 今后文件的存放路径，可以自行修改。
+
+部署完成后就可以使用 Syncthing 了，打开 `http://<vps ip>:8384`，进入 Syncthing 的 Web UI 界面。由于是运行在远程，建议设置账号密码。
