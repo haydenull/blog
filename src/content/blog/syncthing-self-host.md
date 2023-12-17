@@ -70,7 +70,7 @@ services:
 中继服务 ID
 ![](https://pocket.haydenhayden.com/blog/202312032021728.png?x-oss-process=image/resize,w_1000,m_lfit)
 
-## 配置 syncthing 客户端
+## 配置本机 syncthing 客户端
 
 以 mac 客户端为例，启动后打开 UI 界面，点击右上角操作 -> 设置按钮，进入设置界面。
 
@@ -102,7 +102,7 @@ default,https://<服务器 IP>:8443/?id=<发现服务 ID>
 
 > 以下内容为 12 月 10 日 补充
 
-## 搭建 Syncthing 客户端
+## 搭建 VPS Syncthing 客户端
 
 试用几天发现之前理解错了，Syncthing 的中继服务器是用于两台设备保持连接的，本身并不存储数据，这就意味着两台设备必须同时在线才能同步数据。
 
