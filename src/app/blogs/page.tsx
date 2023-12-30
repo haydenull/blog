@@ -1,8 +1,9 @@
-import { getBlogsFrontMatter } from "@/lib/blog";
-import Link from "next/link";
+import Link from 'next/link'
+
+import { getBlogsFrontMatter } from '@/lib/blog'
 
 export default function Posts() {
-  const blogFrontMatter = getBlogsFrontMatter();
+  const blogFrontMatter = getBlogsFrontMatter()
 
   return (
     <div>
@@ -15,5 +16,5 @@ export default function Posts() {
         ))}
       </ul>
     </div>
-  );
+  )
 }
