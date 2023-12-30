@@ -1,9 +1,8 @@
 ---
-pubDatetime: '2021-03-28'
+date: '2021-03-28'
 thumbnail: /assets/how-to-make-beef-stew.webp
 title: How to make Beef stew
 description: The soup stock from sea kelp and dried bonito flakes can be used in many Japanese foods such as miso soup, soba, udon, and stew.
-postSlug: how-to-make-beef-stew
 ---
 
 ### Ingredients

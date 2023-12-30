@@ -13,7 +13,8 @@
     "next": "14.0.4",
     "next-mdx-remote": "^4.4.1",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "valibot": "^0.25.0"
   },
   "devDependencies": {
     "@types/node": "^20",
