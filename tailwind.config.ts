@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+import colors from 'tailwindcss/colors'
 
 const config = {
   darkMode: ['class'],
@@ -22,6 +23,10 @@ const config = {
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
+        },
+        colorful: {
+          ...colors.violet,
+          DEFAULT: colors.violet[500],
         },
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',

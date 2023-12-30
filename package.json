@@ -18,12 +18,15 @@
     ]
   },
   "dependencies": {
+    "@tabler/icons-react": "^2.44.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "framer-motion": "^10.16.16",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.303.0",
     "next": "14.0.4",
     "next-mdx-remote": "^4.4.1",
+    "next-themes": "^0.2.1",
     "react": "^18",
     "react-dom": "^18",
     "tailwind-merge": "^2.2.0",
