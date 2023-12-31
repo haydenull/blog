@@ -62,7 +62,7 @@ const Nav = () => {
     <>
       <FloatingNav navItems={navItems} />
       <button
-        className="fixed right-4 top-10 rounded-full border p-2 text-neutral-600 hover:text-neutral-500 dark:border-white/[0.2] dark:bg-black dark:text-neutral-50 dark:hover:text-neutral-300"
+        className=" fixed right-4 top-10 z-[5000] rounded-full border bg-white p-2 text-neutral-600 hover:text-neutral-500 dark:border-white/[0.2] dark:bg-black dark:text-neutral-50 dark:hover:text-neutral-300"
         onClick={toggleTheme}
       >
         {theme === 'dark' ? <IconMoonStars className="h-4 w-4" /> : <IconSun className="h-4 w-4" />}
