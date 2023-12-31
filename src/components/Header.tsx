@@ -15,22 +15,22 @@ const navItems: NavItem[] = [
   },
   {
     name: '博客',
-    link: '/blogs',
+    link: '/blog',
     icon: <IconBook className="h-4 w-4" />,
   },
   {
     name: '周刊',
-    link: '/weeklies',
+    link: '/weekly',
     icon: <IconNews className="h-4 w-4" />,
   },
   {
     name: '项目',
-    link: '/projects',
+    link: '/project',
     icon: <IconSparkles className="h-4 w-4" />,
   },
   {
     name: '分享',
-    link: '/talks',
+    link: '/talk',
     icon: <IconPodium className="h-4 w-4" />,
   },
   // {
