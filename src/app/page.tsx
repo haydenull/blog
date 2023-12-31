@@ -1,6 +1,5 @@
 import Image from 'next/image'
 
-import Header from '@/components/Header'
 import { GridBackground } from '@/components/ui/grid-background'
 
 import Bento from './components/bento'
@@ -8,8 +7,6 @@ import Bento from './components/bento'
 export default function Home() {
   return (
     <main className="relative">
-      <Header />
-
       {/* 顶部方格背景 */}
       <div>
         <GridBackground className="absolute -z-10 h-28 md:h-40" />
