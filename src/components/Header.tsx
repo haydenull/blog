@@ -2,11 +2,11 @@
 
 import {
   IconBook,
-  IconBriefcase,
-  IconCalendar,
   IconHome,
   IconMoonStars,
+  IconNews,
   IconPodium,
+  IconSparkles,
   IconSun,
   IconUser,
 } from '@tabler/icons-react'
@@ -28,12 +28,12 @@ const navItems: NavItem[] = [
   {
     name: '周刊',
     link: '/weeklies',
-    icon: <IconCalendar className="h-4 w-4" />,
+    icon: <IconNews className="h-4 w-4" />,
   },
   {
     name: '项目',
     link: '/projects',
-    icon: <IconBriefcase className="h-4 w-4" />,
+    icon: <IconSparkles className="h-4 w-4" />,
   },
   {
     name: '分享',

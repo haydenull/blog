@@ -19,8 +19,12 @@
   },
   "dependencies": {
     "@tabler/icons-react": "^2.44.0",
+    "@tsparticles/engine": "^3.0.3",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.0.3",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "dayjs": "^1.11.10",
     "framer-motion": "^10.16.16",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.303.0",
@@ -30,6 +34,7 @@
     "next-themes": "^0.2.1",
     "react": "^18",
     "react-dom": "^18",
+    "react-github-calendar": "^4.0.8",
     "tailwind-merge": "^2.2.0",
     "tailwindcss-animate": "^1.0.7",
     "valibot": "^0.25.0"
