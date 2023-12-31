@@ -1,34 +1,12 @@
-import Link from "next/link";
+import Link from 'next/link'
 
-export default function PostCard({
-  post,
-}: {
-  post: {
-    frontMatter: {
-      title: string;
-      description: string;
-      thumbnail: string;
-      pubDatetime: string;
-      readTime: number;
-      postSlug: string;
-      id: string;
-    };
-  };
-}) {
+import type { BlogFrontMatter } from '@/types/blog'
+
+export default function PostCard({ frontMatter }: { frontMatter: BlogFrontMatter }) {
   return (
-    <Link href={`/posts/${post.frontMatter.id}`}>
-      <div>
-        111 {post.frontMatter.id}
-        <img src={post.frontMatter.thumbnail} alt="postCardImage" />
-        <div>
-          <h2>{post.frontMatter.title}</h2>
-          <p>{post.frontMatter.description}</p>
-        </div>
-        <div>
-          <h2> 📅{post.frontMatter.pubDatetime}</h2>
-          <p>⏰{post.frontMatter.readTime} min read</p>
-        </div>
-      </div>
+    <Link className="rounded-lg border p-2" href={`/blog/${frontMatter.slug}`} key={frontMatter.slug}>
+      <h2 className="mt-4 text-2xl font-semibold">{frontMatter.title}</h2>
+      <p className="mt-1 text-muted-foreground">{frontMatter.description}</p>
     </Link>
-  );
+  )
 }

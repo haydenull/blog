@@ -25,7 +25,7 @@ export default function Home() {
             width={120}
             height={120}
           />
-          <h1 className="text-3xl font-semibold">启封 Hayden</h1>
+          <h1 className="text-4xl font-semibold">启封 Hayden</h1>
           <p className="text-muted-foreground">
             A front-end developer with a passion for using technology to increase personal efficiency and productivity
             💡.
