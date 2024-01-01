@@ -25,7 +25,7 @@ export const LampContainer = ({ children, className }: { children: React.ReactNo
           style={{
             backgroundImage: `conic-gradient(var(--conic-position), var(--tw-gradient-stops))`,
           }}
-          className="bg-gradient-conic absolute inset-auto right-1/2 h-56 w-[20rem] overflow-visible from-cyan-500 via-transparent to-transparent text-white [--conic-position:from_70deg_at_center_top] md:w-[30rem]"
+          className="bg-gradient-conic absolute inset-auto right-1/2 h-56 w-[20rem] overflow-visible from-cyan-500 via-transparent to-transparent text-white [--conic-position:from_70deg_at_center_top] md:w-[30rem] "
         >
           <div className="absolute  bottom-0 left-0 z-20 h-40 w-[100%] bg-slate-950 [mask-image:linear-gradient(to_top,white,transparent)]" />
           <div className="absolute  bottom-0 left-0 z-20 h-[100%]  w-40 bg-slate-950 [mask-image:linear-gradient(to_right,white,transparent)]" />

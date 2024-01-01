@@ -17,6 +17,8 @@ export const FloatingNav = ({ navItems, className }: { navItems: NavItem[]; clas
   const routerPathName = usePathname()
   const { setTheme, theme } = useTheme()
 
+  const isProjectPage = routerPathName === '/project'
+
   const toggleTheme = () => {
     if (theme === 'dark') {
       setTheme('light')
@@ -77,6 +79,7 @@ export const FloatingNav = ({ navItems, className }: { navItems: NavItem[]; clas
           }}
           className={cn(
             'fixed inset-x-0  top-10 z-[5000] mx-auto flex max-w-fit items-center justify-center space-x-4 rounded-full border border-transparent bg-white px-8 py-2  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] dark:border-white/[0.2] dark:bg-black',
+            { '!border-zinc-800 !bg-transparent !shadow-2xl backdrop-blur-3xl': isProjectPage },
             className,
           )}
         >
@@ -86,7 +89,9 @@ export const FloatingNav = ({ navItems, className }: { navItems: NavItem[]; clas
               href={navItem.link}
               className={cn(
                 'relative flex items-center space-x-1 text-neutral-600 hover:text-neutral-500 dark:text-neutral-50 dark:hover:text-neutral-300',
-                new RegExp(`^${navItem.link}(/|$)`).test(routerPathName) && 'text-colorful-500 dark:text-colorful-400',
+                { '!text-zinc-300 hover:!text-zinc-200': isProjectPage },
+                new RegExp(`^${navItem.link}(/|$)`).test(routerPathName) &&
+                  '!text-colorful-500 dark:!text-colorful-400',
               )}
             >
               <span className="block sm:hidden">{navItem.icon}</span>
@@ -97,7 +102,10 @@ export const FloatingNav = ({ navItems, className }: { navItems: NavItem[]; clas
       </AnimatePresence>
       {visible ? (
         <button
-          className=" fixed right-6 top-10 z-[5000] rounded-full border bg-white p-2 text-neutral-600 hover:text-neutral-500 dark:border-white/[0.2] dark:bg-black dark:text-neutral-50 dark:hover:text-neutral-300"
+          className={cn(
+            'fixed right-6 top-10 z-[5000] rounded-full border bg-white p-2 text-neutral-600 hover:text-neutral-500 dark:border-white/[0.2] dark:bg-black dark:text-neutral-50 dark:hover:text-neutral-300',
+            { '!border-zinc-800 !bg-slate-800 !text-zinc-300': isProjectPage },
+          )}
           onClick={toggleTheme}
         >
           {theme === 'dark' ? <IconMoonStars className="h-4 w-4" /> : <IconSun className="h-4 w-4" />}
