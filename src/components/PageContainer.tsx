@@ -1,5 +1,7 @@
-const PageContainer = ({ children }: { children: React.ReactNode }) => {
-  return <main className="pt-20">{children}</main>
+import { cn } from '@/lib/utils'
+
+const PageContainer = ({ children, className }: { children: React.ReactNode; className?: string }) => {
+  return <main className={cn('pt-20', className)}>{children}</main>
 }
 
 export default PageContainer

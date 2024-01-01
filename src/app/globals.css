@@ -75,4 +75,30 @@
   .animate-spotlight {
     animation: spotlight 2s ease .75s 1 forwards;
   }
+
+  /* 博客文章样式 */
+  .prose pre {
+    @apply w-full overflow-x-auto
+  }
+  code, blockquote {
+    word-wrap: break-word;
+  }
+  pre > code {
+    white-space: pre;
+  }
+  .prose h2 {
+    @apply text-2xl font-semibold mt-20 mb-4;
+  }
+  .prose h3 {
+    @apply text-xl font-semibold mt-8 mb-2;
+  }
+  .prose p {
+    @apply text-base leading-7 my-7;
+  }
+  .prose ul {
+    @apply list-disc list-inside my-8;
+  }
+  .prose li {
+    @apply text-base leading-7 my-1;
+  }
 }
