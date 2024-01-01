@@ -10,6 +10,7 @@ import GithubCalendar from '@/components/GithubCalendar'
 import { SparklesCore } from '@/components/ui/sparkles-core'
 
 import BentoCard from './BentoCard'
+import Buymeacoffee from './Buymeacoffee'
 
 const Bento = () => {
   return (
@@ -29,7 +30,7 @@ const Bento = () => {
         <p className="relative z-20 text-center text-3xl font-bold text-white">银河在上，文明永存</p>
       </BentoCard>
       {/* X */}
-      <BentoCard className="group bg-slate-100 dark:bg-slate-900">
+      <BentoCard className="group bg-slate-100 dark:bg-slate-900" url="https://x.com/haydenull">
         <div>
           <div className="relative flex h-[40px] w-[40px] items-center justify-center">
             <div className="absolute h-full w-full rounded-md bg-black transition-all duration-300 group-hover:scale-[10]"></div>
@@ -42,7 +43,10 @@ const Bento = () => {
         </button>
       </BentoCard>
       {/* YouTube */}
-      <BentoCard className="group bg-[#FFF0F0] dark:bg-[#461616]">
+      <BentoCard
+        className="group bg-[#FFF0F0] dark:bg-[#461616]"
+        url="https://www.youtube.com/channel/UC36gTB1ejDVmRggqGUf1Z8Q"
+      >
         <div>
           <div className="relative flex h-[40px] w-[40px] items-center justify-center   ">
             <div className="absolute h-full w-full rounded-md bg-[#ff0000] transition-all duration-300 group-hover:scale-[10]"></div>
@@ -55,7 +59,7 @@ const Bento = () => {
         </button>
       </BentoCard>
       {/* Gmail */}
-      <BentoCard className="group bg-[#E0F7FA] dark:bg-[#103136]">
+      <BentoCard className="group bg-[#E0F7FA] dark:bg-[#103136]" url="hayden.chen.dev@gmail.com">
         <div>
           <div className="relative flex h-[40px] w-[40px] items-center justify-center">
             <div
@@ -74,7 +78,7 @@ const Bento = () => {
         </button>
       </BentoCard>
       {/* Bilibili */}
-      <BentoCard className="group bg-white">
+      <BentoCard className="group bg-white" url="https://space.bilibili.com/13306410">
         <div>
           <div className="relative flex h-[40px] w-[40px] items-center justify-center">
             <div className="absolute h-full w-full rounded-md bg-[#FB7299] transition-all duration-300 group-hover:scale-[10]"></div>
@@ -104,6 +108,7 @@ const Bento = () => {
         </div>
       </BentoCard>
       {/* Buy Me A Coffee */}
+      <Buymeacoffee />
       {/* 爱发电 */}
       {/* 近期博客 x2 */}
       {/* 近期周刊 x1 */}
