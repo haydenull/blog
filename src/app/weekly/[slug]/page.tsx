@@ -5,7 +5,7 @@ import PageContainer from '@/components/PageContainer'
 import { getBlogBySlug } from '@/lib/blog'
 
 // TOC https://gist.github.com/sobelk/16fe68ff5520b2d5e2b6d406e329e0de
-export default function Blog({ params }: { params: { slug: string } }) {
+export default function Weekly({ params }: { params: { slug: string } }) {
   const { frontMatter, content } = getBlogBySlug(params.slug)
 
   return (
