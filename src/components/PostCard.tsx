@@ -7,7 +7,7 @@ import { GlowingStarsBackgroundCard } from './ui/glowing-stars'
 export default function PostCard({ frontMatter }: { frontMatter: BlogFrontMatter }) {
   return (
     <Link className="relative max-w-md overflow-hidden rounded-xl border" href={`/blog/${frontMatter.slug}`}>
-      <div className="relative h-[190px] overflow-hidden">
+      <div className="relative h-[200px] overflow-hidden">
         {frontMatter.cover ? (
           <>
             <img

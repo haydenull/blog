@@ -86,7 +86,7 @@ export const FloatingNav = ({ navItems, className }: { navItems: NavItem[]; clas
               href={navItem.link}
               className={cn(
                 'relative flex items-center space-x-1 text-neutral-600 hover:text-neutral-500 dark:text-neutral-50 dark:hover:text-neutral-300',
-                routerPathName === navItem.link && 'text-colorful-500 dark:text-colorful-400',
+                new RegExp(`^${navItem.link}(/|$)`).test(routerPathName) && 'text-colorful-500 dark:text-colorful-400',
               )}
             >
               <span className="block sm:hidden">{navItem.icon}</span>

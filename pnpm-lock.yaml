@@ -32,6 +32,9 @@ dependencies:
   framer-motion:
     specifier: ^10.16.16
     version: 10.16.16(react-dom@18.2.0)(react@18.2.0)
+  google:
+    specifier: link:next/font/google
+    version: link:next/font/google
   gray-matter:
     specifier: ^4.0.3
     version: 4.0.3
