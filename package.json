@@ -18,6 +18,7 @@
     ]
   },
   "dependencies": {
+    "@react-hookz/web": "^24.0.2",
     "@tabler/icons-react": "^2.44.0",
     "@tsparticles/engine": "^3.0.3",
     "@tsparticles/react": "^3.0.0",

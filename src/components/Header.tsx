@@ -41,37 +41,7 @@ const navItems: NavItem[] = [
 ]
 
 const Nav = () => {
-  const { setTheme, theme } = useTheme()
-  const routerPathName = usePathname()
-
-  const toggleTheme = () => {
-    if (theme === 'dark') {
-      setTheme('light')
-    } else {
-      setTheme('dark')
-    }
-  }
-
-  return (
-    <>
-      {routerPathName === '/' ? null : (
-        <Image
-          className="fixed left-6 top-10 z-[5000] rounded-full border shadow"
-          src="/assets/avatar.png"
-          alt="avatar"
-          width="30"
-          height="30"
-        />
-      )}
-      <FloatingNav navItems={navItems} />
-      <button
-        className=" fixed right-6 top-10 z-[5000] rounded-full border bg-white p-2 text-neutral-600 hover:text-neutral-500 dark:border-white/[0.2] dark:bg-black dark:text-neutral-50 dark:hover:text-neutral-300"
-        onClick={toggleTheme}
-      >
-        {theme === 'dark' ? <IconMoonStars className="h-4 w-4" /> : <IconSun className="h-4 w-4" />}
-      </button>
-    </>
-  )
+  return <FloatingNav navItems={navItems} />
 }
 
 export default Nav
