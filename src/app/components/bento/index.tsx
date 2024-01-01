@@ -13,7 +13,7 @@ import BentoCard from './BentoCard'
 
 const Bento = () => {
   return (
-    <div className="grid grid-cols-2 gap-4 md:w-[400px] md:grid-cols-4 lg:w-[600px] xl:w-[820px] ">
+    <div className="grid min-w-[380px] grid-cols-2 gap-4 md:w-[400px] lg:w-[600px] lg:min-w-[760px] lg:grid-cols-4 xl:w-[820px] ">
       {/* Quote */}
       <BentoCard className="relative col-span-2 flex-col items-center justify-center overflow-hidden bg-black dark:bg-black">
         <div className="absolute inset-0 h-screen w-full">
