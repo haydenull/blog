@@ -4,7 +4,7 @@ const BentoCard = ({ children, className }: { children: React.ReactNode; classNa
   return (
     <div
       className={cn(
-        'flex h-[175px] flex-col justify-between rounded-xl border bg-white p-6 text-white dark:bg-background',
+        'flex h-[175px] flex-col justify-between overflow-hidden rounded-xl border bg-white p-6 text-white dark:bg-background',
         className,
       )}
     >

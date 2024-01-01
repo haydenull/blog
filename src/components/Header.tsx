@@ -56,7 +56,7 @@ const Nav = () => {
     <>
       {routerPathName === '/' ? null : (
         <Image
-          className="fixed left-6 top-10 rounded-full"
+          className="fixed left-6 top-10 z-[5000] rounded-full border shadow"
           src="/assets/avatar.png"
           alt="avatar"
           width="30"

@@ -1,6 +1,7 @@
 'use client'
 
 import { AnimatePresence, motion } from 'framer-motion'
+import { useTheme } from 'next-themes'
 import React, { useEffect, useRef, useState } from 'react'
 
 import { cn } from '@/lib/utils'
@@ -23,7 +24,7 @@ export const GlowingStarsBackgroundCard = ({
         setMouseEnter(false)
       }}
       className={cn(
-        'h-full max-h-[20rem] w-full max-w-md rounded-xl border border-[#eaeaea] bg-[linear-gradient(110deg,#333_0.6%,#222)] p-4 dark:border-neutral-600',
+        'h-full max-h-[20rem] w-full max-w-md bg-[linear-gradient(110deg,#fff.6%,#fefefe)] p-4 dark:border-neutral-600 dark:bg-[linear-gradient(110deg,#111_0.6%,#121212)]',
         className,
       )}
     >
@@ -92,6 +93,8 @@ export const Illustration = ({ mouseEnter }: { mouseEnter: boolean }) => {
 }
 
 const Star = ({ isGlowing, delay }: { isGlowing: boolean; delay: number }) => {
+  const { theme } = useTheme()
+  const startBackground = theme === 'dark' ? '#fff' : '#2563eb'
   return (
     <motion.div
       key={delay}
@@ -100,7 +103,7 @@ const Star = ({ isGlowing, delay }: { isGlowing: boolean; delay: number }) => {
       }}
       animate={{
         scale: isGlowing ? [1, 1.2, 2.5, 2.2, 1.5] : 1,
-        background: isGlowing ? '#fff' : '#666',
+        background: isGlowing ? startBackground : '#666',
       }}
       transition={{
         duration: 2,

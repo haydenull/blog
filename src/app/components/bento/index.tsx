@@ -29,50 +29,62 @@ const Bento = () => {
         <p className="relative z-20 text-center text-3xl font-bold text-white">银河在上，文明永存</p>
       </BentoCard>
       {/* X */}
-      <BentoCard className="bg-slate-100 dark:bg-slate-900">
+      <BentoCard className="group bg-slate-100 dark:bg-slate-900">
         <div>
-          <div className="flex h-[40px] w-[40px] items-center justify-center rounded-md bg-black">
-            <IconBrandX className="h-7 w-7 text-white" />
+          <div className="relative flex h-[40px] w-[40px] items-center justify-center">
+            <div className="absolute h-full w-full rounded-md bg-black transition-all duration-300 group-hover:scale-[10]"></div>
+            <IconBrandX className="relative h-7 w-7 text-white transition-all group-hover:-ml-[12px]" />
           </div>
-          <p className="mt-1 text-black dark:text-foreground">@haydenull</p>
+          <p className="relative mt-1 text-black group-hover:text-white dark:text-foreground">@haydenull</p>
         </div>
-        <button className="w-[70px] rounded-full bg-black py-1.5 text-xs font-semibold ">Follow</button>
+        <button className="relative w-[70px] rounded-full bg-black py-1.5 text-xs font-semibold group-hover:bg-white group-hover:text-black">
+          Follow
+        </button>
       </BentoCard>
       {/* YouTube */}
-      <BentoCard className="bg-[#FFF0F0] dark:bg-[#461616]">
+      <BentoCard className="group bg-[#FFF0F0] dark:bg-[#461616]">
         <div>
-          <div className="flex h-[40px] w-[40px] items-center justify-center rounded-md bg-[#ff0000] ">
-            <IconBrandYoutubeFilled className="h-7 w-7 text-white" />
+          <div className="relative flex h-[40px] w-[40px] items-center justify-center   ">
+            <div className="absolute h-full w-full rounded-md bg-[#ff0000] transition-all duration-300 group-hover:scale-[10]"></div>
+            <IconBrandYoutubeFilled className="relative h-7 w-7 text-white transition-all group-hover:-ml-[12px]" />
           </div>
-          <p className="mt-1 text-black dark:text-foreground">@haydenut</p>
+          <p className="relative mt-1 text-black group-hover:text-white dark:text-foreground">@haydenut</p>
         </div>
-        <button className="w-[70px] rounded-full bg-[#ff0000] py-1.5 text-xs font-semibold text-white ">Follow</button>
+        <button className="relative w-[70px] rounded-full bg-[#ff0000] py-1.5 text-xs font-semibold text-white group-hover:bg-white group-hover:text-[#ff0000] ">
+          Follow
+        </button>
       </BentoCard>
       {/* Gmail */}
-      <BentoCard className="bg-[#E0F7FA] dark:bg-[#103136]">
+      <BentoCard className="group bg-[#E0F7FA] dark:bg-[#103136]">
         <div>
-          <div
-            className="flex h-[40px] w-[40px] items-center justify-center rounded-md"
-            style={{
-              background:
-                'linear-gradient(45deg, #92c5ff 25%, #ff7f7f 25%, #ff7f7f 50%, #ffe680 50%, #ffe680 75%, #80d6a2 75%)',
-            }}
-          >
-            <IconBrandGmail className="h-7 w-7 text-black" />
+          <div className="relative flex h-[40px] w-[40px] items-center justify-center">
+            <div
+              className="absolute h-full w-full rounded-md bg-[#ff0000] transition-all duration-300 group-hover:scale-[10]"
+              style={{
+                background:
+                  'linear-gradient(45deg, #92c5ff 25%, #ff7f7f 25%, #ff7f7f 50%, #ffe680 50%, #ffe680 75%, #80d6a2 75%)',
+              }}
+            ></div>
+            <IconBrandGmail className="relative h-7 w-7 text-black transition-all group-hover:-ml-[12px]" />
           </div>
-          <p className="mt-1 text-black dark:text-foreground">hayden.chen.dev</p>
+          <p className="relative mt-1 text-black group-hover:text-black dark:text-foreground">hayden.chen.dev</p>
         </div>
-        <button className="w-[70px] rounded-full bg-black py-1.5 text-xs font-semibold text-white ">GMail</button>
+        <button className="relative w-[70px] rounded-full bg-black py-1.5 text-xs font-semibold text-white ">
+          GMail
+        </button>
       </BentoCard>
       {/* Bilibili */}
-      <BentoCard className="bg-white">
+      <BentoCard className="group bg-white">
         <div>
-          <div className="flex h-[40px] w-[40px] items-center justify-center rounded-md bg-[#FB7299] ">
-            <IconBrandBilibili className="h-7 w-7 text-white" />
+          <div className="relative flex h-[40px] w-[40px] items-center justify-center">
+            <div className="absolute h-full w-full rounded-md bg-[#FB7299] transition-all duration-300 group-hover:scale-[10]"></div>
+            <IconBrandBilibili className="relative h-7 w-7 text-white transition-all group-hover:-ml-[12px]" />
           </div>
-          <p className="mt-1 text-black dark:text-foreground">启封Hayden</p>
+          <p className="relative mt-1 text-black group-hover:text-white dark:text-foreground">启封Hayden</p>
         </div>
-        <button className="w-[70px] rounded-full bg-[#FB7299] py-1.5 text-xs font-semibold text-white ">关注</button>
+        <button className="relative w-[70px] rounded-full bg-[#FB7299] py-1.5 text-xs font-semibold text-white group-hover:bg-white group-hover:text-[#FB7299] ">
+          关注
+        </button>
       </BentoCard>
       {/* Github */}
       <BentoCard className="col-span-2 flex flex-row items-center">
