@@ -1,9 +1,9 @@
 import PageContainer from '@/components/PageContainer'
-import PostCard from '@/components/PostCard'
-import { getBlogFrontMatterList } from '@/lib/blog'
+import WeeklyCard from '@/components/WeeklyCard'
+import { getWeeklyFrontMatterList } from '@/lib/weekly'
 
 export default function Posts() {
-  const blogFrontMatterList = getBlogFrontMatterList()
+  const weeklyFrontMatterList = getWeeklyFrontMatterList()
 
   return (
     <main className="px-6">
@@ -14,8 +14,8 @@ export default function Posts() {
         </p>
         {/* 文章列表 */}
         <div className="m-auto my-16 grid max-w-[450px] gap-6 md:max-w-[800px] md:grid-cols-2">
-          {blogFrontMatterList.map((frontMatter) => (
-            <PostCard key={frontMatter.slug} frontMatter={frontMatter} />
+          {weeklyFrontMatterList.map((frontMatter) => (
+            <WeeklyCard key={frontMatter.slug} frontMatter={frontMatter} />
           ))}
         </div>
       </PageContainer>

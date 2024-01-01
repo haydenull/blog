@@ -2,11 +2,11 @@ import { MDXRemote } from 'next-mdx-remote/rsc'
 import Markdown from 'react-markdown'
 
 import PageContainer from '@/components/PageContainer'
-import { getBlogBySlug } from '@/lib/blog'
+import { getWeeklyBySlug } from '@/lib/weekly'
 
 // TOC https://gist.github.com/sobelk/16fe68ff5520b2d5e2b6d406e329e0de
 export default function Weekly({ params }: { params: { slug: string } }) {
-  const { frontMatter, content } = getBlogBySlug(params.slug)
+  const { frontMatter, content } = getWeeklyBySlug(params.slug)
 
   return (
     <PageContainer className="bg-grid-small-black/[0.2] dark:bg-grid-small-white/[0.2]">
