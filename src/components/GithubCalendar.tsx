@@ -12,6 +12,7 @@ type Activity = {
 }
 const GithubCalendar = () => {
   const { theme } = useTheme()
+  const _theme = theme === 'dark' ? 'dark' : 'light'
 
   const transformData = (data: Activity[]) => {
     const threeMonthsAgo = dayjs().subtract(3, 'months')
@@ -24,7 +25,8 @@ const GithubCalendar = () => {
       hideColorLegend
       hideMonthLabels
       hideTotalCount
-      colorScheme={theme as 'light' | 'dark'}
+      // 必须使用 _theme 做为 colorScheme 的值，否则 theme 可能是一些奇怪的值导致这个组件 crash
+      colorScheme={_theme}
       transformData={transformData}
     />
   )
