@@ -48,7 +48,8 @@ export const FloatingNav = ({ navItems, className }: { navItems: NavItem[]; clas
     }
   })
   // 手动调整窗口大小时，如果页面无滚动条则显示
-  useResizeObserver(window.document.body, () => {
+  // 三元表达式解决控制台报错 ReferenceError: window is not defined
+  useResizeObserver(typeof window !== 'undefined' ? window.document.body : null, () => {
     if (document.documentElement.scrollHeight <= window.innerHeight) {
       setVisible(true)
     }

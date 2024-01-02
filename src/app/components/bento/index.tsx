@@ -9,15 +9,16 @@ import {
 import GithubCalendar from '@/components/GithubCalendar'
 import { SparklesCore } from '@/components/ui/sparkles-core'
 
+import AiFaDian from './AiFaDian'
 import BentoCard from './BentoCard'
 import Buymeacoffee from './Buymeacoffee'
 
 const Bento = () => {
   return (
-    <div className="grid min-w-[380px] grid-cols-2 gap-4 md:w-[400px] lg:w-[600px] lg:min-w-[760px] lg:grid-cols-4 xl:w-[820px] ">
+    <div className="grid min-w-[380px] grid-cols-2 grid-rows-[repeat(6,_175px)] items-stretch gap-4 md:w-[400px] lg:w-[600px] lg:min-w-[760px] lg:grid-cols-4 xl:w-[820px] ">
       {/* Quote */}
       <BentoCard className="relative col-span-2 flex-col items-center justify-center overflow-hidden bg-black dark:bg-black">
-        <div className="absolute inset-0 h-screen w-full">
+        <div className="absolute inset-0 h-full w-full">
           <SparklesCore
             background="transparent"
             minSize={0.6}
@@ -110,6 +111,7 @@ const Bento = () => {
       {/* Buy Me A Coffee */}
       <Buymeacoffee />
       {/* 爱发电 */}
+      <AiFaDian />
       {/* 近期博客 x2 */}
       {/* 近期周刊 x1 */}
       {/* 项目 */}

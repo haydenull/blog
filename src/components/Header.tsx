@@ -1,9 +1,4 @@
-'use client'
-
-import { IconBook, IconHome, IconMoonStars, IconNews, IconPodium, IconSparkles, IconSun } from '@tabler/icons-react'
-import { useTheme } from 'next-themes'
-import Image from 'next/image'
-import { usePathname } from 'next/navigation'
+import { IconBook, IconHome, IconNews, IconPodium, IconSparkles } from '@tabler/icons-react'
 
 import { FloatingNav, type NavItem } from './ui/floating-navbar'
 
