@@ -23,9 +23,9 @@ export function Beam() {
           x2="258.3580000000041"
           y2="35.80000000000041"
         >
-          <stop stop-color="#2EB9DF" stop-opacity="0"></stop>
-          <stop stop-color="#2EB9DF"></stop>
-          <stop offset="1" stop-color="#9E00FF" stop-opacity="0"></stop>
+          <stop stopColor="#2EB9DF" stop-opacity="0"></stop>
+          <stop stopColor="#2EB9DF"></stop>
+          <stop offset="1" stopColor="#9E00FF" stop-opacity="0"></stop>
         </linearGradient>
       </defs>
     </svg>
