@@ -11,7 +11,7 @@ const BentoCard = ({ children, className, url }: { children: React.ReactNode; cl
       target={url ? '_blank' : undefined}
       rel={url ? 'noopener noreferrer' : undefined}
       className={cn(
-        'flex flex-col justify-between overflow-hidden rounded-xl border bg-white p-6 text-white dark:bg-background',
+        'flex flex-col justify-between overflow-hidden rounded-xl border bg-white p-4 text-white md:p-6 dark:bg-background',
         className,
       )}
     >
