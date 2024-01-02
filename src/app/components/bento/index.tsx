@@ -15,7 +15,7 @@ import Buymeacoffee from './Buymeacoffee'
 
 const Bento = () => {
   return (
-    <div className="grid min-w-[380px] grid-cols-2 grid-rows-[repeat(6,_175px)] items-stretch gap-4 md:w-[400px] lg:w-[600px] lg:min-w-[760px] lg:grid-cols-4 xl:w-[820px] ">
+    <div className="grid min-w-[300px] grid-cols-2 grid-rows-[repeat(6,_150px)] items-stretch gap-4 md:w-[400px] md:min-w-[380px] md:grid-rows-[repeat(6,_175px)] lg:w-[600px] lg:min-w-[760px] lg:grid-cols-4 xl:w-[820px] ">
       {/* Quote */}
       <BentoCard className="relative col-span-2 flex-col items-center justify-center overflow-hidden bg-black dark:bg-black">
         <div className="absolute inset-0 h-full w-full">
@@ -104,7 +104,7 @@ const Bento = () => {
             Follow
           </button>
         </div>
-        <div className="flex min-w-[240px] max-w-[60%] justify-end overflow-hidden">
+        <div className="flex min-w-[172px] max-w-[50%] justify-end overflow-hidden md:min-w-[240px] md:max-w-[60%]">
           <GithubCalendar />
         </div>
       </BentoCard>

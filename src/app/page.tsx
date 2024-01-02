@@ -15,7 +15,7 @@ export default function Home() {
       </div>
 
       {/* 主体内容 */}
-      <div className="flex flex-col gap-10 bg-background px-16 py-8 text-foreground md:flex-row md:gap-6">
+      <div className="flex flex-col gap-10 bg-background px-4 py-8 text-foreground md:flex-row md:gap-6 md:px-16">
         {/* 个人信息 */}
         <div className="flex flex-1 flex-col gap-4">
           <Image
