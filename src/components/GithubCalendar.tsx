@@ -14,8 +14,8 @@ const GithubCalendar = () => {
   const { theme } = useTheme()
 
   const transformData = (data: Activity[]) => {
-    const twoMonthsAgo = dayjs().subtract(3, 'months')
-    return data.filter((item) => dayjs(item.date).isAfter(twoMonthsAgo))
+    const threeMonthsAgo = dayjs().subtract(3, 'months')
+    return data?.filter((item) => dayjs(item.date).isAfter(threeMonthsAgo)) || []
   }
 
   return (

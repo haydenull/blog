@@ -6,7 +6,7 @@ import React from 'react'
 import { cn } from '@/lib/utils'
 
 export const LampContainer = ({ children, className }: { children: React.ReactNode; className?: string }) => {
-  const isMdScreen = window.innerWidth >= 768
+  const isMdScreen = typeof window !== 'undefined' ? window.innerWidth >= 768 : true
   const lampWidth = isMdScreen ? 30 : 20
 
   return (
