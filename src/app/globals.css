@@ -65,12 +65,6 @@
   .prose pre {
     @apply w-full overflow-x-auto;
   }
-  code, blockquote {
-    word-wrap: break-word;
-  }
-  pre > code {
-    white-space: pre;
-  }
   .prose h2 {
     @apply text-2xl font-semibold mt-20 mb-4 text-foreground;
   }
@@ -85,5 +79,17 @@
   }
   .prose li {
     @apply text-base leading-7 my-1;
+  }
+  .prose strong {
+    @apply dark:text-[#d6d6d8];
+  }
+  .prose img {
+    @apply mx-auto;
+  }
+  .prose p {
+    @apply break-all;
+  }
+  .prose blockquote {
+    @apply border-l-4 border-colorful-500 dark:border-colorful-600 pl-4 pr-1 py-1 bg-colorful-50 dark:bg-colorful-950 rounded-tr rounded-br;
   }
 }
