@@ -20,11 +20,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="zh-CN" suppressHydrationWarning className={inter.className}>
       <head>
-        <script
-          async
-          src="https://umami.haydenhayden.com/script.js"
-          data-website-id="1d3a1731-2c59-434b-bf52-b2b36b7e90da"
-        ></script>
+        {process.env.NODE_ENV !== 'development' ? (
+          <script
+            async
+            src="https://umami.haydenhayden.com/script.js"
+            data-website-id="1d3a1731-2c59-434b-bf52-b2b36b7e90da"
+          ></script>
+        ) : null}
       </head>
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
