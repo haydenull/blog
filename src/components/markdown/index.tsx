@@ -1,6 +1,7 @@
 import ReactMarkdown from 'react-markdown'
 import directive from 'remark-directive'
 import gfm from 'remark-gfm'
+import remarkObsidianCallout from 'remark-obsidian-callout'
 import { visit } from 'unist-util-visit'
 
 import CodeBlock from '@/components/markdown/CodeBlock'
@@ -11,7 +12,7 @@ const Markdown = ({ markdownText }: { markdownText: string }) => {
   return (
     <ReactMarkdown
       className="mt-10"
-      remarkPlugins={[gfm, directive, htmlComments]}
+      remarkPlugins={[gfm, directive, htmlComments, remarkObsidianCallout]}
       components={{
         code({ node, className, children, ...props }) {
           const match = /language-(\w+)/.exec(className || '')
@@ -24,6 +25,19 @@ const Markdown = ({ markdownText }: { markdownText: string }) => {
         a({ node, className, children, ...props }) {
           return <Link text={String(children)} {...props} />
         },
+        // blockquote({ node, className, children, ...props }) {
+        //   console.log('[faiz:] === children', String(children).replace(/\n$/, ''))
+        //   // console.log('[faiz:] === className', className)
+        //   // console.log('[faiz:] === node', node)
+        //   if (className?.startsWith('callout')) {
+        //     return <div dangerouslySetInnerHTML={{ __html: String(children).replace(/\n$/, '') }}></div>
+        //   }
+        //   return (
+        //     <blockquote className={className} {...props}>
+        //       {children}
+        //     </blockquote>
+        //   )
+        // },
       }}
     >
       {markdownText}
