@@ -80,6 +80,9 @@
   .prose li {
     @apply text-base leading-7 my-1;
   }
+  .prose ol {
+    @apply list-decimal list-inside my-8;
+  }
   .prose strong {
     @apply dark:text-[#d6d6d8];
   }
@@ -90,6 +93,6 @@
     @apply break-all;
   }
   .prose blockquote {
-    @apply border-l-4 border-colorful-500 dark:border-colorful-600 pl-4 pr-1 py-1 bg-colorful-50 dark:bg-colorful-950 rounded-tr rounded-br;
+    @apply border-l-4 border-colorful-500 dark:border-colorful-600 pl-4 pr-1 py-1 bg-colorful-50 dark:bg-secondary rounded-tr rounded-br;
   }
 }
