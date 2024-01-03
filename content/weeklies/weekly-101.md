@@ -8,7 +8,7 @@ tags:
   - PARA
 ---
 
-## Table of Contents
+
 
 ## VSCode Tips
 
