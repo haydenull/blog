@@ -7,6 +7,7 @@ import CodeBlock from '@/components/markdown/CodeBlock'
 import InlineCode from '@/components/markdown/InlineCode'
 import Link from '@/components/markdown/Link'
 
+import Image from './Image'
 import remarkCallout from './remarkPlugins/callout'
 
 const Markdown = ({ markdownText }: { markdownText: string }) => {
@@ -26,6 +27,9 @@ const Markdown = ({ markdownText }: { markdownText: string }) => {
         },
         a({ node, className, children, ...props }) {
           return <Link text={String(children)} {...props} />
+        },
+        img({ node, src, alt, ...props }) {
+          return <Image src={src} alt={alt} {...props} />
         },
       }}
     >
