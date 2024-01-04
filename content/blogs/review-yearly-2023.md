@@ -5,6 +5,7 @@ author: Haydenull
 date: 2023-12-29
 slug: yearly-review-2023
 draft: false
+cover: https://pocket.haydenhayden.com/blog/202401041630866.jpeg
 tags:
   - Personal Review
 ---
@@ -34,14 +35,19 @@ tags:
 
 ### 不背单词
 
-![](https://pocket.haydenhayden.com/blog/202312290810560.JPG?x-oss-process=image/resize,w_200,m_lfit)
-![](https://pocket.haydenhayden.com/blog/202312290811867.JPG?x-oss-process=image/resize,w_200,m_lfit)
+
+<div class="two-columns-img">
+
+![](https://pocket.haydenhayden.com/blog/202312290810560.JPG?x-oss-process=image/resize,w_240,m_lfit)
+![](https://pocket.haydenhayden.com/blog/202312290811867.JPG?x-oss-process=image/resize,w_240,m_lfit)
+
+</div>
 
 上半年背的比较多，下半年基本周末很少背，这个需要改进。总体时长达标，但是这个背的速度是真慢，不过就当是一种习惯养成吧。
 
 ### 微信读书
 
-![](https://pocket.haydenhayden.com/blog/202312290818247.PNG?x-oss-process=image/resize,w_200,m_lfit)
+![](https://pocket.haydenhayden.com/blog/202312290818247.PNG?x-oss-process=image/resize,w_240,m_lfit)
 
 总时长达标，不过靠的是前三个季度，最后一个季度基本没怎么读，这个也需要改进。
 
@@ -63,7 +69,7 @@ tags:
 
 按惯例贴一下今年的 Coding 热力图，算是一种监督，希望以后都能保持这样的热情。
 
-![](https://pocket.haydenhayden.com/blog/202312291110859.png)
+![](https://pocket.haydenhayden.com/blog/202401041713252.png)
 
 ## 2023 的一些 Highlight
 

@@ -87,7 +87,13 @@
     @apply dark:text-[#d6d6d8];
   }
   .prose img {
-    @apply mx-auto;
+    @apply mx-auto rounded;
+  }
+  .prose .two-columns-img p {
+    @apply flex flex-col md:flex-row md:justify-center items-center gap-4;
+  }
+  .prose .two-columns-img img {
+    @apply md:inline-block md:m-0;
   }
   .prose p {
     @apply break-all;
