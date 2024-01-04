@@ -1,16 +1,13 @@
-import { toString } from 'mdast-util-to-string'
 import ReactMarkdown from 'react-markdown'
 import rehypeRaw from 'rehype-raw'
 import directive from 'remark-directive'
 import gfm from 'remark-gfm'
-// import remarkObsidianCallout from 'remark-obsidian-callout'
-import type { Plugin } from 'unified'
-import type { Node, Parent } from 'unist'
-import { visit } from 'unist-util-visit'
 
 import CodeBlock from '@/components/markdown/CodeBlock'
 import InlineCode from '@/components/markdown/InlineCode'
 import Link from '@/components/markdown/Link'
+
+import remarkCallout from './remarkPlugins/callout'
 
 const Markdown = ({ markdownText }: { markdownText: string }) => {
   return (
@@ -49,31 +46,5 @@ const Markdown = ({ markdownText }: { markdownText: string }) => {
 //     })
 //   }
 // }
-
-// 解析 callout
-// > [!tip] callout title
-// > callout content
-const remarkCallout: Plugin = () => {
-  return (tree) => {
-    visit(tree, 'blockquote', (node: Node, index, parent) => {
-      const children = (node as Parent).children
-      const values = children.map((child) => toString(child))
-      const value = values.join('\n') // 保留原始的换行符
-
-      const [firstLine, ...remainingLines] = value.split('\n')
-      const content = remainingLines.map((line) => `<p>${line}</p>`).join('\n')
-
-      const match = firstLine.match(/\[!(\w+)\]\s*(.*)?/)
-      if (match && typeof index === 'number') {
-        const [, type, title = 'default title'] = match
-        // @ts-expect-error type correct
-        parent.children[index] = {
-          type: 'html',
-          value: `<div class="callout callout-${type}"><div>${title}</div><div>${content}</div></div>`,
-        }
-      }
-    })
-  }
-}
 
 export default Markdown

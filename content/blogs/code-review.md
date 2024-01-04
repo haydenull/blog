@@ -73,11 +73,10 @@ git checkout -b feat/v1.0-sub-module
 git fetch --prune && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D
 ```
 
-::: warning
-该命令会比对本地分支与远程分支的差异，删除对应远程分支不存在的本地分支。
-
-这个操作比较危险，建议仅在有多个待删除分支时使用。
-:::
+> [!warning]
+> 该命令会比对本地分支与远程分支的差异，删除对应远程分支不存在的本地分支。
+>
+> 这个操作比较危险，建议仅在有多个待删除分支时使用。
 
 ### 通知 Reviewer
 

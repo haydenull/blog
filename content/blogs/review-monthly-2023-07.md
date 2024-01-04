@@ -55,13 +55,11 @@ tags:
 
 ### 有一个小需求忘记上线
 
-::: warning Challenge
-比较久以前的小需求，一直没安排测试，我这边也一直拖延没去 push，最终这个需求没能让业务及时用上。
-:::
+> [!warning] Challenge
+> 比较久以前的小需求，一直没安排测试，我这边也一直拖延没去 push，最终这个需求没能让业务及时用上。
 
-::: tip Resolution
-不能拖延，该 push 的就得 push。
-:::
+> [!tip] Resolution
+> 不能拖延，该 push 的就得 push。
 
 ## 4. Learning and Growth
 

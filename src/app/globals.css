@@ -95,4 +95,54 @@
   .prose blockquote {
     @apply border-l-4 border-colorful-500 dark:border-colorful-600 pl-4 pr-1 py-1 bg-colorful-50 dark:bg-secondary rounded-tr rounded-br;
   }
+  /* ========= callout start ========= */
+  .prose .callout {
+    @apply rounded-md px-3 py-1 my-7;
+  }
+  .prose .callout .callout-title {
+    @apply flex items-center gap-2 text-lg font-bold my-3;
+  }
+  .prose .callout .callout-title .callout-title__icon svg {
+    @apply w-6 h-6;
+  }
+  .prose .callout .callout-content p {
+    @apply my-2 mx-1;
+  }
+  .prose .callout-note {
+    @apply bg-sky-50 dark:bg-sky-950;
+  }
+  .prose .callout-note .callout-title {
+    @apply text-sky-600;
+  }
+  .prose .callout-tip {
+    @apply bg-green-100 dark:bg-green-950;
+  }
+  .prose .callout-tip .callout-title {
+    @apply text-green-600;
+  }
+  .prose .callout-tip {
+    @apply bg-green-100 dark:bg-green-950;
+  }
+  .prose .callout-tip .callout-title {
+    @apply text-green-600;
+  }
+  .prose .callout-important {
+    @apply bg-purple-100 dark:bg-purple-950;
+  }
+  .prose .callout-important .callout-title {
+    @apply text-purple-600 dark:text-purple-500;
+  }
+  .prose .callout-warning {
+    @apply bg-amber-100 dark:bg-amber-950;
+  }
+  .prose .callout-warning .callout-title {
+    @apply text-amber-600;
+  }
+  .prose .callout-caution {
+    @apply bg-rose-100 dark:bg-rose-950;
+  }
+  .prose .callout-caution .callout-title {
+    @apply text-rose-600 dark:text-rose-500;
+  }
+  /* ========= callout end ========= */
 }

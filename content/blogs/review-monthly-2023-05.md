@@ -83,55 +83,46 @@ minimalist 是物理机测试服管理的前后端项目，之前是完全分离
 
 ### 工作流变形
 
-::: warning Challenge
-这段时间比较忙，原定计划总是被一个个突发事件打断，持续几天后，就不再做计划了。
-:::
+> [!warning] Challenge
+> 这段时间比较忙，原定计划总是被一个个突发事件打断，持续几天后，就不再做计划了。
 
-::: tip Resolution
-每天早上到公司后，第一件事是确定当日计划 ==（定时）==。
 
-遇到打断计划的事，经过评估后确确定是否放到计划中。
-
-坚持使用番茄钟。
-:::
+> [!tip] Resolution
+> 每天早上到公司后，第一件事是确定当日计划 ==（定时）==。
+>
+>遇到打断计划的事，经过评估后确确定是否放到计划中。
+>
+>坚持使用番茄钟。
 
 ### review 以及 log 质量低
 
-::: warning Challenge
-review 以及 log 不能及时记录，大部分都是补记。
-:::
+> [!warning] Challenge
+> review 以及 log 不能及时记录，大部分都是补记。
 
-::: tip Resolution
-工作日 19:30 进行当日 review，每周每月最后一天进行周月 review。
-:::
+> [!tip] Resolution
+> 工作日 19:30 进行当日 review，每周每月最后一天进行周月 review。
 
-::: warning Challenge
-review 以及 log 质量低，大部分是数据堆砌。
-:::
+> [!warning] Challenge
+> review 以及 log 质量低，大部分是数据堆砌。
 
-::: tip Resolution
-log 改为随时记录，顺手记下当时的想法。
+> [!tip] Resolution
+> log 改为随时记录，顺手记下当时的想法。
+>
+> review 使用新的模板。
 
-review 使用新的模板。
-:::
+> [!warning] Challenge
+> review 时间成本很高，一个小时起步，其中有很多关于数据的重复工作。
 
-::: warning Challenge
-review 时间成本很高，一个小时起步，其中有很多关于数据的重复工作。
-:::
-
-::: tip Resolution
-暂时没有很好的办法，需要写一些自动化的工具配合 Logseq Template 使用。
-:::
+> [!tip] Resolution
+> 暂时没有很好的办法，需要写一些自动化的工具配合 Logseq Template 使用。
 
 ### code review 质量不高
 
-::: warning Challenge
-这次修改其他同事的代码时发现，即使 review 过的代码，也还有挺多当时没能及时发现的问题，一般这些问题需要结合业务才能发现。
-:::
+> [!warning] Challenge
+> 这次修改其他同事的代码时发现，即使 review 过的代码，也还有挺多当时没能及时发现的问题，一般这些问题需要结合业务才能发现。
 
-::: tip Resolution
-code review 的时候尽可能 down 下代码，实际跑一下。
-:::
+> [!tip] Resolution
+> code review 的时候尽可能 down 下代码，实际跑一下。
 
 ## 4. Learning and Growth
 

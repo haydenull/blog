@@ -12,10 +12,8 @@ tags:
   - React
 ---
 
-::: tip
-如果没有特别说明，文中的组件都是指函数组件。
-:::
-
+> [!note]
+> 如果没有特别说明，文中的组件都是指函数组件。
 
 
 ## 基础概念
@@ -676,11 +674,10 @@ export default ParentComponent;
 
 当我们点击 increase 按钮时，虽然 `ParentComponent` 发生了 rerender，但是 data 使用 useMemo 包裹，data 的引用未改变，所以 `ChildComponent` 不会重新渲染。
 
-::: tip
-请注意 `ChildComponent` 必须是 `React.memo` 包裹的组件上述 `useMemo` 的优化才会生效。
-
-这是因为当 `ParentComponent` rerender 时其子组件就会 rerender，不论其 props 是否发生了改变。只有当其子组件是 `React.memo` 组件时，React 才会使用 `Object.is` 比较 props 是否变更来决定是否跳过 rerender。
-:::
+> [!important]
+> 请注意 `ChildComponent` 必须是 `React.memo` 包裹的组件上述 `useMemo` 的优化才会生效。
+>
+> 这是因为当 `ParentComponent` rerender 时其子组件就会 rerender，不论其 props 是否发生了改变。只有当其子组件是 `React.memo` 组件时，React 才会使用 `Object.is` 比较 props 是否变更来决定是否跳过 rerender。
 
 ### 6. 如何利用 React 的自定义 Hooks 来封装和复用数据处理逻辑？
 
