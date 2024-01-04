@@ -31,7 +31,7 @@ Server 就是代理服务器，假如我们使用机场的订阅链接，那么 
 
 节点选择的配置如下：
 
-```
+```text
 static=节点选择, 自动选择, direct, proxy, server-tag-regex=^(.(?!(网易|墨鱼|Traffic|Expire)))*$, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Star.png
 ```
 
@@ -70,7 +70,7 @@ static=节点选择, 自动选择, direct, proxy, server-tag-regex=^(.(?!(网易
 
 假如我们有一个策略名为 OpenAI，最近 ChatGPT 新增了一个域名 `oaistatic.com`，那么我们需要让这个域名的请求都走 OpenAI 策略。
 
-```
+```text
 host-suffix, oaistatic.com, OpenAI
 ```
 
@@ -81,7 +81,7 @@ host-suffix, oaistatic.com, OpenAI
 
 当我们使用远程规则时，一个链接往往是一组规则的集合:
 
-```
+```text
 https://raw.githubusercontent.com/ddgksf2013/Filter/master/OpenAi.list, tag=OpenAI, force-policy=OpenAI, update-interval=172800, opt-parser=true, enabled=true
 ```
 

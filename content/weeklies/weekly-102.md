@@ -141,7 +141,7 @@ logseq 基于双链的特性，可以让我们在任意页面记录笔记，然�
 
 当我需要查看当前需要关注的项目时，使用以下 query 聚合信息:
 
-```
+```clojure
 #+BEGIN_QUERY
 {
  :title [:h3 "开发中"]
@@ -164,7 +164,7 @@ logseq 基于双链的特性，可以让我们在任意页面记录笔记，然�
 
 关于任务，我会在 Agenda 中创建一个 work 的 Filter，query 如下:
 
-```
+```clojure
 [
   :find (pull ?b [*])
   :where
