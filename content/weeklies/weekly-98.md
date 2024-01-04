@@ -43,7 +43,7 @@ Chatgpt 套壳软件 [Prompta](https://github.com/iansinnott/prompta)，支持�
 
 这里是一个线上演示：https://vite-starter2.fly.dev
 
-视频地址：https://www.youtube.com/watch?v=QJBQLYmXReI
+[](https://www.youtube.com/watch?v=QJBQLYmXReI)
 
 用户的操作都会序列化并存储在本地，联网时这些操作会同步到另一台机器上，同时利用 CRDTs 自动解决冲突保证数据的一致性。
 

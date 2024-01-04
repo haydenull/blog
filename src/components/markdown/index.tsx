@@ -25,8 +25,8 @@ const Markdown = ({ markdownText }: { markdownText: string }) => {
             <InlineCode text={children as string} {...props} />
           )
         },
-        a({ node, className, children, ...props }) {
-          return <Link text={String(children)} {...props} />
+        a({ node, className, children, href, ...props }) {
+          return <Link text={String(children)} href={href} {...props} />
         },
         img({ node, src, alt, ...props }) {
           return <Image src={src} alt={alt} {...props} />

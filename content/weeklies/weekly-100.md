@@ -7,7 +7,7 @@ tags:
   - Weekly
 ---
 
-
+[](https://x.com/haydenull/status/1248980662184361984?s=20)
 
 ## 稍后读工具 [Cubox](https://cubox.cc/)
 
@@ -60,7 +60,7 @@ VSCode 现在支持查看仓库本地与远程的差异了。当本地代码落�
 
 ## Copilot 1.84 更新视频
 
-https://www.youtube.com/watch?v=i63DjsjdR3s
+[](https://www.youtube.com/watch?v=i63DjsjdR3s)
 
 这个视频里有很多 copilot 的使用细节，比如：
 

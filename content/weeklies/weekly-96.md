@@ -44,9 +44,9 @@ https://github.com/lobehub/lobe-chat
 
 ## 系统代理、 Tun 代理与 Vpn 代理的区别
 
-https://www.youtube.com/watch?v=qItL005LUik
+[](https://www.youtube.com/watch?v=qItL005LUik)
 
-https://www.youtube.com/watch?v=wAxOjL_gDzk&list=PLqybz7NWybwUgR-S6m78tfd-lV4sBvGFG&index=7
+[](https://www.youtube.com/watch?v=wAxOjL_gDzk)
 
 ![](https://pocket.haydenhayden.com/blog/202311121925796.png)
 
