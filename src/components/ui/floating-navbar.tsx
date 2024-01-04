@@ -58,11 +58,11 @@ export const FloatingNav = ({ navItems, className }: { navItems: NavItem[]; clas
     <>
       {visible && routerPathName !== '/' ? (
         <Image
-          className="fixed left-6 top-10 z-[5000] rounded-full border shadow"
+          className="fixed left-6 top-11 z-[5000] rounded-full border shadow"
           src="/assets/avatar.png"
           alt="avatar"
-          width="30"
-          height="30"
+          width="34"
+          height="34"
         />
       ) : null}
       <AnimatePresence mode="wait">
@@ -109,7 +109,7 @@ export const FloatingNav = ({ navItems, className }: { navItems: NavItem[]; clas
           )}
           onClick={toggleTheme}
         >
-          {theme === 'dark' ? <IconMoonStars className="h-4 w-4" /> : <IconSun className="h-4 w-4" />}
+          {theme === 'dark' ? <IconMoonStars className="h-4 w-4" /> : <IconSun className="h-5 w-5" />}
         </button>
       ) : null}
     </>
