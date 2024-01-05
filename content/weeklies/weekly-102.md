@@ -192,7 +192,9 @@ logseq 基于双链的特性，可以让我们在任意页面记录笔记，然�
 所以我的 Journal 会有两个部分:
 
 1. Daily Log
-   ![](https://pocket.haydenhayden.com/blog/202312251318508.png)
+
+![](https://pocket.haydenhayden.com/blog/202312251318508.png)
 
 2. Daily Review
-   ![](https://pocket.haydenhayden.com/blog/202312251318583.png)
+
+![](https://pocket.haydenhayden.com/blog/202312251318583.png)

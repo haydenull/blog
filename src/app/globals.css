@@ -84,11 +84,17 @@
   .prose ul {
     @apply list-disc list-inside my-8;
   }
+  .prose ol {
+    @apply list-decimal list-inside my-8;
+  }
   .prose li {
     @apply text-base leading-7 my-1;
   }
-  .prose ol {
-    @apply list-decimal list-inside my-8;
+  .prose li::marker {
+    @apply font-semibold;
+  }
+  .prose ul ul, .prose ol ol, .prose ul ol, .prose ol ul {
+    @apply ml-6 my-1;
   }
   .prose strong {
     @apply text-[#1f1f22] dark:text-[#d6d6d8];
