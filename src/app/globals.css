@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 
+@font-face {
+  font-family: 'mi-sans';
+  src: url('/assets/MiSans-Regular.ttf');
+  font-style: normal;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -53,6 +59,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'mi-sans';
   }
   .animate-spotlight {
     animation: spotlight 2s ease .75s 1 forwards;
@@ -84,7 +91,7 @@
     @apply list-decimal list-inside my-8;
   }
   .prose strong {
-    @apply dark:text-[#d6d6d8];
+    @apply text-[#1f1f22] dark:text-[#d6d6d8];
   }
   .prose img {
     @apply mx-auto rounded;
