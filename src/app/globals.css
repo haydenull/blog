@@ -99,7 +99,7 @@
     @apply break-all;
   }
   .prose blockquote {
-    @apply border-l-4 border-colorful-500 dark:border-colorful-600 pl-4 pr-1 py-1 bg-colorful-50 dark:bg-secondary rounded-tr rounded-br;
+    @apply border-l-4 border-colorful-500 dark:border-colorful-600 pl-4 pr-1 py-1 bg-colorful-50 dark:bg-colorful-950 dark:bg-opacity-70 rounded-tr rounded-br;
   }
   /* ========= callout start ========= */
   .prose .callout {
@@ -133,19 +133,19 @@
     @apply text-green-600;
   }
   .prose .callout-important {
-    @apply bg-purple-100 dark:bg-purple-950;
+    @apply bg-purple-100 dark:bg-purple-950 dark:bg-opacity-70;
   }
   .prose .callout-important .callout-title {
     @apply text-purple-600 dark:text-purple-500;
   }
   .prose .callout-warning {
-    @apply bg-amber-100 dark:bg-amber-950;
+    @apply bg-amber-100 dark:bg-amber-950 dark:bg-opacity-80;
   }
   .prose .callout-warning .callout-title {
     @apply text-amber-600;
   }
   .prose .callout-caution {
-    @apply bg-rose-100 dark:bg-rose-950;
+    @apply bg-rose-100 dark:bg-rose-950 dark:bg-opacity-90;
   }
   .prose .callout-caution .callout-title {
     @apply text-rose-600 dark:text-rose-500;

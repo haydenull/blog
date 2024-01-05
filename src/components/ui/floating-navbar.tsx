@@ -57,13 +57,15 @@ export const FloatingNav = ({ navItems, className }: { navItems: NavItem[]; clas
   return (
     <>
       {visible && routerPathName !== '/' ? (
-        <Image
-          className="fixed left-6 top-11 z-[5000] rounded-full border shadow"
-          src="/assets/avatar.png"
-          alt="avatar"
-          width="34"
-          height="34"
-        />
+        <Link href="/">
+          <Image
+            className="fixed left-6 top-11 z-[5000] rounded-full border shadow"
+            src="/assets/avatar.png"
+            alt="avatar"
+            width="34"
+            height="34"
+          />
+        </Link>
       ) : null}
       <AnimatePresence mode="wait">
         <motion.div
