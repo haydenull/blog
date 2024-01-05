@@ -64,7 +64,7 @@ const Bento = () => {
         <div>
           <div className="relative flex h-[40px] w-[40px] items-center justify-center">
             <div
-              className="absolute h-full w-full rounded-md bg-[#ff0000] transition-all duration-300 group-hover:scale-[10]"
+              className="absolute h-full w-full rounded-md bg-[#ff0000] transition-all duration-300 group-hover:scale-[7]"
               style={{
                 background:
                   'linear-gradient(45deg, #92c5ff 25%, #ff7f7f 25%, #ff7f7f 50%, #ffe680 50%, #ffe680 75%, #80d6a2 75%)',
