@@ -57,6 +57,7 @@ export async function GET(req: Request) {
           style: 'normal',
         },
       ],
+      emoji: 'twemoji',
     },
   )
 }

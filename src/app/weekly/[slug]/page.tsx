@@ -24,3 +24,29 @@ export default function Weekly({ params }: { params: { slug: string } }) {
     </PageContainer>
   )
 }
+
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+  const { frontMatter, content } = getWeeklyBySlug(params.slug)
+  const { title, cover, description = '' } = frontMatter
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      images: [
+        {
+          url: `/api/og?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}`,
+          width: 1280,
+          height: 720,
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      cardType: 'summary_large_image',
+      title,
+      description,
+    },
+  }
+}

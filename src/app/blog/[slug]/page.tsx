@@ -35,12 +35,17 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       description,
       images: [
         {
-          url: `./api/og?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}`,
+          url: `/api/og?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}`,
           width: 1280,
           height: 720,
           alt: title,
         },
       ],
+    },
+    twitter: {
+      cardType: 'summary_large_image',
+      title,
+      description,
     },
   }
 }
