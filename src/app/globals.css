@@ -152,3 +152,9 @@
   }
   /* ========= callout end ========= */
 }
+
+/* 配合深色模式切换动画 */
+::view-transition-old(root),
+::view-transition-new(root) {
+   animation: none;
+ }

@@ -8,7 +8,8 @@ import { useTheme } from 'next-themes'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import React, { useState } from 'react'
+import React, { useCallback, useState } from 'react'
+import { flushSync } from 'react-dom'
 
 import { cn } from '@/lib/utils'
 
@@ -16,16 +17,43 @@ export const FloatingNav = ({ navItems, className }: { navItems: NavItem[]; clas
   const { scrollYProgress } = useScroll()
   const routerPathName = usePathname()
   const { setTheme, theme } = useTheme()
+  const isDark = theme === 'dark'
 
   const isProjectPage = routerPathName === '/project'
 
-  const toggleTheme = () => {
-    if (theme === 'dark') {
-      setTheme('light')
-    } else {
-      setTheme('dark')
+  const toggleTheme = useCallback(() => {
+    const md = window.matchMedia('(max-width: 768px)').matches
+
+    // @ts-expect-error startViewTransition 可以使用
+    if (!document.startViewTransition || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setTheme(isDark ? 'light' : 'dark')
+      return
     }
-  }
+
+    // @ts-expect-error startViewTransition 可以使用
+    const transition = document.startViewTransition(() => {
+      flushSync(() => {
+        setTheme(isDark ? 'light' : 'dark')
+      })
+    })
+
+    transition.ready.then(() => {
+      const blur = md ? 1 : 3
+      const duration = md ? 500 : 700
+
+      document.documentElement.animate(
+        {
+          clipPath: [`circle(50% at 150% 0%)`, `circle(100% at 50% 50%)`],
+          filter: [`blur(${blur}px)`, `blur(0)`],
+        },
+        {
+          duration,
+          easing: 'ease-out',
+          pseudoElement: '::view-transition-new(root)',
+        },
+      )
+    })
+  }, [setTheme, isDark])
 
   const [visible, setVisible] = useState(true)
 
