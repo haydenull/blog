@@ -17,7 +17,7 @@ export async function GET(req: Request) {
   const avatarImg = await fetch(new URL('../../../../public/assets/avatar.png', import.meta.url)).then((res) =>
     res.arrayBuffer(),
   )
-  const miSansFont = await fetch(new URL('../../../../public/assets/MiSans-Regular.ttf', import.meta.url)).then((res) =>
+  const miSansFont = await fetch('https://pocket.haydenhayden.com/font/MiSans-Regular.ttf').then((res) =>
     res.arrayBuffer(),
   )
 
