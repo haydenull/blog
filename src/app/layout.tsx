@@ -18,8 +18,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    // <html lang="zh-CN" suppressHydrationWarning className={inter.className}>
-    <html lang="zh-CN" suppressHydrationWarning>
+    <html lang="zh-CN" suppressHydrationWarning className={inter.className}>
+      {/* <html lang="zh-CN" suppressHydrationWarning> */}
       <head>
         {process.env.NODE_ENV !== 'development' ? (
           <script
