@@ -33,9 +33,13 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     openGraph: {
       title,
       description,
+      type: 'article',
+      url: `https://haydenhayden.com/weekly/${params.slug}`,
       images: [
         {
-          url: `/api/og?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}`,
+          url: `https://haydenhayden.com/api/og?title=${encodeURIComponent(title)}&description=${encodeURIComponent(
+            description,
+          )}`,
           width: 1280,
           height: 720,
           alt: title,
@@ -46,6 +50,16 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       cardType: 'summary_large_image',
       title,
       description,
+      images: [
+        {
+          url: `https://haydenhayden.com/api/og?title=${encodeURIComponent(title)}&description=${encodeURIComponent(
+            description,
+          )}`,
+          width: 1280,
+          height: 720,
+          alt: title,
+        },
+      ],
     },
   }
 }
