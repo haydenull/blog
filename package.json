@@ -51,6 +51,7 @@
     "remark-directive": "^3.0.0",
     "remark-gfm": "^4.0.0",
     "remark-obsidian-callout": "^1.1.3",
+    "remark-toc": "^9.0.0",
     "tailwind-merge": "^2.2.0",
     "tailwindcss-animate": "^1.0.7",
     "unified": "^11.0.4",

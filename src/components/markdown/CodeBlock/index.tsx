@@ -7,7 +7,8 @@ import CopyButton from './CopyButton'
 
 const CodeBlock = ({ text, language, ...props }: { text: string; language: string }) => {
   return (
-    <div className="relative">
+    <details className="relative rounded bg-[#1D2021] pb-3" open>
+      <summary className="cursor-pointer px-8 pt-3 text-sm text-white">{language}</summary>
       <SyntaxHighlighter
         wrapLines
         showLineNumbers
@@ -20,7 +21,7 @@ const CodeBlock = ({ text, language, ...props }: { text: string; language: strin
         {text}
       </SyntaxHighlighter>
       <CopyButton text={text} />
-    </div>
+    </details>
   )
 }
 

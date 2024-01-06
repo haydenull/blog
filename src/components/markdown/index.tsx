@@ -2,6 +2,7 @@ import ReactMarkdown from 'react-markdown'
 import rehypeRaw from 'rehype-raw'
 import directive from 'remark-directive'
 import gfm from 'remark-gfm'
+import remarkToc from 'remark-toc'
 
 import CodeBlock from '@/components/markdown/CodeBlock'
 import InlineCode from '@/components/markdown/InlineCode'
