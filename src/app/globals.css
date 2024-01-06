@@ -59,7 +59,6 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: 'MiSans', 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
   }
   .animate-spotlight {
     animation: spotlight 2s ease .75s 1 forwards;
