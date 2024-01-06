@@ -14,7 +14,11 @@ const Link = ({ text, href, ...props }: { text: string; href?: string }) => {
   const isYouTubeLink = href && /https:\/\/www\.youtube\.com\/watch\?v=/.test(href)
   if (isYouTubeLink) {
     const videoId = href?.split('v=')[1]
-    return <iframe src={`https://www.youtube.com/embed/${videoId}?enablejsapi=1`} className="h-80 w-full" />
+    return videoId ? (
+      <iframe src={`https://www.youtube.com/embed/${videoId}?enablejsapi=1`} className="h-80 w-full" />
+    ) : (
+      <del>Invalid YouTube Link</del>
+    )
   }
 
   // Twitter card
@@ -23,8 +27,7 @@ const Link = ({ text, href, ...props }: { text: string; href?: string }) => {
   const isTwitterLink = href && /(https:\/\/x\.com|https:\/\/twitter\.com)\/.*\/status\/\d+/.test(href)
   if (isTwitterLink) {
     const tweetId = href?.split('/').pop()?.split('?')[0]
-    console.log('[faiz:] === tweetId', tweetId)
-    return tweetId ? <Tweet id={tweetId} /> : null
+    return tweetId ? <Tweet id={tweetId} /> : <del>Invalid Twitter Link</del>
   }
 }
 
