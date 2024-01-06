@@ -1,6 +1,7 @@
 import fs from 'fs'
 import matter from 'gray-matter'
 import path from 'path'
+import readingTime from 'reading-time'
 import * as v from 'valibot'
 
 import { type BlogFrontMatter, BlogFrontMatterSchema } from '@/types/blog'
@@ -27,11 +28,14 @@ export const getBlogFrontMatterList = () => {
 export const getBlogBySlug = (slug: string) => {
   const file = fs.readFileSync(path.join(BLOG_PATH, `${slug}.md`), 'utf-8')
   const { data, content } = matter(file)
+  const readingTimeStats = readingTime(content)
   return {
     frontMatter: v.parse(BlogFrontMatterSchema, {
       ...data,
       slug,
     }),
     content,
+    // 向上取整
+    readingTime: Math.ceil(readingTimeStats.minutes),
   }
 }

@@ -1,13 +1,17 @@
+import { IconCalendarCode, IconHourglassHigh, IconMug } from '@tabler/icons-react'
+import dayjs from 'dayjs'
 import Image from 'next/image'
 
 import EditLink from '@/components/EditLink'
 import PageContainer from '@/components/PageContainer'
+import DateAndReadingTime from '@/components/article/DateAndReadingTime'
+import Description from '@/components/article/Description'
 import Markdown from '@/components/markdown'
 import { getBlogBySlug } from '@/lib/blog'
 
 // TOC https://gist.github.com/sobelk/16fe68ff5520b2d5e2b6d406e329e0de
 export default function Blog({ params }: { params: { slug: string } }) {
-  const { frontMatter, content } = getBlogBySlug(params.slug)
+  const { frontMatter, content, readingTime } = getBlogBySlug(params.slug)
 
   return (
     <PageContainer className="bg-grid-small-zinc-200 dark:bg-grid-small-zinc-700">
@@ -17,8 +21,9 @@ export default function Blog({ params }: { params: { slug: string } }) {
             <Image className="w-full" src={frontMatter.cover} alt={frontMatter.title} width={1280} height={720} />
           </div>
         ) : null}
+        <DateAndReadingTime date={frontMatter.date} readingTime={readingTime} />
         <h1 className="mt-10 text-[2.5rem] font-semibold text-foreground">{frontMatter.title}</h1>
-        {/* <MDXRemote source={content} /> */}
+        <Description description={frontMatter.description} />
         <Markdown markdownText={content} />
         <EditLink filePath={`content/blogs/${params.slug}.md`} />
       </article>
