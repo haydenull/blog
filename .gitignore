@@ -34,3 +34,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# 动态的生成 OG 需要的字体
+public/fonts/dynamic/*
