@@ -1,6 +1,7 @@
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import Image from 'next/image'
 
+import EditLink from '@/components/EditLink'
 import PageContainer from '@/components/PageContainer'
 import Markdown from '@/components/markdown'
 import { getWeeklyBySlug } from '@/lib/weekly'
@@ -20,6 +21,7 @@ export default function Weekly({ params }: { params: { slug: string } }) {
         <h1 className="mt-10 text-[2.5rem] font-semibold text-foreground">{frontMatter.title}</h1>
         {/* <MDXRemote source={content} /> */}
         <Markdown markdownText={content} />
+        <EditLink filePath={`content/weeklies/${params.slug}.md`} />
       </article>
     </PageContainer>
   )
