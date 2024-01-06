@@ -9,7 +9,8 @@
     "lint": "next lint",
     "test": "echo \"Write tests! -> https://nextjs.org/docs/testing\"",
     "typecheck": "tsc --noEmit",
-    "prepare": "husky install"
+    "prepare": "husky install && pnpm run compressFont",
+    "compressFont": "node scripts/compressFont.mjs"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
@@ -30,7 +31,9 @@
     "clsx": "^2.1.0",
     "copy-to-clipboard": "^3.3.3",
     "dayjs": "^1.11.10",
+    "fontmin": "^1.0.1",
     "framer-motion": "^10.16.16",
+    "glob": "^10.3.10",
     "google": "link:next/font/google",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.303.0",
