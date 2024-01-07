@@ -69,7 +69,7 @@
     @apply text-[#52525b] dark:text-[#aeaeb5];
   }
   .prose pre {
-    @apply w-full overflow-x-auto;
+    @apply w-full overflow-x-auto my-7;
   }
   .prose h2 {
     @apply text-2xl font-semibold mt-20 mb-4 text-foreground;
@@ -78,7 +78,7 @@
     @apply text-xl font-semibold mt-8 mb-2 text-foreground;
   }
   .prose p {
-    @apply text-base leading-7 my-7;
+    @apply text-base leading-7 my-7 break-all;
   }
   .prose ul {
     @apply list-disc list-inside my-8;
@@ -107,11 +107,8 @@
   .prose .two-columns-img img {
     @apply md:inline-block md:m-0;
   }
-  .prose p {
-    @apply break-all;
-  }
   .prose blockquote {
-    @apply border-l-4 border-colorful-500 dark:border-colorful-600 pl-4 pr-1 py-1 bg-colorful-50 dark:bg-colorful-950 dark:bg-opacity-70 rounded-tr rounded-br;
+    @apply border-l-4 border-colorful-500 dark:border-colorful-600 pl-4 pr-1 py-1 bg-colorful-50 dark:bg-colorful-950 dark:bg-opacity-70 rounded-tr rounded-br my-7;
   }
   /* ========= callout start ========= */
   .prose .callout {

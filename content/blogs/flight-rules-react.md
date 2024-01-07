@@ -221,13 +221,13 @@ const ChatRoom = ({ roomId }) => {
 
 > The question is not "when does this effect run" the question is "with which state does this effect synchronize with"
 >
-> useEffect(fn) // all state
+> `useEffect(fn) // all state`
 >
-> useEffect(fn, []) // no state
+> `useEffect(fn, []) // no state`
 >
-> useEffect(fn, [these, states])
+> `useEffect(fn, [these, states])`
 >
-> https://twitter.com/ryanflorence/status/1125041041063665666
+> [](https://twitter.com/ryanflorence/status/1125041041063665666)
 
 重要的不是 useEffect 什么时候执行，而是同步了哪些状态。
 

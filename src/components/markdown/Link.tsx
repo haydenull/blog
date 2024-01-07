@@ -15,7 +15,7 @@ const Link = ({ text, href, ...props }: { text: string; href?: string }) => {
   if (isYouTubeLink) {
     const videoId = href?.split('v=')[1]
     return videoId ? (
-      <iframe src={`https://www.youtube.com/embed/${videoId}?enablejsapi=1`} className="h-80 w-full" />
+      <iframe src={`https://www.youtube.com/embed/${videoId}?enablejsapi=1`} className="h-52 w-full md:h-80" />
     ) : (
       <del>Invalid YouTube Link</del>
     )

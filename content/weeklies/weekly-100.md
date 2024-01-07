@@ -7,8 +7,6 @@ tags:
   - Weekly
 ---
 
-[](https://x.com/haydenull/status/1248980662184361984?s=20)
-
 ## 稍后读工具 [Cubox](https://cubox.cc/)
 
 Cubox 是一个稍后读工具，可以将文章保存到 Cubox 中，然后在 Cubox 中阅读。吸引我的点是国际版有 AI 阅读助理，可以对文章做总结，生成大纲。
@@ -76,7 +74,7 @@ VSCode 现在支持查看仓库本地与远程的差异了。当本地代码落�
 
 以前一直觉得是我的鼻子有问题，只有一个鼻孔通气，现在才知道这是正常现象。
 
-https://twitter.com/HotmailfromSH/status/1732140620037403028
+[](https://twitter.com/HotmailfromSH/status/1732140620037403028)
 
 ## 我做了什么
 

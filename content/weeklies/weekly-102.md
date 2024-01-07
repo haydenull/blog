@@ -14,8 +14,9 @@ tags:
 
 
 ## Tailwind 技巧
+[](https://www.youtube.com/watch?v=aSlK3GhRuXA)
 
-这个 [YouTube](https://www.youtube.com/watch?v=aSlK3GhRuXA) 视频介绍了很多 Tailwind 的实用技巧。
+这个 YouTube 视频介绍了很多 Tailwind 的实用技巧。
 
 ## mac 截图工具推荐
 
