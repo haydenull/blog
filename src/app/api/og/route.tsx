@@ -42,8 +42,8 @@ export async function GET(req: Request) {
           <span tw="text-[38px] text-zinc-700">启封 Hayden</span>
         </div>
         <div tw="flex flex-col text-left">
-          <h1 tw="text-left text-[80px] font-bold m-0">{title}</h1>
-          {description ? <p tw="text-left text-[40px] text-zinc-500 m-0">{description}</p> : null}
+          <h1 tw="text-left text-[74px] font-bold m-0 leading-none">{title}</h1>
+          {description ? <p tw="text-left text-[40px] text-zinc-500 m-0 mt-[20px]">{description}</p> : null}
         </div>
         <div tw="flex justify-end">
           <span tw="text-[36px] text-violet-500">HaydenHayden.com</span>
