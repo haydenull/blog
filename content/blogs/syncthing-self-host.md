@@ -1,6 +1,6 @@
 ---
-title: 自建 syncthing 服务
-description: 使用 docker 自建 syncthing 发现服务与中继服务
+title: 自建 syncthing 服务同步 Logseq 笔记
+description: 使用 docker 自建 syncthing 发现服务与中继服务, 实现多设备同步 Logseq 笔记
 author: Haydenull
 date: 2023-12-10
 slug: syncthing-self-host
@@ -9,10 +9,6 @@ tags:
   - sync
   - p2p
 ---
-
-
-
-## 背景
 
 目前使用 Git 同步两台电脑的 Logseq 笔记，偶尔会忘记点 push。研究了一下 syncthing，采用 P2P 的方式同步文件，开源安全，所以想试试。
 
@@ -100,6 +96,7 @@ default,https://<服务器 IP>:8443/?id=<发现服务 ID>
 
 ![](https://pocket.haydenhayden.com/blog/202312032032414.png)
 
+> [!caution]
 > 以下内容为 12 月 10 日 补充
 
 ## 搭建 VPS Syncthing 客户端
