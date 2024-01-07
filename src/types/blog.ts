@@ -1,4 +1,4 @@
-import { type Output, array, date, object, optional, string, url } from 'valibot'
+import { type Output, array, date, object, optional, string, url, boolean } from 'valibot'
 
 /** 博客文章 front matter schema */
 export const BlogFrontMatterSchema = object({
@@ -9,5 +9,6 @@ export const BlogFrontMatterSchema = object({
   description: optional(string()),
   tags: optional(array(string())),
   cover: optional(string([url()])),
+  draft: optional(boolean()),
 })
 export type BlogFrontMatter = Output<typeof BlogFrontMatterSchema>

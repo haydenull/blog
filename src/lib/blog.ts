@@ -21,6 +21,7 @@ export const getBlogFrontMatterList = () => {
       if (issues) console.error(blog, issues)
       return frontMatter as BlogFrontMatter
     })
+    .filter((blog) => !blog.draft)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 }
 
