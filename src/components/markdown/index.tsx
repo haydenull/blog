@@ -19,9 +19,27 @@ const Markdown = ({ markdownText }: { markdownText: string }) => {
       remarkPlugins={[gfm, directive, remarkCallout]}
       components={{
         code({ node, className, children, ...props }) {
-          const match = /language-(\w+)/.exec(className || '')
+          // 适配指定行高亮
+          // tsx{3,4,5,8-11}
+          // const match = /language-(\w+)/.exec(className || '')
+          const match = /language-(\w+)(\{(.*)\})?/.exec(className || '')
+          const language = match ? match[1] : 'txt'
+          const highlightLines = match ? match[3] : ''
+          const highlightLinesArr = highlightLines
+            ? highlightLines
+                .split(',')
+                .map((line) => {
+                  if (line.includes('-')) {
+                    const [start, end] = line.split('-')
+                    // 8-11 -> [8, 9, 10, 11]
+                    return Array.from({ length: Number(end) - Number(start) + 1 }, (_, i) => Number(start) + i)
+                  }
+                  return Number(line.trim())
+                })
+                .flat()
+            : []
           return match ? (
-            <CodeBlock language={match[1]} text={children as string} {...props} />
+            <CodeBlock language={language} highlightLines={highlightLinesArr} text={children as string} {...props} />
           ) : (
             <InlineCode text={children as string} {...props} />
           )
