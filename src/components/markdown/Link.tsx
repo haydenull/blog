@@ -27,7 +27,13 @@ const Link = ({ text, href, ...props }: { text: string; href?: string }) => {
   const isTwitterLink = href && /(https:\/\/x\.com|https:\/\/twitter\.com)\/.*\/status\/\d+/.test(href)
   if (isTwitterLink) {
     const tweetId = href?.split('/').pop()?.split('?')[0]
-    return tweetId ? <Tweet id={tweetId} /> : <del>Invalid Twitter Link</del>
+    return tweetId ? (
+      <div className="m-auto w-fit">
+        <Tweet id={tweetId} />
+      </div>
+    ) : (
+      <del>Invalid Twitter Link</del>
+    )
   }
 }
 
