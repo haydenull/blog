@@ -87,8 +87,11 @@ export const FloatingNav = ({ navItems, className }: { navItems: NavItem[]; clas
       {visible && routerPathName !== '/' ? (
         <Link href="/">
           <Image
+            priority
             className="fixed left-6 top-11 z-[5000] rounded-full border shadow"
             src="/assets/avatar.png"
+            placeholder="blur"
+            blurDataURL="/assets/avatar.png"
             alt="avatar"
             width="34"
             height="34"

@@ -19,6 +19,9 @@ export default function Home() {
         {/* 个人信息 */}
         <div className="flex flex-1 flex-col gap-4">
           <Image
+            priority
+            placeholder="blur"
+            blurDataURL="/assets/avatar.png"
             className="inset-0 rounded-full border"
             src="/assets/avatar.png"
             alt="avatar"

@@ -1,7 +1,6 @@
-import Image from 'next/image'
-
 import EditLink from '@/components/EditLink'
 import PageContainer from '@/components/PageContainer'
+import Cover from '@/components/article/Cover'
 import DateAndReadingTime from '@/components/article/DateAndReadingTime'
 import Description from '@/components/article/Description'
 import Markdown from '@/components/markdown'
@@ -14,11 +13,7 @@ export default function Weekly({ params }: { params: { slug: string } }) {
   return (
     <PageContainer className="bg-grid-small-zinc-200 dark:bg-grid-small-zinc-700">
       <article className="prose m-auto w-full max-w-[880px] px-4 py-6 md:px-20">
-        {frontMatter.cover ? (
-          <div className="w-full overflow-hidden rounded-3xl shadow-2xl md:-ml-[10%] md:w-[120%]">
-            <Image className="w-full" src={frontMatter.cover} alt={frontMatter.title} width={1280} height={720} />
-          </div>
-        ) : null}
+        <Cover url={frontMatter.cover} alt={frontMatter.title} />
         <DateAndReadingTime date={frontMatter.date} readingTime={readingTime} />
         <h1 className="mt-10 text-[2.5rem] font-semibold text-foreground">{frontMatter.title}</h1>
         <Description description={frontMatter.description} />
