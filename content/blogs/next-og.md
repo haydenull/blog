@@ -132,15 +132,15 @@ return new ImageResponse(
 
 ![](https://pocket.haydenhayden.com/blog/202401071823121.png)
 
-这是因为部署时，Vercel 会将字体文件复制到 Edge Function 的运行环境中，免费版的 Edge Function 的运行环境只有 1MB，而 Mi Sans 字体的体积是 6MB，所以会报错。
+这是因为部署时，Vercel 会将字体文件复制到 Edge Function 的运行环境中，免费版的 Edge Function 的运行环境只有 1MB，而 Mi Sans 字体压缩后也会超过 5M，所以会报错。
 
-中文字体文件普遍都在 5M 以上，我们有一个方案是将文件上传到 CDN，然后在 Edge Function 中引入 CDN 上的文件。如此一来，Edge Function 的运行环境中就不会包含字体文件，也就不会报错了。
+中文字体文件普遍都在 5M 以上，要解决这个问题一个方案是将文件上传到 CDN，然后在 Edge Function 中引入 CDN 上的文件。如此一来，Edge Function 的运行环境中就不会包含字体文件。
 
 我试过一版，因为全量的字体文件比较大，放到 CDN 上，有一定概率 next.js 请求不到字体文件，导致部署失败。
 
 ## 解决中文字体包过大的问题
 
-这时候我想起了 [中文网字计划](https://chinese-font.netlify.app/)，他们有一个特色就是字体文件按需加载，也就是说，我们只需要加载我们需要的字体文件，而不是全量的字体文件。似乎可以解决我们的问题。
+这时候我想起了 [中文网字计划](https://chinese-font.netlify.app/)，他们有一个特色就是字体文件按需加载，也就是说，我们只需要加载我们需要的字体文件，而不是全量的。似乎可以解决我们的问题。
 
 这里有两篇文章可以参考:
 - https://voderl.cn/js/对中文字体进行压缩/

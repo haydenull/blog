@@ -82,3 +82,11 @@ https://github.com/easychen/lean-side-bussiness
 仓库地址在这里：https://github.com/haydenull/blog
 
 ![](https://pocket.haydenhayden.com/blog/202401072101657.png)
+
+### 尝试使用 Logseq WhiteBoard 进行周回顾
+
+白板的可以将季度目标，周目标，以及本周每天的日记平铺到一起，非常适合周回顾。
+
+![](https://pocket.haydenhayden.com/blog/202401080842694.png)
+
+![](https://pocket.haydenhayden.com/blog/202401080847749.png)
