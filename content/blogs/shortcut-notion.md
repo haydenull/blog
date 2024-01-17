@@ -1,24 +1,23 @@
 ---
-title: 使用 Shortcut 及 Notion 实现个人打卡 App
-description: 使用苹果全家桶上都支持的 Shortcut 实现快速打卡，使用 Notion 存储数据，实现个人打卡 App
+title: 使用快捷指令及 Notion 实现个人打卡 App
+description: 使用苹果快捷指令实现快速打卡，使用 Notion 存储数据，实现个人打卡 App
 date: 2024-01-16
 useCover: true
-cover: https://pocket.haydenhayden.com/blog/202304141335006.jpeg
-slug: shortcut-notion
-draft: true
+slug: 快捷指令-notion
+draft: false
 ---
 
 新的一年，又开始折腾年度计划了。日常工作任务我使用 Logseq 管理，不过 Logseq 毕竟不是专业的任务 App，在对便捷性有强需求的打卡任务上，还是需要专业的打卡 App。
 
 但是目前大部分 UI 漂亮，使用方便的任务管理 App，要么功能强大，但数据封闭，要么数据开放，但功能简单，而且也不好定制。
 
-之前看到 yihong 大佬使用 [issue](https://github.com/yihong0618/2024/issues?q=is:issue+is:open+sort:updated-desc) 记录年度信息，让我想到了使用 Notion 记录打卡信息，使用 Shortcut 实现快速打卡的方案。
+之前看到 yihong 大佬使用 [issue](https://github.com/yihong0618/2024/issues?q=is:issue+is:open+sort:updated-desc) 记录年度信息，让我想到了使用 Notion 记录打卡信息，使用 快捷指令 实现快速打卡的方案。
 
 其实去年我就已经使用 Notion 记录打卡信息了，但是每次打卡都需要打开 Notion，然后找到对应的页面，然后在表格里新建行，记录数据，这个过程非常繁琐，所以坚持了 9 个月还是放弃了。
 
 ![](https://pocket.haydenhayden.com/blog/202401160814072.png)
 
-如果使用 Shortcut 实现快速打卡，那么就可以在锁屏界面或者控制中心直接打卡，非常方便。结合 Notion 的 Api 也可以随时扩展新的功能。
+如果使用 快捷指令 实现快速打卡，那么就可以在锁屏界面或者控制中心直接打卡，非常方便。结合 Notion 的 Api 也可以随时扩展新的功能。
 
 ## 增加 Notion Integration
 
@@ -42,9 +41,9 @@ draft: true
 
 ![](https://pocket.haydenhayden.com/blog/202401160832040.png)
 
-## 制作 Shortcut
+## 制作快捷指令
 
-为了方便说明，我这里使用 Mac 上的 Shortcuts App，实际上 iOS 上的 Shortcuts App 也是一样的。
+为了方便说明，我这里使用 Mac 上的快捷指令 App，实际上 iOS 上的快捷指令 App 也是一样的。
 
 ### 用到的组件
 
@@ -58,11 +57,11 @@ draft: true
 6. Dictionary: 用于保存 Notion Api 的请求参数
 7. Get Contents of URL: 用于发送请求到 Notion Api
 
-### 详细 Shortcut 说明
+### 详细说明
 
 ![](https://pocket.haydenhayden.com/blog/202401160844287.png)
 
-我们使用两个 Text 保存 Notion 的 Integration Secret 和 Database Id，这样后面拷贝 Shortcut 制作其他的打卡任务时，只需要修改这两个 Text 的值就可以了。
+我们使用两个 Text 保存 Notion 的 Integration Secret 和 Database Id，这样后面拷贝 快捷指令 制作其他的打卡任务时，只需要修改这两个 Text 的值就可以了。
 
 databaseId 是 Notion Database 的 Id，可以在 Notion 页面的地址栏找到。
 
