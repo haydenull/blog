@@ -2,7 +2,7 @@
 title: 使用快捷指令及 Notion 实现个人打卡 App
 description: 使用苹果快捷指令实现快速打卡，使用 Notion 存储数据，实现个人打卡 App
 date: 2024-01-16
-useCover: true
+cover: https://pocket.haydenhayden.com/blog/202401180843813.png
 slug: 快捷指令-notion
 draft: false
 ---
