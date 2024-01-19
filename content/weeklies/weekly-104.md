@@ -48,14 +48,47 @@ const fetchUserInfo = async () => {
 [使用快捷指令及 Notion 实现个人打卡 App](/blog/shortcut-notion)
 
 
-## Chrome 不再限制 12px
+## Chrome 118版本不再限制汉字最小字号
 
-Chrome 不在限制 12px
-找电子书zlib
-arc 颜色选择器
-命令行年度总结
-生成unicode 进度条
-电子化说明书
+https://developer.chrome.com/blog/chrome-118-beta#consistent_minimum_font_size_across_languages
+
+Chrome 团队认为中文等语言小于 12px 的字号不可读，所以针对这几个语言做了最小字号限制。
+
+在 2023 年 9 月的 Chrome 118 版本中，这个限制被移除了。现在中文与英文保持一致，可以设置小于 12px 的字号。
+
+> Changes the default setting for the **Minimum font size** to be off by default for seven languages (Arabic, Farsi, Japanese, Korean, Thai, Simplified and Traditional Chinese) to improve interoperability and accessibility.
+
+## 推荐两个找电子书的网站
+
+- [无名图书](https://www.book123.info/)
+- [zLibrary](https://z-lib.io/)
+
+![](https://pocket.haydenhayden.com/blog/202401190742360.png)
+
+## 一个有点像 Arc 的颜色选择器
+
+[](https://twitter.com/coooolxyh/status/1746335370458042776)
+
+这个颜色选择器让我想起了 Arc，它会出现两到四个颜色点，根据一定的规则，在你改变其中一个点时，自动修改其他的颜色点，生成一个好看的渐变色，这里是 [demo](https://harmony.sh/)。
+
+## 命令行年度总结工具 cmd-wrapped
+
+https://github.com/YiNNx/cmd-wrapped
+
+对你的命令行操作进行统计，生成年度总结。
+
+![](https://pocket.haydenhayden.com/blog/202401190801603.png)
+
+
+## 生成 Unicode 进度条工具
+
+https://github.com/Changaco/unicode-progress-bars
+
+生成各种 Unicode 进度条，方便使用纯文本的形式展示进度。
+
+![](https://pocket.haydenhayden.com/blog/202401190804792.png)
+
+## 电子化说明书
 
 ## 我做了什么
 agenda i18n 发版
