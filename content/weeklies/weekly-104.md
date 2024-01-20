@@ -1,10 +1,9 @@
 ---
 title: 十五周刊 - 104
-description: 2024 第 2 周周报
-date: 2024-01-18
+description: 2024 第 3 周周报
+date: 2024-01-20
 slug: weekly-104
 cover: https://pocket.haydenhayden.com/blog/202401182145227.JPG
-draft: true
 ---
 
 ## JS location.href 跳转不阻断代码执行
@@ -88,10 +87,26 @@ https://github.com/Changaco/unicode-progress-bars
 
 ![](https://pocket.haydenhayden.com/blog/202401190804792.png)
 
-## 电子化说明书
+## 电子化说明书 Paperless
+
+https://github.com/paperless-ngx/paperless-ngx
+
+Paperless 是一个开源自部署的电子化说明书系统，可以将物理说明书拍照上传保存。支持 OCR 识别，可以搜索说明书内容。
 
 ## 我做了什么
-agenda i18n 发版
-新键盘
-快捷指令
-周计划进度开始对齐与回顾了
+
+### agenda i18n 发版
+
+https://github.com/haydenull/logseq-plugin-agenda/releases/tag/v3.9.0
+
+增加了中文翻译。
+
+### 换上了新键盘 Rainy 75
+
+铝坨坨的键盘，声音很好听。但是跟 Mac 的 2.4G 无线连接不稳定，经常会断开。还需要再定位一下问题。
+
+### 使用快捷指令进行习惯打卡
+
+之前都是用 Logseq 循环任务打卡，但是循环任务不太灵活，比如设置打卡时间为每天 19:00，但是我可能会在 19:00 之前完成任务，这时候点击完成任务，Logseq 只是创建一个打卡记录，但并不会将下次任务时间变更为明天。
+
+想来想去，还是用快捷指令比较方便，可以自定义打卡时间，也可以自定义打卡内容，手机平板都可以打卡。数据存储在 Notion 中，可以用 API 读取。
