@@ -33,6 +33,7 @@
     "dayjs": "^1.11.10",
     "fontmin": "^1.0.1",
     "framer-motion": "^10.16.16",
+    "github-slugger": "^2.0.0",
     "glob": "^10.3.10",
     "google": "link:next/font/google",
     "gray-matter": "^4.0.3",

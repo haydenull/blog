@@ -1,10 +1,16 @@
 import { Tweet } from 'react-tweet'
 
-const Link = ({ text, href, ...props }: { text: string; href?: string }) => {
+import { cn } from '@/lib/utils'
+
+const Link = ({ text, href, className, ...props }: { text: string; href?: string; className?: string }) => {
   // raw link
   if (text !== 'undefined') {
     return (
-      <a className="break-all text-colorful-500 hover:underline dark:text-colorful-400" href={href} {...props}>
+      <a
+        {...props}
+        className={cn(className, 'break-all text-colorful-500 hover:underline dark:text-colorful-400')}
+        href={href}
+      >
         {text}
       </a>
     )

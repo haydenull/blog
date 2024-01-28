@@ -169,6 +169,26 @@
   .prose .code-block .code-container>code {
     @apply flex flex-col w-fit;
   }
+  /* ========= toc start ========= */
+  .toc-position-container {
+    @apply fixed w-screen left-0 justify-center hidden bottom-14 pointer-events-none xl:flex;
+  }
+  .toc-position-container .toc-faker-content {
+    @apply w-[864px] flex justify-end;
+  }
+  .toc-position-container .toc-faker-content .toc-container {
+    @apply flex flex-col text-xs w-[240px] -mr-[250px] pointer-events-auto;
+  }
+  .toc-container a {
+    @apply text-xs line-clamp-1 text-zinc-400 hover:text-zinc-500 hover:no-underline dark:text-zinc-600 hover:dark:text-zinc-500;
+  }
+  .toc-container a.toc-h2 {
+    @apply font-medium mt-3;
+  }
+  .toc-container a.toc-h3 {
+    @apply flex items-center mt-2 gap-1 before:inline-block before:w-1 before:h-1 before:rounded-full before:bg-zinc-300 dark:before:bg-zinc-700;
+  }
+  /* ========= toc end ========= */
 }
 
 /* 配合深色模式切换动画 */
