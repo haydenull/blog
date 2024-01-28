@@ -74,8 +74,14 @@
   .prose h2 {
     @apply text-2xl font-semibold mt-20 mb-4 text-foreground;
   }
+  .prose h2 code {
+    @apply text-2xl;
+  }
   .prose h3 {
     @apply text-xl font-semibold mt-8 mb-2 text-foreground;
+  }
+  .prose h3 code {
+    @apply text-xl;
   }
   .prose p {
     @apply text-base leading-7 my-7 break-all;
