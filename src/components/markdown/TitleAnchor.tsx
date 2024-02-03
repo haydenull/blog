@@ -6,7 +6,7 @@ const TitleAnchor = ({ title, level, ...props }: { title: string; level: 2 | 3 }
   const Tag = `h${level}` as keyof JSX.IntrinsicElements
 
   return (
-    <Tag {...props} className="group flex items-center">
+    <Tag {...props} className="group flex flex-wrap items-center">
       <a
         id={slugStr}
         href={`#${slugStr}`}
