@@ -51,7 +51,7 @@ SafeTest 是一个包含单元测试与端到端测试的测试框架，集成�
 
 ![](https://pocket.haydenhayden.com/blog/202403022109986.png)
 
-## Vercel AI SDK 3.0 版本支持渐进式 UI
+## Vercel AI SDK 3.0 版本支持生成式 UI
 
 [Introducing AI SDK 3.0 with Generative UI support](https://vercel.com/blog/ai-sdk-3-generative-ui)
 
