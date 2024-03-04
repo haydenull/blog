@@ -61,9 +61,9 @@ Vercel AI SDK 3.0 版本支持渐进式 UI，即可以返回 RSC（React Server 
 
 ![](https://pocket.haydenhayden.com/blog/202403022120705.png)
 
-上图截字 Vercel 的文档，可以看到对于天气的提问，SDK 直接返回了一个天气的组件。并且这个组件也是有 loading 状态的。并且这个组件是可以直接在网页上交互的。感觉这倒是一个非常好的 RSC 应用场景。
+上图截自 Vercel 的文档，可以看到对于天气的提问，SDK 直接返回了一个天气的组件。并且这个组件也是有 loading 状态的。并且这个组件是可以直接在网页上交互的。感觉这倒是一个非常好的 RSC 应用场景。
 
-可以去这里测试一下效果：https://sdk.vercel.ai/demo。
+可以去这里测试一下效果：https://sdk.vercel.ai/demo
 
 也可以看这个 twitter：
 
