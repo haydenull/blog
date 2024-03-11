@@ -8,11 +8,39 @@ import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
+const title = '启封 Hayden'
+const description = '启封 Hayden 的个人网站'
 export const metadata: Metadata = {
-  title: '启封 Hayden',
-  description: '启封 Hayden 的个人网站',
+  title,
+  description,
   icons: {
     icon: '/assets/avatar.png',
+  },
+  openGraph: {
+    title,
+    description,
+    type: 'article',
+    url: `https://haydenhayden.com`,
+    images: [
+      {
+        url: `https://haydenhayden.com/api/og`,
+        width: 1280,
+        height: 720,
+        alt: title,
+      },
+    ],
+  },
+  twitter: {
+    title,
+    description,
+    images: [
+      {
+        url: `https://haydenhayden.com/api/og`,
+        width: 1280,
+        height: 720,
+        alt: title,
+      },
+    ],
   },
 }
 

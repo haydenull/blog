@@ -11,8 +11,10 @@ export async function GET(req: Request) {
   // /api/og?title=Hello&description=你好
 
   const { searchParams } = new URL(req.url)
-  const title = searchParams.get('title')
-  const description = searchParams.get('description')
+  const title = searchParams.get('title') ?? '启封 Hayden'
+  const description =
+    searchParams.get('description') ??
+    'A front-end developer with a passion for using technology to increase personal efficiency and productivity 💡.'
 
   const avatarImg = await fetch(new URL('../../../../public/assets/avatar.png', import.meta.url)).then((res) =>
     res.arrayBuffer(),
