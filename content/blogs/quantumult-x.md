@@ -45,7 +45,7 @@ static=节点选择, 自动选择, direct, proxy, server-tag-regex=^(.(?!(网易
 - https://github.com/Koolson/Qure
 - https://github.com/Orz-3/mini
 
-我自将常用的策略如下：
+我自己常用的策略如下：
 ![](https://pocket.haydenhayden.com/blog/202311191938550.png?x-oss-process=image/resize,w_400,m_lfit)
 
 - 节点选择：手动选择节点
