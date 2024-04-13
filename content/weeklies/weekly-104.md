@@ -4,6 +4,9 @@ description: 2024 第 3 周周报
 date: 2024-01-20
 slug: weekly-104
 cover: https://pocket.haydenhayden.com/blog/202401182145227.JPG
+year: 2024
+week: 3
+episode: 104
 ---
 
 ## JS location.href 跳转不阻断代码执行

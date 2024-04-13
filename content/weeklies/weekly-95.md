@@ -3,6 +3,9 @@ title: 十五周刊 - 95
 description: 2023 第 44 周周报
 date: 2023-11-05T19:00:00+08:00
 slug: weekly-95
+year: 2023
+week: 44
+episode: 95
 tags:
   - Weekly
 ---

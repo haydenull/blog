@@ -3,6 +3,9 @@ title: 十五周刊 - 109
 description: 2024 第 11 周周报
 date: 2024-03-17
 slug: weekly-109
+year: 2024
+week: 11
+episode: 109
 ---
 
 ## Applite: Homebrew Cask 的 UI 客户端

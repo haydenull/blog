@@ -3,6 +3,9 @@ title: 十五周刊 - 97
 description: 2023 第 46 周周报
 date: 2023-11-19T17:35:00+08:00
 slug: weekly-97
+year: 2023
+week: 46
+episode: 97
 tags:
   - Weekly
   - Local First

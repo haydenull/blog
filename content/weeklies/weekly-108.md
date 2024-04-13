@@ -3,6 +3,9 @@ title: 十五周刊 - 108
 description: 2024 第 10 周周报
 date: 2024-03-09
 slug: weekly-108
+year: 2024
+week: 10
+episode: 108
 ---
 
 ## Earthworm

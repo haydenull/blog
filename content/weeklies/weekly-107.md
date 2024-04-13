@@ -3,6 +3,9 @@ title: 十五周刊 - 107
 description: 2024 第 9 周周报
 date: 2024-03-02
 slug: weekly-107
+year: 2024
+week: 9
+episode: 107
 ---
 
 ## WXT: 开发浏览器插件的框架

@@ -1,6 +1,9 @@
 ---
 title: 十五周刊 - 92
 description: 2022 第 26 周周报
+year: 2022
+week: 26
+episode: 92
 author: Haydenull
 date: 2022-07-03
 useCover: true

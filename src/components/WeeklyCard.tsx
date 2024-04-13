@@ -1,29 +1,19 @@
+import dayjs from 'dayjs'
 import Link from 'next/link'
 
-import type { BlogFrontMatter } from '@/types/blog'
+import type { WeeklyFrontMatter } from '@/types/weekly'
 
-import { GlowingStarsBackgroundCard } from './ui/glowing-stars'
-
-export default function WeeklyCard({ frontMatter }: { frontMatter: BlogFrontMatter }) {
+export default function WeeklyCard({ frontMatter }: { frontMatter: WeeklyFrontMatter }) {
   return (
-    <Link className="relative max-w-md overflow-hidden rounded-xl border" href={`/weekly/${frontMatter.slug}`}>
-      <div className="relative h-[200px] overflow-hidden">
-        {frontMatter.cover ? (
-          <>
-            <img
-              src={frontMatter.cover}
-              alt={`Cover Image for ${frontMatter.title}`}
-              className="h-full w-full  object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-500 opacity-50 dark:to-black"></div>
-          </>
-        ) : (
-          <GlowingStarsBackgroundCard />
-        )}
-      </div>
-      <div className="px-2 pb-2 pt-4">
-        <h2 className="text-xl font-semibold text-foreground">{frontMatter.title}</h2>
-        <p className="mt-1 text-sm text-muted-foreground">{frontMatter.description}</p>
+    <Link className="rounded-x relative max-w-md overflow-hidden" href={`/weekly/${frontMatter.slug}`}>
+      <div className="flex items-center gap-3 px-4 py-3 hover:bg-zinc-100 hover:dark:bg-zinc-900">
+        <div className="flex h-5 w-9 items-center justify-center rounded border border-colorful-500 text-xs text-colorful-500 dark:border-colorful-400 dark:text-colorful-400">
+          W{frontMatter.week.toString().padStart(2, '0')}
+        </div>
+        <div>
+          <h2 className="text-xl font-medium text-foreground">{frontMatter.title}</h2>
+          <p className="mt-0.5 text-sm text-muted-foreground">{dayjs(frontMatter.date).format('MMM DD, YYYY')}</p>
+        </div>
       </div>
     </Link>
   )

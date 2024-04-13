@@ -4,6 +4,9 @@ description: 2024 第 4 周周报
 date: 2024-01-28
 slug: weekly-105
 cover: https://pocket.haydenhayden.com/blog/202401281556821.JPG
+year: 2024
+week: 4
+episode: 105
 ---
 
 ## 支持类 IDE 语法提示的文档工具 vdoc

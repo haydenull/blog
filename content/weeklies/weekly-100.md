@@ -3,6 +3,9 @@ title: 十五周刊 - 100
 description: 2023 第 49 周周报
 date: 2023-12-10T16:25:00+08:00
 slug: weekly-100
+year: 2023
+week: 49
+episode: 100
 tags:
   - Weekly
 ---
