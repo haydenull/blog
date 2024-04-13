@@ -3,6 +3,9 @@ title: 十五周刊 - 94
 description: 2023 第 43 周周报
 date: 2023-10-23
 slug: weekly-94
+year: 2023
+week: 43
+episode: 94
 tags:
   - Weekly
 ---

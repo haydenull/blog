@@ -4,6 +4,9 @@ description: 2024 第 1 周周报
 date: 2024-01-07
 slug: weekly-103
 cover: https://pocket.haydenhayden.com/blog/202401071723257.JPG
+year: 2024
+week: 1
+episode: 103
 ---
 
 ## 动态裁剪字体

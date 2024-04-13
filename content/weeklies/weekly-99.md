@@ -3,6 +3,9 @@ title: 十五周刊 - 99
 description: 2023 第 48 周周报
 date: 2023-12-03T17:54:00+08:00
 slug: weekly-99
+year: 2023
+week: 48
+episode: 99
 tags:
   - Weekly
   - Plugin

@@ -3,6 +3,9 @@ title: 十五周刊 - 98
 description: 2023 第 47 周周报
 date: 2023-11-26T17:14:00+08:00
 slug: weekly-98
+year: 2023
+week: 47
+episode: 98
 tags:
   - Weekly
   - Local First

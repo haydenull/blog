@@ -2,6 +2,9 @@
 title: 十五周刊 - 93
 description: 2023 第 5 周周报
 date: 2023-01-30
+year: 2023
+week: 5
+episode: 93
 useCover: true
 cover: https://pocket.haydenhayden.com/blog/202302021321338.png
 headerMask: rgb(14, 21, 5, .2)

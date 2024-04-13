@@ -3,6 +3,9 @@ title: 十五周刊 - 106
 description: 2024 第 5 周周报
 date: 2024-02-03
 slug: weekly-106
+year: 2024
+week: 5
+episode: 106
 ---
 
 ## Tailwind 配色工具

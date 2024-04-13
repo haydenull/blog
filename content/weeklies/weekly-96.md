@@ -3,6 +3,9 @@ title: 十五周刊 - 96
 description: 2023 第 45 周周报
 date: 2023-11-12T16:48:00+08:00
 slug: weekly-96
+year: 2023
+week: 45
+episode: 96
 tags:
   - Weekly
 ---

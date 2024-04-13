@@ -3,6 +3,9 @@ title: 十五周刊 - 102
 description: 2023 第 51 周周报
 date: 2023-12-25T07:45:00+08:00
 slug: weekly-102
+year: 2023
+week: 51
+episode: 102
 tags:
   - Weekly
   - Logseq

@@ -3,6 +3,9 @@ title: 十五周刊 - 101
 description: 2023 第 50 周周报
 date: 2023-12-17T18:44:00+08:00
 slug: weekly-101
+year: 2023
+week: 50
+episode: 101
 tags:
   - Weekly
   - PARA
