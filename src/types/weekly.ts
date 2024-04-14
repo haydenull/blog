@@ -9,6 +9,7 @@ export const WeeklyFrontMatterSchema = v.transform(
     date: v.date('未填写日期'),
     draft: v.optional(v.boolean()),
     cover: v.optional(v.string([v.url()])),
+    readingTime: v.number('未填写阅读时间'),
   }),
   (data) => ({
     ...data,

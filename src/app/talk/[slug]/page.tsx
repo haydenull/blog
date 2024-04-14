@@ -11,7 +11,7 @@ export default function Talk({ params }: { params: { slug: string } }) {
   const { frontMatter, content } = getTalkBySlug(params.slug)
 
   return (
-    <PageContainer className="bg-grid-small-zinc-200 dark:bg-grid-small-zinc-700">
+    <PageContainer className="bg-grid-small-zinc-200 dark:bg-grid-small-zinc-800">
       <article className="prose m-auto w-full max-w-[880px] px-4 py-6 md:px-20">
         <Cover url={frontMatter.cover} alt={frontMatter.title} />
         <DateAndReadingTime date={frontMatter.date} />
@@ -61,7 +61,7 @@ export default function Talk({ params }: { params: { slug: string } }) {
                 </>
               ) : null}
             </div>
-            <div className="relative w-full pt-[57%]">
+            <div className="relative mt-1 w-full pt-[57%]">
               <iframe src={frontMatter.spaUrl} className="absolute left-0 top-0 h-full w-full shadow-lg" />
             </div>
           </div>

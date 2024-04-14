@@ -1,10 +1,11 @@
 import fs from 'fs'
 import matter from 'gray-matter'
 import path from 'path'
-import readingTime from 'reading-time'
 import * as v from 'valibot'
 
 import { WeeklyFrontMatterSchema, type WeeklyFrontMatter } from '@/types/weekly'
+
+import { getReadingTime } from './utils'
 
 const WEEKLY_PATH = path.join(process.cwd(), 'content/weeklies')
 /** 从根目录下的 content/weeklies 文件夹读取 markdown 文件，并解析 */
@@ -13,10 +14,11 @@ export const getWeeklyFrontMatterList = () => {
   return weeklyFiles
     .map((weekly) => {
       const content = fs.readFileSync(path.join(WEEKLY_PATH, weekly), 'utf-8')
-      const { data } = matter(content)
+      const { data, content: articleContent } = matter(content)
       const { output: frontMatter, issues } = v.safeParse(WeeklyFrontMatterSchema, {
         ...data,
         slug: weekly.replace('.md', ''),
+        readingTime: getReadingTime(articleContent),
       })
       if (issues) console.error(weekly, issues)
       return frontMatter as WeeklyFrontMatter
@@ -49,14 +51,12 @@ export const getWeeklyGroupByYear = () => {
 export const getWeeklyBySlug = (slug: string) => {
   const file = fs.readFileSync(path.join(WEEKLY_PATH, `${slug}.md`), 'utf-8')
   const { data, content } = matter(file)
-  const readingTimeStats = readingTime(content)
   return {
     frontMatter: v.parse(WeeklyFrontMatterSchema, {
       ...data,
       slug,
+      readingTime: getReadingTime(content),
     }),
     content,
-    // 向上取整
-    readingTime: Math.ceil(readingTimeStats.minutes),
   }
 }

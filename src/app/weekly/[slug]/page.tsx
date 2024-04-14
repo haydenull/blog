@@ -8,13 +8,13 @@ import { getWeeklyBySlug } from '@/lib/weekly'
 
 // TOC https://gist.github.com/sobelk/16fe68ff5520b2d5e2b6d406e329e0de
 export default function Weekly({ params }: { params: { slug: string } }) {
-  const { frontMatter, content, readingTime } = getWeeklyBySlug(params.slug)
+  const { frontMatter, content } = getWeeklyBySlug(params.slug)
 
   return (
-    <PageContainer className="bg-grid-small-zinc-200 dark:bg-grid-small-zinc-700">
+    <PageContainer className="bg-grid-small-zinc-200 dark:bg-grid-small-zinc-800">
       <article className="prose m-auto w-full max-w-[880px] px-4 py-6 md:px-20">
         <Cover url={frontMatter.cover} alt={frontMatter.title} />
-        <DateAndReadingTime date={frontMatter.date} readingTime={readingTime} />
+        <DateAndReadingTime date={frontMatter.date} readingTime={frontMatter.readingTime} />
         <h1 className="mt-10 text-[2.5rem] font-semibold text-foreground">{frontMatter.title}</h1>
         <Description description={frontMatter.description} />
         <p className="my-6 px-1 text-xs text-muted-foreground">

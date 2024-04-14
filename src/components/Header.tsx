@@ -19,14 +19,14 @@ const navItems: NavItem[] = [
     icon: <IconNews className="h-5 w-5" />,
   },
   {
-    name: '项目',
-    link: '/project',
-    icon: <IconSparkles className="h-5 w-5" />,
-  },
-  {
     name: '分享',
     link: '/talk',
     icon: <IconPodium className="h-5 w-5" />,
+  },
+  {
+    name: '项目',
+    link: '/project',
+    icon: <IconSparkles className="h-5 w-5" />,
   },
   // {
   //   name: '关于',

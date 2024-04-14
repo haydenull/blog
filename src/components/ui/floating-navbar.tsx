@@ -138,7 +138,7 @@ export const FloatingNav = ({ navItems, className }: { navItems: NavItem[]; clas
         <button
           className={cn(
             'fixed right-6 top-10 z-[5000] rounded-full border bg-white p-2 text-neutral-600 hover:text-neutral-500 dark:border-white/[0.2] dark:bg-black dark:text-neutral-50 dark:hover:text-neutral-300',
-            { '!border-zinc-800 !bg-slate-800 !text-zinc-300': isProjectPage },
+            { '!border-zinc-800 !bg-transparent !text-zinc-300 !shadow-2xl backdrop-blur-3xl': isProjectPage },
           )}
           onClick={toggleTheme}
         >

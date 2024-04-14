@@ -25,7 +25,7 @@ const Buymeacoffee = () => {
 
   return (
     <BentoCard
-      className="group relative col-span-2 flex flex-row items-center justify-center bg-yellow-50 p-0 dark:bg-orange-900"
+      className="group relative col-span-2 flex flex-row items-center justify-center bg-yellow-50 p-0 dark:bg-yellow-300 dark:bg-opacity-60"
       url="https://buymeacoffee.com/haydenull"
     >
       <img className="w-[40%]" src="/assets/bmc-full-logo-no-background.png" />
