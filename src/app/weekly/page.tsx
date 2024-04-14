@@ -1,9 +1,9 @@
 import PageContainer from '@/components/PageContainer'
 import WeeklyCard from '@/components/WeeklyCard'
-import { getWeeklyFrontMatterList } from '@/lib/weekly'
+import { getWeeklyGroupByYear } from '@/lib/weekly'
 
 export default function Posts() {
-  const weeklyFrontMatterList = getWeeklyFrontMatterList()
+  const weeklyFrontMatterList = getWeeklyGroupByYear()
 
   return (
     <main className="px-6">
