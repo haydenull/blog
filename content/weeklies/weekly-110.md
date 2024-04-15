@@ -44,7 +44,7 @@ https://www.langui.dev
 
 ## OAuth 2.0 使用 session 存储随机 code 防止 CSRF 攻击
 
-https://stackoverflow.com/questions/35985551/how-does-csrf-work-without-state-parameter-in-oauth2-0
+### 如何防止 CSRF 攻击
 
 ![](https://pocket.haydenhayden.com/blog/202404142206905.png)
 
@@ -69,6 +69,20 @@ if (state !== callbackState) {
 }
 ```
 
+### CSRF 攻击的流程
+
+https://stackoverflow.com/questions/35985551/how-does-csrf-work-without-state-parameter-in-oauth2-0
+
+假设我们有一个笔记软件，用户登录后可以绑定微信账号，以后可以使用微信登录。
+
+攻击流程：
+1. 攻击者访问笔记的微信授权页面，得到授权链接 `https://open.weixin.qq.com/connect/oauth2/authorize?appid=APPID&redirect_uri=REDIRECT_URI&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect`
+2. 将授权链接发送给受害者，引导受害者点击（比如伪造成图片）
+3. 受害者点击链接后，会跳转到微信授权页面，授权后即可将受害者的笔记软件账号绑定到攻击者的微信账号上
+4. 攻击者可以通过自己的微信登录受害者的账号
+
+正是由于第一步 state 不是随机的，所以攻击者可以自己构造授权链接，引导受害者点击。而如果 state 是随机的，并且使用 session storage 存储，那么攻击者即使构造了授权链接，由于 session storage 是浏览器隔离的，受害者在访问授权链接时，其 session storage 中的 state 与攻击者构造的 state 不一致，从而防止了 CSRF 攻击。
+
 
 ## 我做了什么
 
@@ -81,3 +95,13 @@ if (state !== callbackState) {
 ![](https://pocket.haydenhayden.com/blog/202404142117575.png)
 
 ![](https://pocket.haydenhayden.com/blog/202404142118703.png)
+
+### 回收积攒多年的电子设备
+
+周六用转转上门卖了 5 台设备，包括一台 Mac，两部手机以及一台 iPad。整个过程比较轻松，在手机上操作得到评估价后，11 点下单，下午三点就有人上门检测设备，全程有录音，最后的的价格跟评估价也没有差很多，大部分差价是因为设备屏幕老化。当场验完直接支付宝就到账。
+
+虽然价格肯定比自己找买家便宜，但是比较省心，毕竟如果和买家发生纠纷处理起来费时费力。
+
+最后感慨一句淘汰下来的设备尽早出掉比较好，保养得再好时间长了屏幕就会老化，越往后越不值钱。
+
+![](https://pocket.haydenhayden.com/blog/202404151033343.png?x-oss-process=image/resize,w_420,m_lfit)
