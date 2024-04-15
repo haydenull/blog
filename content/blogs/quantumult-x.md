@@ -3,6 +3,7 @@ title: Quantumult X 配置及同步
 description: Quantumult X 配置解析及利用 iCloud 实现多设备同步
 date: 2023-11-19
 slug: quantumult-x
+cover: https://pocket.haydenhayden.com/blog/202404151317762.jpg
 tags:
   - GFW
   - Quantumult X

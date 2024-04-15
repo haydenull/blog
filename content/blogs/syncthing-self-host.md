@@ -4,6 +4,7 @@ description: 使用 docker 自建 syncthing 发现服务与中继服务, 实现�
 author: Haydenull
 date: 2023-12-10
 slug: syncthing-self-host
+cover: https://pocket.haydenhayden.com/blog/202404151309579.png
 tags:
   - syncthing
   - sync

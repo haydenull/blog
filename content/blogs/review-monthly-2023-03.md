@@ -3,7 +3,7 @@ title: "总结: 2023 年 3 月"
 description: AI 狂潮下的 3 月
 date: 2023-04-03
 useCover: true
-cover: https://pocket.haydenhayden.com/blog/202302030851669.png
+# cover: https://pocket.haydenhayden.com/blog/202302030851669.png
 headerMask: rgba(14, 21, 5, .2)
 slug: monthly-review-2023-03
 tags:

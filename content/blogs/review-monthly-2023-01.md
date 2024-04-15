@@ -4,7 +4,7 @@ description: 开始复盘计划的第一次月度总结
 author: Haydenull
 date: 2023-02-03
 useCover: true
-cover: https://pocket.haydenhayden.com/blog/202302030851669.png
+# cover: https://pocket.haydenhayden.com/blog/202302030851669.png
 headerMask: rgb(14, 21, 5, .2)
 slug: monthly-review-2023-01
 tags:

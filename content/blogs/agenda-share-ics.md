@@ -3,6 +3,7 @@ title: Agenda 分享 ics 订阅
 description: 使用私有 github 仓库及 Cloudflare Worker 实现私人 ics 订阅
 date: 2023-11-01
 slug: agenda-share-ics
+cover: https://pocket.haydenhayden.com/blog/202404151320279.jpg
 tags:
   - ics
   - Agenda

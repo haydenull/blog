@@ -4,7 +4,7 @@ description: 学习任务完成，工作任务不达标，如何调整？
 author: Haydenull
 date: 2023-03-06
 useCover: true
-cover: https://pocket.haydenhayden.com/blog/202302030851669.png
+# cover: https://pocket.haydenhayden.com/blog/202302030851669.png
 headerMask: rgb(14, 21, 5, .2)
 slug: monthly-review-2023-02
 tags:
