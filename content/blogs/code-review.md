@@ -3,10 +3,7 @@ title: 关注代码质量：Code Review 的技巧与实践
 description: 聚焦 Code Review 的过程、技巧和注意事项
 author: Haydenull
 date: 2023-04-14
-useCover: true
 cover: https://pocket.haydenhayden.com/blog/202404151322009.png
-headerMask: rgb(14, 21, 5, .2)
-slug: code-review
 tags:
   - Code Review
 ---

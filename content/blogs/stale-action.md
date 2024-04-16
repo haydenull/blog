@@ -2,7 +2,6 @@
 title: 使用 Stale Action 管理 Github Issue
 description: 使用 Stale Action 自动关闭不活跃的 Github Issue
 date: 2023-11-26
-slug: stale-action
 cover: https://pocket.haydenhayden.com/blog/202404151313205.png
 tags:
   - Github

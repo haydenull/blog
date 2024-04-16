@@ -84,7 +84,7 @@
     @apply text-xl;
   }
   .prose p {
-    @apply text-base leading-7 my-7 break-all;
+    @apply text-base leading-7 my-7 break-words;
   }
   .prose ul {
     @apply list-disc list-inside my-8;

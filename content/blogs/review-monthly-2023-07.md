@@ -3,11 +3,7 @@ title: "总结: 2023 年 7 月"
 description: 7 月的总结
 author: Haydenull
 date: 2023-08-20
-useCover: true
-# cover: https://pocket.haydenhayden.com/blog/202302030851669.png
-headerMask: rgba(14, 21, 5, .2)
-slug: monthly-review-2023-07
-featured: false
+cover: https://pocket.haydenhayden.com/blog/202404161326604.png
 draft: false
 tags:
   - Personal Review

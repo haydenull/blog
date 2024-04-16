@@ -3,11 +3,7 @@ title: "年终总结: 2022"
 description: 迟到的 2022 年终总结
 author: Haydenull
 date: 2023-01-03
-useCover: true
-# cover: https://pocket.haydenhayden.com/blog/202302030851669.png
 cover: https://pocket.haydenhayden.com/blog/202404151326937.png
-headerMask: rgb(14, 21, 5, .2)
-slug: yearly-review-2022
 tags:
   - Personal Review
 ---

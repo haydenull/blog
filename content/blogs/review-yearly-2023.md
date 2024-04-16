@@ -3,7 +3,6 @@ title: 2023 年终总结
 description: 2023 年终总结
 author: Haydenull
 date: 2023-12-29
-slug: yearly-review-2023
 cover: https://pocket.haydenhayden.com/blog/202401041630866.jpeg
 tags:
   - Personal Review

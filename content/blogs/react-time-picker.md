@@ -3,10 +3,7 @@ title: 如何实现一个符合 React 设计的时间选择器
 description: 在业务中实现时间选择器的一些思考, 使用 4 个版本代码来对比 React 设计的优劣
 author: Haydenull
 date: 2023-02-18
-useCover: true
-cover: https://pocket.haydenhayden.com/blog/202302182111910.png
-headerMask: rgb(14, 21, 5, .2)
-slug: react-time-picker
+cover: https://pocket.haydenhayden.com/blog/202404161306616.png
 tags:
   - React
 ---

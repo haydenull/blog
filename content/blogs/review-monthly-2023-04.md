@@ -3,10 +3,7 @@ title: "总结: 2023 年 4 月"
 description: 相对满意的一个月
 author: Haydenull
 date: 2023-05-05
-useCover: true
-# cover: https://pocket.haydenhayden.com/blog/202302030851669.png
-headerMask: rgba(14, 21, 5, .2)
-slug: monthly-review-2023-04
+cover: https://pocket.haydenhayden.com/blog/202404161326604.png
 tags:
   - Personal Review
 ---

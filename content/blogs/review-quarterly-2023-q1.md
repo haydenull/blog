@@ -3,10 +3,7 @@ title: "总结: 2023 年 Q1"
 description: 在 AI 浪潮中不断成长与寻找方向
 author: Haydenull
 date: 2023-04-05
-useCover: true
-# cover: https://pocket.haydenhayden.com/blog/202302030851669.png
-headerMask: rgba(14, 21, 5, .2)
-slug: quarterly-review-2023-q1
+cover: https://pocket.haydenhayden.com/blog/202404161326604.png
 tags:
   - Personal Review
 ---

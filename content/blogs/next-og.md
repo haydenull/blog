@@ -2,7 +2,6 @@
 title: 如何在 Next.js 中生成包含中文的 Open Graph 图片
 description: 使用 next/og 生成 Open Graph 图片，同时解决中文字体体积过大的问题
 date: 2024-01-07
-slug: next-og
 cover: https://pocket.haydenhayden.com/blog/202401071739981.JPG
 ---
 

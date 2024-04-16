@@ -3,10 +3,7 @@ title: React Flight Rules - 基础知识和原理
 description: React 基础概念、状态管理、数据传递和处理
 author: Haydenull
 date: 2023-02-07
-useCover: true
-cover: https://pocket.haydenhayden.com/blog/202302070801422.png
-headerMask: rgb(14, 21, 5, .2)
-slug: react-flight-rules-base
+cover: https://pocket.haydenhayden.com/blog/202404161310631.jpg
 tags:
   - Flight Rules
   - React
