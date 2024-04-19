@@ -11,7 +11,10 @@ import { SparklesCore } from '@/components/ui/sparkles-core'
 
 import AiFaDian from './AiFaDian'
 import BentoCard from './BentoCard'
+import Blog from './Blog'
 import Buymeacoffee from './Buymeacoffee'
+import RSS from './RSS'
+import Weekly from './Weekly'
 
 const Bento = () => {
   return (
@@ -108,13 +111,16 @@ const Bento = () => {
           <GithubCalendar />
         </div>
       </BentoCard>
+      {/* 近期博客 x1 */}
+      <Blog />
+      {/* 近期周刊 x1 */}
+      <Weekly />
+      {/* RSS */}
+      <RSS />
       {/* Buy Me A Coffee */}
       <Buymeacoffee />
       {/* 爱发电 */}
       <AiFaDian />
-      {/* 近期博客 x2 */}
-      {/* 近期周刊 x1 */}
-      {/* 项目 */}
     </div>
   )
 }
