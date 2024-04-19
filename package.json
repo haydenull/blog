@@ -10,7 +10,7 @@
     "test": "echo \"Write tests! -> https://nextjs.org/docs/testing\"",
     "typecheck": "tsc --noEmit",
     "prepare": "husky install && pnpm run compressFont",
-    "compressFont": "node scripts/compressFont.mjs"
+    "compressFont": "node ./scripts/compressFont.mjs"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
