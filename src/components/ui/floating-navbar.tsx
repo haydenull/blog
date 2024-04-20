@@ -109,7 +109,7 @@ export const FloatingNav = ({ navItems, className }: { navItems: NavItem[]; clas
               <IconMenu2 className="h-5 w-5" />
             </HeaderButton>
           </DrawerTrigger>
-          <DrawerContent>
+          <DrawerContent className="h-2/3">
             <div className="flex flex-col gap-4 px-10 py-8">
               {navItems.map((navItem: NavItem, idx: number) => (
                 <DrawerClose key={`link=${idx}`} asChild>
@@ -168,8 +168,8 @@ export const FloatingNav = ({ navItems, className }: { navItems: NavItem[]; clas
                 },
               )}
             >
-              <span className="block sm:hidden">{navItem.icon}</span>
-              <span className="hidden text-sm sm:block">{navItem.name}</span>
+              {/* <span>{navItem.icon}</span> */}
+              <span className="text-sm">{navItem.name}</span>
             </Link>
           ))}
         </motion.div>
