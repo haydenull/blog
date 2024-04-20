@@ -2,7 +2,7 @@
 
 // https://ui.aceternity.com/components/floating-navbar
 import { useResizeObserver } from '@react-hookz/web'
-import { IconMoonStars, IconSun } from '@tabler/icons-react'
+import { IconMenu2, IconMoonStars, IconSun } from '@tabler/icons-react'
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-motion'
 import { useTheme } from 'next-themes'
 import Image from 'next/image'
@@ -10,8 +10,10 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React, { useCallback, useState } from 'react'
 import { flushSync } from 'react-dom'
+import type { TwcComponentProps } from 'react-twc'
 
-import { cn } from '@/lib/utils'
+import { Drawer, DrawerClose, DrawerContent, DrawerTrigger } from '@/components/ui/drawer'
+import { cn, twx } from '@/lib/utils'
 
 export const FloatingNav = ({ navItems, className }: { navItems: NavItem[]; className?: string }) => {
   const { scrollYProgress } = useScroll()
@@ -84,11 +86,12 @@ export const FloatingNav = ({ navItems, className }: { navItems: NavItem[]; clas
   })
   return (
     <>
+      {/* Avatar */}
       {visible && routerPathName !== '/' ? (
         <Link href="/">
           <Image
             priority
-            className="fixed left-6 top-11 z-[5000] rounded-full border shadow"
+            className="fixed left-6 top-11 z-[5000] hidden rounded-full border shadow sm:block"
             src="/assets/avatar.png"
             placeholder="blur"
             blurDataURL="/assets/avatar.png"
@@ -98,6 +101,40 @@ export const FloatingNav = ({ navItems, className }: { navItems: NavItem[]; clas
           />
         </Link>
       ) : null}
+      {/* Mobile Menu */}
+      {visible ? (
+        <Drawer>
+          <DrawerTrigger asChild>
+            <HeaderButton className="left-6 right-auto sm:hidden" $isProjectPage={isProjectPage}>
+              <IconMenu2 className="h-5 w-5" />
+            </HeaderButton>
+          </DrawerTrigger>
+          <DrawerContent>
+            <div className="flex flex-col gap-4 px-10 py-8">
+              {navItems.map((navItem: NavItem, idx: number) => (
+                <DrawerClose key={`link=${idx}`} asChild>
+                  <Link
+                    href={navItem.link}
+                    className={cn(
+                      'flex items-center space-x-1 text-neutral-600 hover:text-neutral-500 dark:text-neutral-50 dark:hover:text-neutral-300',
+                      {
+                        '!text-zinc-300 hover:!text-zinc-200': isProjectPage,
+                        '!text-colorful-500 dark:!text-colorful-400': new RegExp(`^${navItem.link}(/|$)`).test(
+                          routerPathName,
+                        ),
+                      },
+                    )}
+                  >
+                    <span>{navItem.icon}</span>
+                    <span>{navItem.name}</span>
+                  </Link>
+                </DrawerClose>
+              ))}
+            </div>
+          </DrawerContent>
+        </Drawer>
+      ) : null}
+      {/* PC Menu */}
       <AnimatePresence mode="wait">
         <motion.div
           initial={{
@@ -112,7 +149,7 @@ export const FloatingNav = ({ navItems, className }: { navItems: NavItem[]; clas
             duration: 0.2,
           }}
           className={cn(
-            'fixed inset-x-0  top-10 z-[5000] mx-auto flex max-w-fit items-center justify-center space-x-4 rounded-full border border-transparent bg-white px-8 py-2  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] dark:border-white/[0.2] dark:bg-black',
+            'fixed inset-x-0 top-10 z-[5000] mx-auto hidden max-w-fit items-center justify-center space-x-4 rounded-full border border-transparent bg-white px-8 py-2 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]  sm:flex dark:border-white/[0.2] dark:bg-black',
             { '!border-zinc-800 !bg-transparent !shadow-2xl backdrop-blur-3xl': isProjectPage },
             className,
           )}
@@ -123,9 +160,12 @@ export const FloatingNav = ({ navItems, className }: { navItems: NavItem[]; clas
               href={navItem.link}
               className={cn(
                 'relative flex items-center space-x-1 text-neutral-600 hover:text-neutral-500 dark:text-neutral-50 dark:hover:text-neutral-300',
-                { '!text-zinc-300 hover:!text-zinc-200': isProjectPage },
-                new RegExp(`^${navItem.link}(/|$)`).test(routerPathName) &&
-                  '!text-colorful-500 dark:!text-colorful-400',
+                {
+                  '!text-zinc-300 hover:!text-zinc-200': isProjectPage,
+                  '!text-colorful-500 dark:!text-colorful-400': new RegExp(`^${navItem.link}(/|$)`).test(
+                    routerPathName,
+                  ),
+                },
               )}
             >
               <span className="block sm:hidden">{navItem.icon}</span>
@@ -134,16 +174,11 @@ export const FloatingNav = ({ navItems, className }: { navItems: NavItem[]; clas
           ))}
         </motion.div>
       </AnimatePresence>
+      {/* Toggle Theme */}
       {visible ? (
-        <button
-          className={cn(
-            'fixed right-6 top-10 z-[5000] rounded-full border bg-white p-2 text-neutral-600 hover:text-neutral-500 dark:border-white/[0.2] dark:bg-black dark:text-neutral-50 dark:hover:text-neutral-300',
-            { '!border-zinc-800 !bg-transparent !text-zinc-300 !shadow-2xl backdrop-blur-3xl': isProjectPage },
-          )}
-          onClick={toggleTheme}
-        >
+        <HeaderButton $isProjectPage={isProjectPage} onClick={toggleTheme}>
           {theme === 'dark' ? <IconMoonStars className="h-4 w-4" /> : <IconSun className="h-5 w-5" />}
-        </button>
+        </HeaderButton>
       ) : null}
     </>
   )
@@ -154,3 +189,11 @@ export type NavItem = {
   link: string
   icon: React.ReactNode
 }
+
+type HeaderButtonProps = TwcComponentProps<'button'> & { $isProjectPage?: boolean }
+const HeaderButton = twx.button<HeaderButtonProps>((props) => [
+  'fixed right-6 top-10 z-50 rounded-full border bg-white p-2 text-neutral-600 hover:text-neutral-500 dark:border-white/[0.2] dark:bg-black dark:text-neutral-50 dark:hover:text-neutral-300',
+  {
+    '!border-zinc-800 !bg-transparent !text-zinc-300 !shadow-2xl backdrop-blur-3xl': props.$isProjectPage,
+  },
+])
