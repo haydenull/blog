@@ -54,14 +54,15 @@ const TYPE_KEYS = Object.keys(TYPE)
 // 语法参考 github alerts https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts
 // > [!tip] callout title
 // > callout content
+// > ![img alt](img url)
 const remarkCallout: Plugin = () => {
   return (tree) => {
     visit(tree, 'blockquote', (node: Node, index, parent) => {
       const children = (node as Parent).children
-      const values = children.map((child) => toString(child))
-      const value = values.join('\n') // 保留原始的换行符
+      // const values = children.map((child) => toString(child))
+      // const value = values.join('\n') // 保留原始的换行符
 
-      const [firstLine, ...remainingLines] = value.split('\n')
+      const [firstLine, ...remainingLines] = toString(children[0]).split('\n')
       const content = remainingLines.map((line) => `<p>${line}</p>`).join('\n')
 
       const match = firstLine.match(/\[!(\w+)\]\s*(.*)?/)
@@ -71,16 +72,43 @@ const remarkCallout: Plugin = () => {
         if (TYPE_KEYS.includes(type)) {
           const { icon, title: defaultTitle } = TYPE[type as keyof typeof TYPE]
           const _title = title?.trim() || defaultTitle
+          // parent.children[index] = {
+          //   type: 'html',
+          //   value: `<div class="callout callout-${type}">
+          //     <div class="callout-title">
+          //       <span class="callout-title__icon">${icon}</span>
+          //       <span class="callout-title__text">${_title}</span>
+          //     </div>
+          //     <div class="callout-content">${content}</div>
+          //   </div>`,
+          // }
           // @ts-expect-error type correct
           parent.children[index] = {
-            type: 'html',
-            value: `<div class="callout callout-${type}">
-              <div class="callout-title">
-                <span class="callout-title__icon">${icon}</span>
-                <span class="callout-title__text">${_title}</span>
-              </div>
-              <div class="callout-content">${content}</div>
-            </div>`,
+            type: 'div',
+            data: { hProperties: { className: `callout callout-${type}` } },
+            children: [
+              {
+                type: 'div',
+                data: { hProperties: { className: 'callout-title' } },
+                children: [
+                  {
+                    type: 'span',
+                    data: { hProperties: { className: 'callout-title__icon' } },
+                    children: [{ type: 'html', value: icon }],
+                  },
+                  {
+                    type: 'span',
+                    data: { hProperties: { className: 'callout-title__text' } },
+                    children: [{ type: 'text', value: _title }],
+                  },
+                ],
+              },
+              {
+                type: 'div',
+                data: { hProperties: { className: 'callout-content' } },
+                children: [{ type: 'html', value: content }, ...children.slice(1)],
+              },
+            ],
           }
         }
       }
