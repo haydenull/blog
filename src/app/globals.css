@@ -198,21 +198,50 @@
 }
 
 /** artalk 样式 */
-.atk-main-editor {
-  @apply !bg-background dark:!bg-zinc-900;
+.artalk, .atk-layer-wrap {
+  --at-color-main:  #8b5cf6 !important;
+  --at-color-bg: hsl(0 0% 100%) !important;
 }
-.atk-main-editor .atk-textarea {
-  @apply !bg-background dark:!bg-zinc-900;
+.artalk.atk-dark-mode, .atk-layer-wrap.atk-dark-mode {
+  --at-color-main:  #a78bfa !important;
+  --at-color-bg: rgb(24 24 27) !important;
+}
+.atk-main-editor {
+  @apply !mb-4;
 }
 .atk-send-btn {
-  @apply !bg-colorful-500 dark:!bg-colorful-600;
+  @apply !rounded;
 }
-.atk-dropdown {
-  @apply !bg-background dark:!bg-zinc-900;
+.atk-comment>.atk-avatar img {
+  @apply !size-10 !rounded-full border;
 }
-.atk-dropdown .atk-dropdown-item.active span {
-  @apply !text-colorful-500 dark:!text-colorful-400;
+/* .atk-list .atk-list-header {
+  @apply !hidden;
+} */
+.atk-list .atk-comment {
+  @apply !py-1;
 }
-.atk-copyright a {
-  @apply !text-colorful-500 dark:!text-colorful-400;
+.atk-list .atk-comment .atk-main {
+  @apply !ml-14;
+}
+.atk-list .atk-comment .atk-main .atk-header {
+  @apply !mb-0.5;
+}
+.atk-list .atk-comment .atk-main .atk-header .atk-nick {
+  @apply !text-base;
+}
+.atk-list .atk-comment .atk-main .atk-header .atk-date {
+  @apply !text-xs !text-muted-foreground;
+}
+.atk-list .atk-comment .atk-main .atk-footer {
+  @apply !mt-0.5 md:opacity-0 transition-all;
+}
+.atk-list .atk-comment:hover .atk-main .atk-footer {
+  @apply opacity-100;
+}
+.atk-list .atk-comment .atk-main .atk-footer .atk-actions > span {
+  @apply !text-xs !text-muted-foreground;
+}
+.atk-list .atk-list-footer {
+  @apply opacity-40 mt-2 md:mt-0;
 }

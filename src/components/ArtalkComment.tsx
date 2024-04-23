@@ -26,6 +26,11 @@ const ArtalkComment = ({ pageKey, pageTitle }: { pageKey: string; pageTitle: str
         server: 'https://artalk.haydenhayden.com', // 后端地址
         site: 'blog', // 站点 ID
       })
+      // 修改 input placeholder
+      setTimeout(() => {
+        document.querySelector('.atk-nick')?.setAttribute('placeholder', '昵称*')
+        document.querySelector('.atk-mail')?.setAttribute('placeholder', '邮箱*')
+      }, 2000)
     }
 
     const getIsReady = () => {
@@ -71,7 +76,11 @@ const ArtalkComment = ({ pageKey, pageTitle }: { pageKey: string; pageTitle: str
     }
   }, [])
 
-  return <div id="artalk-comments"></div>
+  return (
+    <div className="mt-20">
+      <div id="artalk-comments"></div>
+    </div>
+  )
 }
 
 export default ArtalkComment
