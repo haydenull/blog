@@ -1,3 +1,4 @@
+import ArtalkComment from '@/components/ArtalkComment'
 import EditLink from '@/components/EditLink'
 import PageContainer from '@/components/PageContainer'
 import Cover from '@/components/article/Cover'
@@ -19,6 +20,7 @@ export default function Blog({ params }: { params: { slug: string } }) {
         <Description description={frontMatter.description} />
         <Markdown markdownText={content} />
         <EditLink filePath={`content/blogs/${params.slug}.md`} />
+        <ArtalkComment pageKey={`/blog/${frontMatter.slug}`} pageTitle={frontMatter.title} />
       </article>
     </PageContainer>
   )

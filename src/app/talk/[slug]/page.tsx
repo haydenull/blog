@@ -1,3 +1,4 @@
+import ArtalkComment from '@/components/ArtalkComment'
 import EditLink from '@/components/EditLink'
 import PageContainer from '@/components/PageContainer'
 import Cover from '@/components/article/Cover'
@@ -68,6 +69,7 @@ export default function Talk({ params }: { params: { slug: string } }) {
         ) : null}
         <Markdown markdownText={content} />
         <EditLink filePath={`content/talks/${params.slug}.md`} />
+        <ArtalkComment pageKey={`/talk/${frontMatter.slug}`} pageTitle={frontMatter.title} />
       </article>
     </PageContainer>
   )

@@ -1,3 +1,4 @@
+import ArtalkComment from '@/components/ArtalkComment'
 import EditLink from '@/components/EditLink'
 import PageContainer from '@/components/PageContainer'
 import Cover from '@/components/article/Cover'
@@ -22,6 +23,7 @@ export default function Weekly({ params }: { params: { slug: string } }) {
         </p>
         <Markdown markdownText={content} />
         <EditLink filePath={`content/weeklies/${params.slug}.md`} />
+        <ArtalkComment pageKey={`/weekly/${frontMatter.slug}`} pageTitle={frontMatter.title} />
       </article>
     </PageContainer>
   )

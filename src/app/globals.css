@@ -194,5 +194,25 @@
 /* 配合深色模式切换动画 */
 ::view-transition-old(root),
 ::view-transition-new(root) {
-   animation: none;
- }
+  animation: none;
+}
+
+/** artalk 样式 */
+.atk-main-editor {
+  @apply !bg-background dark:!bg-zinc-900;
+}
+.atk-main-editor .atk-textarea {
+  @apply !bg-background dark:!bg-zinc-900;
+}
+.atk-send-btn {
+  @apply !bg-colorful-500 dark:!bg-colorful-600;
+}
+.atk-dropdown {
+  @apply !bg-background dark:!bg-zinc-900;
+}
+.atk-dropdown .atk-dropdown-item.active span {
+  @apply !text-colorful-500 dark:!text-colorful-400;
+}
+.atk-copyright a {
+  @apply !text-colorful-500 dark:!text-colorful-400;
+}
