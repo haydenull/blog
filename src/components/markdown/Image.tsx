@@ -21,10 +21,10 @@ const Image = ({ src = '', alt = '', ...props }: { src?: string; alt?: string })
           <img src={src} alt={alt} className="max-h-full max-w-full !rounded-none dark:opacity-80" />
         </div>
       )}
-      {/* <img src={src} alt={alt} {...props} onClick={toggleFullscreen} className="cursor-zoom-in dark:opacity-80" /> */}
-      <div className="relative">
+      <img src={src} alt={alt} {...props} onClick={toggleFullscreen} className="cursor-zoom-in dark:opacity-80" />
+      {/* <div className="relative">
         <NextImageWithBlur src={src} alt={alt} />
-      </div>
+      </div> */}
     </>
   )
 }
