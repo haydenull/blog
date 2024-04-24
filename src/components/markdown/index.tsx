@@ -54,10 +54,10 @@ const Markdown = ({ markdownText }: { markdownText: string }) => {
             return <Image src={src} alt={alt} {...props} />
           },
           h2({ node, children, ...props }) {
-            return <TitleAnchor title={children as string} level={2} {...props} />
+            return <TitleAnchor title={children} level={2} {...props} />
           },
           h3({ node, children, ...props }) {
-            return <TitleAnchor title={children as string} level={3} {...props} />
+            return <TitleAnchor title={children} level={3} {...props} />
           },
         }}
       >

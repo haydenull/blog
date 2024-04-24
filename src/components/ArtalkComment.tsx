@@ -29,7 +29,7 @@ const ArtalkComment = ({ pageKey, pageTitle }: { pageKey: string; pageTitle: str
       // 修改 input placeholder
       setTimeout(() => {
         document.querySelector('.atk-nick')?.setAttribute('placeholder', '昵称*')
-        document.querySelector('.atk-mail')?.setAttribute('placeholder', '邮箱*')
+        document.querySelector('.atk-email')?.setAttribute('placeholder', '邮箱*')
       }, 2000)
     }
 
