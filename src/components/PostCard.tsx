@@ -2,6 +2,7 @@ import Link from 'next/link'
 
 import type { BlogFrontMatter } from '@/types/blog'
 
+import NextImageWithBlur from './NextImageWithBlur'
 import { GlowingStarsBackgroundCard } from './ui/glowing-stars'
 
 export default function PostCard({ frontMatter }: { frontMatter: BlogFrontMatter }) {
@@ -10,7 +11,7 @@ export default function PostCard({ frontMatter }: { frontMatter: BlogFrontMatter
       <div className="relative h-[200px] overflow-hidden">
         {frontMatter.cover ? (
           <>
-            <img
+            <NextImageWithBlur
               src={frontMatter.cover}
               alt={`Cover Image for ${frontMatter.title}`}
               className="h-full w-full  object-cover"

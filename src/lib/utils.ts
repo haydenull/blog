@@ -14,3 +14,14 @@ export function getReadingTime(article: string) {
   const readingTimeStats = readingTime(article)
   return Math.ceil(readingTimeStats.minutes)
 }
+
+export function getBaseUrl() {
+  if (typeof window !== 'undefined') return ''
+  const vc = process.env.VERCEL_URL
+  if (vc) return `https://${vc}`
+  return 'http://test.haydenhayden.com:3000'
+}
+
+export function getApiUrl(path?: string) {
+  return `${getBaseUrl()}${path || ''}`
+}

@@ -1,8 +1,10 @@
 import Icons from 'unplugin-icons/webpack'
+import withPlaiceholder from "@plaiceholder/next"
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
+  // output: 'standalone',
+  transpilePackages: ["@plaiceholder/ui"],
   images: {
     remotePatterns: [
       {
@@ -25,4 +27,4 @@ const nextConfig = {
   }
 }
 
-export default nextConfig
+export default withPlaiceholder(nextConfig)
