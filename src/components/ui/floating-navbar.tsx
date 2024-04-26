@@ -15,6 +15,8 @@ import type { TwcComponentProps } from 'react-twc'
 import { Drawer, DrawerClose, DrawerContent, DrawerTrigger } from '@/components/ui/drawer'
 import { cn, twx } from '@/lib/utils'
 
+import SearchDialog from '../SearchDialog'
+
 export const FloatingNav = ({ navItems, className }: { navItems: NavItem[]; className?: string }) => {
   const { scrollYProgress } = useScroll()
   const routerPathName = usePathname()
@@ -91,7 +93,7 @@ export const FloatingNav = ({ navItems, className }: { navItems: NavItem[]; clas
         <Link href="/">
           <Image
             priority
-            className="fixed left-6 top-11 z-[5000] hidden rounded-full border shadow sm:block"
+            className="fixed left-6 top-11 z-50 hidden rounded-full border shadow sm:block"
             src="/assets/avatar.png"
             placeholder="blur"
             blurDataURL="/assets/avatar.png"
@@ -149,7 +151,7 @@ export const FloatingNav = ({ navItems, className }: { navItems: NavItem[]; clas
             duration: 0.2,
           }}
           className={cn(
-            'fixed inset-x-0 top-10 z-[5000] mx-auto hidden max-w-fit items-center justify-center space-x-4 rounded-full border border-transparent bg-white px-8 py-2 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]  sm:flex dark:border-white/[0.2] dark:bg-black',
+            'fixed inset-x-0 top-10 z-50 mx-auto hidden max-w-fit items-center justify-center space-x-4 rounded-full border border-transparent bg-white px-8 py-2 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]  sm:flex dark:border-white/[0.2] dark:bg-black',
             { '!border-zinc-800 !bg-transparent !shadow-2xl backdrop-blur-3xl': isProjectPage },
             className,
           )}
@@ -176,9 +178,15 @@ export const FloatingNav = ({ navItems, className }: { navItems: NavItem[]; clas
       </AnimatePresence>
       {/* Toggle Theme */}
       {visible ? (
-        <HeaderButton $isProjectPage={isProjectPage} onClick={toggleTheme}>
-          {theme === 'dark' ? <IconMoonStars className="h-4 w-4" /> : <IconSun className="h-5 w-5" />}
-        </HeaderButton>
+        <>
+          <HeaderButton $isProjectPage={isProjectPage} className="flex items-center gap-3">
+            {/* <IconamoonSearch className={cn('hidden sm:block', theme === 'dark' ? 'text-base' : 'text-sm')} /> */}
+            <SearchDialog theme={theme} />
+            <div onClick={toggleTheme}>
+              {theme === 'dark' ? <IconMoonStars className="h-5 w-5" /> : <IconSun className="h-5 w-5" />}
+            </div>
+          </HeaderButton>
+        </>
       ) : null}
     </>
   )
