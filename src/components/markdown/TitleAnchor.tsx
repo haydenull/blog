@@ -24,7 +24,7 @@ const TitleAnchor = ({ title, level, ...props }: { title: React.ReactNode; level
       <a
         id={slugStr}
         href={`#${slugStr}`}
-        className="before:invisibl absolute -ml-6 flex items-center opacity-100 transition-opacity before:block before:h-20 before:content-[''] group-hover:opacity-100"
+        className="before:invisibl absolute -ml-6 flex items-center opacity-0 transition-opacity before:block before:h-20 before:content-[''] sm:group-hover:opacity-100"
       >
         <IconLink className="w-5" />
       </a>

@@ -20,9 +20,9 @@ const SearchDialog = ({ theme }: { theme?: string }) => {
       </DialogTrigger>
       <DialogContent className="gap-0 divide-y overflow-hidden p-0 sm:max-w-md md:max-w-xl">
         <div className="flex w-full items-center px-4 pb-1 pt-2">
-          <IconamoonSearch className="text-muted-foreground" />
+          <IconamoonSearch className="text-base text-muted-foreground" />
           <Input
-            className="flex-1 border-none pr-5 !outline-none !ring-0 !ring-offset-0"
+            className="flex-1 border-none pr-5 text-base !outline-none !ring-0 !ring-offset-0"
             value={text}
             onChange={(e) => setText(e.target.value)}
             onKeyDown={(e) => {

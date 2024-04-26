@@ -35,10 +35,10 @@ const MenuDrawer = ({
         </HeaderButton>
       </DrawerTrigger>
       <DrawerContent className="h-2/3 px-7 pb-2">
-        <div className="mt-6 flex w-full items-center rounded-full bg-muted px-3 py-1">
-          <IconamoonSearch />
+        <div className="mt-6 flex w-full items-center rounded-full bg-muted px-3">
+          <IconamoonSearch className="text-base text-muted-foreground" />
           <Input
-            className="flex-1 border-none bg-muted pl-1 pr-5 !outline-none !ring-0 !ring-offset-0"
+            className="flex-1 border-none bg-muted pl-1 pr-5 text-base !outline-none !ring-0 !ring-offset-0"
             placeholder="Search in Google"
             onChange={(e) => (textRef.current = e.target.value)}
             onKeyDown={(e) => {
