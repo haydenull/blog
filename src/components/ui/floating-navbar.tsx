@@ -12,9 +12,9 @@ import React, { useCallback, useState } from 'react'
 import { flushSync } from 'react-dom'
 import type { TwcComponentProps } from 'react-twc'
 
-import { Drawer, DrawerClose, DrawerContent, DrawerTrigger } from '@/components/ui/drawer'
 import { cn, twx } from '@/lib/utils'
 
+import MenuDrawer from '../MenuDrawer'
 import SearchDialog from '../SearchDialog'
 
 export const FloatingNav = ({ navItems, className }: { navItems: NavItem[]; className?: string }) => {
@@ -104,38 +104,7 @@ export const FloatingNav = ({ navItems, className }: { navItems: NavItem[]; clas
         </Link>
       ) : null}
       {/* Mobile Menu */}
-      {visible ? (
-        <Drawer>
-          <DrawerTrigger asChild>
-            <HeaderButton className="left-6 right-auto sm:hidden" $isProjectPage={isProjectPage}>
-              <IconMenu2 className="h-5 w-5" />
-            </HeaderButton>
-          </DrawerTrigger>
-          <DrawerContent className="h-2/3">
-            <div className="flex flex-col gap-4 px-10 py-8">
-              {navItems.map((navItem: NavItem, idx: number) => (
-                <DrawerClose key={`link=${idx}`} asChild>
-                  <Link
-                    href={navItem.link}
-                    className={cn(
-                      'flex items-center space-x-1 text-neutral-600 hover:text-neutral-500 dark:text-neutral-50 dark:hover:text-neutral-300',
-                      {
-                        '!text-zinc-300 hover:!text-zinc-200': isProjectPage,
-                        '!text-colorful-500 dark:!text-colorful-400': new RegExp(`^${navItem.link}(/|$)`).test(
-                          routerPathName,
-                        ),
-                      },
-                    )}
-                  >
-                    <span>{navItem.icon}</span>
-                    <span>{navItem.name}</span>
-                  </Link>
-                </DrawerClose>
-              ))}
-            </div>
-          </DrawerContent>
-        </Drawer>
-      ) : null}
+      {visible ? <MenuDrawer navItems={navItems} isProjectPage={isProjectPage} /> : null}
       {/* PC Menu */}
       <AnimatePresence mode="wait">
         <motion.div
@@ -199,7 +168,7 @@ export type NavItem = {
 }
 
 type HeaderButtonProps = TwcComponentProps<'button'> & { $isProjectPage?: boolean }
-const HeaderButton = twx.button<HeaderButtonProps>((props) => [
+export const HeaderButton = twx.button<HeaderButtonProps>((props) => [
   'fixed right-6 top-10 z-50 rounded-full border bg-white p-2 text-neutral-600 hover:text-neutral-500 dark:border-white/[0.2] dark:bg-black dark:text-neutral-50 dark:hover:text-neutral-300',
   {
     '!border-zinc-800 !bg-transparent !text-zinc-300 !shadow-2xl backdrop-blur-3xl': props.$isProjectPage,

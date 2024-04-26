@@ -33,7 +33,7 @@ const SearchDialog = ({ theme }: { theme?: string }) => {
           />
         </div>
         <div className="cursor-pointer bg-secondary px-4 py-3 text-secondary-foreground" onClick={onClickSearch}>
-          <span className="font-semibold">Search in Googgle</span> {text}
+          <span className="font-semibold">Search in Google</span> {text}
         </div>
       </DialogContent>
     </Dialog>
