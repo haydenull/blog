@@ -52,6 +52,7 @@ export const ProgressiveImage = ({
   placeholder,
   alt,
   className,
+  ...props
 }: DOMAttributes<HTMLImageElement> & {
   src?: string
   alt?: string
@@ -71,6 +72,7 @@ export const ProgressiveImage = ({
 
   return (
     <img
+      {...props}
       src={loaded ? src : thumbnailUrl}
       alt={alt}
       className={cn(
