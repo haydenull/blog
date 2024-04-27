@@ -10,6 +10,8 @@ export const WeeklyFrontMatterSchema = v.transform(
     draft: v.optional(v.boolean()),
     cover: v.optional(v.string([v.url()])),
     readingTime: v.number('未填写阅读时间'),
+    sitemapPriority: v.optional(v.number([v.minValue(0), v.maxValue(1)])),
+    updatedDate: v.optional(v.date()),
   }),
   (data) => ({
     ...data,

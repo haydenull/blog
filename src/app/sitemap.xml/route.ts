@@ -9,22 +9,32 @@ const STATIC_MAP = [
   {
     url: getUrl('/').href,
     lastModified: new Date(),
+    priority: 1.0,
+    changeFrequency: 'monthly',
   },
   {
     url: getUrl('/blog').href,
     lastModified: new Date(),
+    priority: 1.0,
+    changeFrequency: 'weekly',
   },
   {
     url: getUrl('/weekly').href,
     lastModified: new Date(),
+    priority: 1.0,
+    changeFrequency: 'weekly',
   },
   {
     url: getUrl('/talk').href,
     lastModified: new Date(),
+    priority: 1.0,
+    changeFrequency: 'monthly',
   },
   {
     url: getUrl('/project').href,
     lastModified: new Date(),
+    priority: 1.0,
+    changeFrequency: 'monthly',
   },
 ] satisfies MetadataRoute.Sitemap
 
@@ -39,11 +49,11 @@ export async function GET() {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url><loc>${SEO.url.href}</loc></url>
-    ${STATIC_MAP.map(({ url, lastModified }) => getXml({ date: lastModified, url })).join('\n')}
+    ${STATIC_MAP.map(({ url, lastModified, priority }) => getXml({ date: lastModified, url, priority })).join('\n')}
     ${articles
-      .map(({ date, slug, type }) => {
+      .map(({ date, slug, type, sitemapPriority, updatedDate }) => {
         const url = getUrl(`/${type}/${slug}`).href
-        return getXml({ date, url })
+        return getXml({ date: updatedDate ?? date, url, priority: sitemapPriority })
       })
       .join('\n')}
     </urlset>`
@@ -58,11 +68,23 @@ export async function GET() {
 function getUrl(path = '') {
   return new URL(path, SEO.url.href)
 }
-function getXml({ date, url }: { date: Date; url: string }) {
+/** format: https://www.sitemaps.org/protocol.html */
+function getXml({
+  date,
+  url,
+  changefreq = 'monthly',
+  priority = 0.5,
+}: {
+  date: Date
+  url: string
+  changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
+  /** 0.0 ~ 1.0 */
+  priority?: number
+}) {
   return `<url>
   <loc>${url}</loc>
-  <lastmod>${date}</lastmod>
-  <priority>1.00</priority>
-  <changefreq>monthly</changefreq>
+  <lastmod>${date.toISOString()}</lastmod>
+  <priority>${priority}</priority>
+  <changefreq>${changefreq}</changefreq>
 </url>`
 }
