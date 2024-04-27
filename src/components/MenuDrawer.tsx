@@ -2,7 +2,7 @@ import { IconMenu2 } from '@tabler/icons-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useRef } from 'react'
-import IconamoonSearch from '~icons/iconamoon/search'
+import OcticonSearch16 from '~icons/octicon/search-16'
 
 import { Drawer, DrawerClose, DrawerContent, DrawerTrigger } from '@/components/ui/drawer'
 import { cn, navigateToGoogleSearch } from '@/lib/utils'
@@ -36,7 +36,7 @@ const MenuDrawer = ({
       </DrawerTrigger>
       <DrawerContent className="h-2/3 px-7 pb-2">
         <div className="mt-6 flex w-full items-center rounded-full bg-muted px-3">
-          <IconamoonSearch className="text-base text-muted-foreground" />
+          <OcticonSearch16 className="text-base text-muted-foreground" />
           <Input
             className="flex-1 border-none bg-muted pl-1 pr-5 text-base !outline-none !ring-0 !ring-offset-0"
             placeholder="Search in Google"

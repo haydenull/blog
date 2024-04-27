@@ -1,6 +1,7 @@
 'use client'
 
-import { IconBrandGithub, IconEditCircle } from '@tabler/icons-react'
+import AkarIconsGithubFill from '~icons/akar-icons/github-fill'
+import SimpleIconsStackblitz from '~icons/simple-icons/stackblitz'
 
 const EditLink = ({ filePath }: { filePath: string }) => {
   // /blog/:slug?admin=1
@@ -17,7 +18,7 @@ const EditLink = ({ filePath }: { filePath: string }) => {
         rel="noopener noreferrer"
         className="flex items-center gap-1 text-base text-colorful-500 hover:text-colorful-700 dark:text-colorful-600 dark:hover:text-colorful-500"
       >
-        <IconBrandGithub className="w-5" /> Edit on Github
+        <AkarIconsGithubFill /> Edit on Github
       </a>
       <a
         href={`https://stackblitz.com/github/haydenull/blog/tree/main?file=${encodeURIComponent(filePath)}`}
@@ -25,7 +26,7 @@ const EditLink = ({ filePath }: { filePath: string }) => {
         rel="noopener noreferrer"
         className="flex items-center gap-1 text-base text-colorful-500 hover:text-colorful-700 dark:text-colorful-600 dark:hover:text-colorful-500"
       >
-        <IconEditCircle className="w-5" /> Edit on StackBlitz
+        <SimpleIconsStackblitz /> Edit on StackBlitz
       </a>
     </div>
   )
