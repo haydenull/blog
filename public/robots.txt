@@ -1,0 +1,2 @@
+Allow: /api/og/*
+Sitemap: https://haydenhayden.com/sitemap.xml
