@@ -11,6 +11,20 @@ episode: 112
 
 解决方法：将字号设置为 16px 及以上。
 
+## 如何防止中文输入法的回车误触发 input 的回车事件
+
+使用 `isComposing` 属性来判断当前是组合输入状态，还是输入完成状态。
+
+```tsx
+<Input
+  onKeyDown={(e) => {
+    if (e.key === 'Enter' && !e.nativeEvent.isComposing) {
+      onClickSearch()
+    }
+  }}
+/>
+```
+
 ## 优化 Vercel 部署的页面在国内的访问
 
 [](https://twitter.com/ccbikai/status/1783821908737446100)
