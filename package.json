@@ -33,6 +33,7 @@
     "clsx": "^2.1.0",
     "copy-to-clipboard": "^3.3.3",
     "dayjs": "^1.11.10",
+    "flexsearch": "^0.7.43",
     "fontmin": "^1.0.1",
     "framer-motion": "^10.16.16",
     "github-slugger": "^2.0.0",
