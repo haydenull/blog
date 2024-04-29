@@ -169,6 +169,8 @@ export async function GET() {
 
 等待一段时间 **(可能几个小时也可能一天)**，再次搜索关键词 `贴纸`，就可以看到这个页面的搜索结果了。
 
+![](https://pocket.haydenhayden.com/blog/202404290951628.png?x-oss-process=image/resize,w_1000,m_lfit)
+
 ## 参考资料
 
 - [How to add a Dynamic Sitemap to your NextJs Blog](https://www.sandromaglione.com/articles/how-to-add-dynamic-sitemap-nextjs-blog)
