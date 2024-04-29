@@ -1,3 +1,5 @@
+'use client'
+
 import { cn } from '@/lib/utils'
 
 const STICKERS = [
@@ -64,22 +66,26 @@ const Sticker = ({ className }: { className?: string }) => {
   return (
     <div className="relative h-28 overflow-hidden md:h-40">
       {/* 线条背景 */}
-      <div className="via-zinc-white h-full bg-gradient-to-r from-white via-[white_70%,_#EEEFF2_70%] to-[#EEEFF2] bg-[length:6px_100%] dark:from-zinc-950 dark:via-[#09090b_70%,_#1E1E21_70%] dark:to-[#1E1E21]">
+      <div className="via-zinc-white h-full bg-gradient-to-r from-white via-[white_70%,_#EEEFF2_70%] to-[#EEEFF2] bg-[length:6px_100%] dark:from-zinc-950 dark:via-[#09090b_70%,_#3f3f46_70%] dark:to-zinc-700">
         {stickerList.map(({ url, top, left, rotate, scale }, index) => (
           <img
             key={url + index}
             src={url}
-            className={cn('absolute w-14 opacity-0 transition-all lg:w-16 lg:opacity-100', {
-              // 默认屏幕展示前 5 个贴纸
-              'opacity-100': index < 5,
-              // md 屏幕展示前 7 个贴纸
-              'md:opacity-100': index < 7,
-            })}
+            className={cn(
+              'absolute w-14 select-none opacity-0 transition-all hover:z-50 hover:!scale-125 lg:w-16 lg:opacity-100',
+              {
+                // 默认屏幕展示前 5 个贴纸
+                'opacity-100': index < 5,
+                // md 屏幕展示前 7 个贴纸
+                'md:opacity-100': index < 7,
+              },
+            )}
             style={{ transform: `rotate(${rotate}deg)`, scale, top, left }}
           />
         ))}
       </div>
-      <div className="absolute inset-0 bg-gradient-to-b from-white/25 via-white/25 via-30% to-white/90 dark:from-black/40 dark:via-black/40 dark:to-black"></div>
+      <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-background"></div>
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/20 via-white/20 via-30% to-white/90 dark:from-black/30 dark:via-black/30 dark:to-black"></div>
     </div>
   )
 }

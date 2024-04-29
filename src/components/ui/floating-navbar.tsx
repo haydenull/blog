@@ -22,10 +22,12 @@ export const FloatingNav = ({ navItems, className }: { navItems: NavItem[]; clas
   const routerPathName = usePathname()
   const { setTheme, theme } = useTheme()
   const isDark = theme === 'dark'
+  console.log('[faiz:] === theme', theme, isDark)
 
   const isProjectPage = routerPathName === '/project'
 
-  const toggleTheme = useCallback(() => {
+  const toggleTheme = () => {
+    console.log('[faiz:] === toggleTheme', isDark, theme)
     const md = window.matchMedia('(max-width: 768px)').matches
 
     // @ts-expect-error startViewTransition 可以使用
@@ -57,7 +59,7 @@ export const FloatingNav = ({ navItems, className }: { navItems: NavItem[]; clas
         },
       )
     })
-  }, [setTheme, isDark])
+  }
 
   const [visible, setVisible] = useState(true)
 
