@@ -170,7 +170,10 @@
   }
   /* ========= callout end ========= */
   .prose .code-block .code-container>code {
-    @apply flex flex-col w-fit;
+    @apply flex flex-col w-fit min-w-full;
+  }
+  .prose .code-block .code-container>code .highlighted-line {
+    @apply bg-colorful-400/15 dark:bg-colorful-400/10 -ml-2 border-l-[0.3rem] pl-[0.2rem] border-colorful-500 dark:border-colorful-600;
   }
   /* ========= toc start ========= */
   .toc-position-container {

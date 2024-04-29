@@ -26,14 +26,10 @@ const CodeBlock = ({
         PreTag="div"
         className="code-container !my-0 bg-transparent !px-2 !pt-0 text-sm"
         lineProps={(lineNumber: number) => {
-          const style: Record<string, unknown> = {}
           if (highlightLines.includes(lineNumber)) {
-            style.backgroundColor = '#383e40'
-            style.width = 'fit-content'
-            style.minWidth = '100%'
-            style.display = 'block'
+            return { class: 'highlighted-line' }
           }
-          return { style }
+          return {}
         }}
         {...props}
       >
