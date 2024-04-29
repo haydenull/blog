@@ -1,5 +1,6 @@
 import Image from 'next/image'
 
+import Sticker from '@/components/Sticker'
 import { GridBackground } from '@/components/ui/grid-background'
 
 import Bento from './components/bento'
@@ -9,9 +10,9 @@ export default function Home() {
     <main className="relative">
       {/* 顶部方格背景 */}
       <div>
-        <GridBackground className="absolute -z-10 h-28 md:h-40" />
-        <div className="h-28 bg-transparent md:h-40"></div>
-        {/* <Beam /> */}
+        {/* <GridBackground className="absolute -z-10 h-28 md:h-40" /> */}
+        {/* <div className="h-28 bg-transparent md:h-40"></div> */}
+        <Sticker />
       </div>
 
       {/* 主体内容 */}
