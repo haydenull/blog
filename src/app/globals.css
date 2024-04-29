@@ -119,6 +119,9 @@
   .prose blockquote {
     @apply border-l-4 border-colorful-500 dark:border-colorful-600 pl-4 pr-1 py-1 bg-colorful-50 dark:bg-colorful-950 dark:bg-opacity-70 rounded-tr rounded-br my-7;
   }
+  .prose video {
+    @apply mx-auto rounded shadow-md;
+  }
   /* ========= callout start ========= */
   .prose .callout {
     @apply rounded-md px-3 py-1 my-7;
@@ -169,12 +172,40 @@
     @apply text-rose-600 dark:text-rose-500;
   }
   /* ========= callout end ========= */
+  /* ========= table start ========= */
+  .prose table {
+    @apply my-7 border border-zinc-200 dark:border-zinc-800 rounded-md border-separate border-spacing-0 border-t-4 border-t-colorful-500 dark:border-t-colorful-600;
+  }
+  .prose table thead tr th {
+    @apply bg-zinc-200/60 dark:bg-zinc-800/80 px-4 py-2 text-[#1f1f22] dark:text-[#d6d6d8];
+  }
+  .prose table tbody tr {
+    @apply bg-white dark:bg-zinc-900;
+  }
+  .prose table tbody tr td {
+    @apply px-4 py-2;
+  }
+  .prose table th:not(:last-child), .prose table td:not(:last-child) {
+    @apply border-r border-zinc-200 dark:border-zinc-800;
+  }
+  .prose table tbody>tr:not(:last-child)>td {
+    @apply border-b border-zinc-200 dark:border-zinc-800;
+  }
+  .prose table tbody tr:hover {
+    @apply bg-colorful-50 dark:bg-colorful-600/30;
+  }
+  /* ========= table end ========= */
+  /* ========= code-block start ========= */
   .prose .code-block .code-container>code {
     @apply flex flex-col w-fit min-w-full;
   }
   .prose .code-block .code-container>code .highlighted-line {
-    @apply bg-colorful-400/15 dark:bg-colorful-400/10 -ml-2 border-l-[0.3rem] pl-[0.2rem] border-colorful-500 dark:border-colorful-600;
+    @apply bg-colorful-400/15 dark:bg-colorful-400/10 -ml-2 -mr-2 border-l-[0.3rem] pl-[0.2rem] border-colorful-500 dark:border-colorful-600;
   }
+  .prose .code-block .code-container>code .linenumber {
+    @apply !text-zinc-600;
+  }
+  /* ========= code-block end ========= */
   /* ========= toc start ========= */
   .toc-position-container {
     @apply fixed w-screen left-0 justify-center hidden bottom-14 pointer-events-none xl:flex;

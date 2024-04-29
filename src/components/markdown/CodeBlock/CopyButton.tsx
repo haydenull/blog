@@ -21,7 +21,7 @@ const CopyButton = ({ text }: { text: string }) => {
       onClick={copyToClipboard}
       className="absolute right-3 top-3 rounded border border-zinc-700 bg-zinc-800 p-1 text-white"
     >
-      {copySuccess ? <IconCheck className="h-4 w-4 text-green-500" /> : <IconCopy className="h-4 w-4" />}
+      {copySuccess ? <IconCheck className="h-4 w-4 text-green-500" /> : <IconCopy className="h-4 w-4 text-zinc-500" />}
     </button>
   )
 }

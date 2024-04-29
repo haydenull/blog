@@ -116,7 +116,7 @@ function getXml({
 | loc        | 页面的 URL                                                           |
 | lastmod    | 页面最后修改时间                                                     |
 | priority   | 页面的优先级，0.0 ~ 1.0，1.0 为最高优先级                            |
-| changefreq | 页面内容的更新频率，always, hourly, daily, weekly, monthly, yearly, never |
+| changefreq | 页面内容的更新频率，always, hourly, daily, weekly, monthly, yearly, never|
 
 一个简单的 sitemap 文件示例：
 
@@ -132,7 +132,7 @@ function getXml({
 </urlset>
 ```
 
-3. 返回 sitemap 文件
+1. 返回 sitemap 文件
 
 ```ts
 export async function GET() {
@@ -163,11 +163,11 @@ export async function GET() {
 
 ![](https://pocket.haydenhayden.com/blog/202404282000153.png?x-oss-process=image/resize,w_1000,m_lfit)
 
-点击页面中的 `请求索引`，Google 会尽快爬取这个页面。之后点击 `TEST LIVE URL`，Google 会检查这个页面是否可以被爬取。出现如下提示，说明 Google 已经爬取到这个页面。
+点击页面中的 `请求索引`，Google 会将爬取这个页面的任务放到优先队列里。
 
 ![](https://pocket.haydenhayden.com/blog/202404282024729.png?x-oss-process=image/resize,w_1000,m_lfit)
 
-等待一段时间 **(可能几个小时也可能一天)**，再次搜索关键词 `贴纸`，就可以看到这个页面的搜索结果了。
+等待一段时间 **(可能几个小时也可能一天)**，出现如下提示，说明 Google 已经爬取到这个页面。再次搜索关键词 `贴纸`，就可以看到这个页面的搜索结果了。
 
 ![](https://pocket.haydenhayden.com/blog/202404290951628.png?x-oss-process=image/resize,w_1000,m_lfit)
 

@@ -16,15 +16,15 @@ const CodeBlock = ({
   language: string
 }) => {
   return (
-    <details className="code-block relative rounded bg-[#1D2021]" open>
-      <summary className="cursor-pointer px-8 pb-3 pt-3 text-sm text-white">{language}</summary>
+    <details className="code-block relative rounded bg-zinc-900" open>
+      <summary className="cursor-pointer px-8 pb-3 pt-3 text-sm text-zinc-500">{language}</summary>
       <SyntaxHighlighter
         wrapLines
         showLineNumbers
         style={atomDark}
         language={language}
         PreTag="div"
-        className="code-container !my-0 bg-transparent !px-2 !pt-0 text-sm"
+        className="code-container !my-0 !bg-transparent !px-2 !pt-0 text-sm"
         lineProps={(lineNumber: number) => {
           if (highlightLines.includes(lineNumber)) {
             return { class: 'highlighted-line' }
