@@ -51,6 +51,51 @@ const STICKERS = [
   {
     url: 'https://pocket.haydenhayden.com/blog/202404291617912.png',
   },
+  {
+    url: 'https://pocket.haydenhayden.com/blog/202404292046720.png',
+  },
+  {
+    url: 'https://pocket.haydenhayden.com/blog/202404292046721.png',
+  },
+  {
+    url: 'https://pocket.haydenhayden.com/blog/202404292046722.png',
+  },
+  {
+    url: 'https://pocket.haydenhayden.com/blog/202404292046723.png',
+  },
+  {
+    url: 'https://pocket.haydenhayden.com/blog/202404292046724.png',
+  },
+  {
+    url: 'https://pocket.haydenhayden.com/blog/202404292046725.png',
+  },
+  {
+    url: 'https://pocket.haydenhayden.com/blog/202404292048095.png',
+  },
+  {
+    url: 'https://pocket.haydenhayden.com/blog/202404292048096.png',
+  },
+  {
+    url: 'https://pocket.haydenhayden.com/blog/202404292048097.png',
+  },
+  {
+    url: 'https://pocket.haydenhayden.com/blog/202404292048098.png',
+  },
+  {
+    url: 'https://pocket.haydenhayden.com/blog/202404292048099.png',
+  },
+  {
+    url: 'https://pocket.haydenhayden.com/blog/202404292048100.png',
+  },
+  {
+    url: 'https://pocket.haydenhayden.com/blog/202404292048101.png',
+  },
+  {
+    url: 'https://pocket.haydenhayden.com/blog/202404292048102.png',
+  },
+  {
+    url: 'https://pocket.haydenhayden.com/blog/202404292048103.png',
+  },
 ]
 
 const Sticker = ({ className }: { className?: string }) => {
