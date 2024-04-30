@@ -8,7 +8,7 @@ import { useTheme } from 'next-themes'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import React, { useCallback, useState } from 'react'
+import React, { useState } from 'react'
 import { flushSync } from 'react-dom'
 import type { TwcComponentProps } from 'react-twc'
 
@@ -22,7 +22,6 @@ export const FloatingNav = ({ navItems, className }: { navItems: NavItem[]; clas
   const routerPathName = usePathname()
   const { setTheme, theme } = useTheme()
   const isDark = theme === 'dark'
-  console.log('[faiz:] === theme', theme, isDark)
 
   const isProjectPage = routerPathName === '/project'
 
