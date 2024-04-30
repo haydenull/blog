@@ -15,7 +15,11 @@ export default function Weekly({ params }: { params: { slug: string } }) {
     <PageContainer className="bg-grid-small-zinc-200 dark:bg-grid-small-zinc-800">
       <article className="prose m-auto w-full max-w-[880px] px-4 py-6 md:px-20">
         <Cover url={frontMatter.cover} alt={frontMatter.title} />
-        <DateAndReadingTime date={frontMatter.date} readingTime={frontMatter.readingTime} />
+        <DateAndReadingTime
+          date={frontMatter.date}
+          updateDate={frontMatter.updatedDate}
+          readingTime={frontMatter.readingTime}
+        />
         <h1 className="mt-10 text-[2.5rem] font-semibold text-foreground">{frontMatter.title}</h1>
         <Description description={frontMatter.description} />
         <p className="my-6 px-1 text-xs text-muted-foreground">
