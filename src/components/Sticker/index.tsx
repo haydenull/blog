@@ -1,6 +1,9 @@
 'use client'
 
-import { cn } from '@/lib/utils'
+import { useRef } from 'react'
+
+import { FollowPointer, FollowerPointerCard } from '../ui/following-pointer'
+import StickerImg from './StickerImage'
 
 const STICKERS = [
   {
@@ -99,6 +102,7 @@ const STICKERS = [
 ]
 
 const Sticker = ({ className }: { className?: string }) => {
+  const boardRef = useRef<HTMLDivElement>(null)
   const stickerList = generateRandomStickers(
     STICKERS.map((sticker) => ({
       ...generateRandomPosition(),
@@ -111,22 +115,20 @@ const Sticker = ({ className }: { className?: string }) => {
   return (
     <div className="relative h-28 overflow-hidden md:h-40">
       {/* 线条背景 */}
-      <div className="via-zinc-white h-full bg-gradient-to-r from-white via-[white_70%,_#EEEFF2_70%] to-[#EEEFF2] bg-[length:6px_100%] dark:from-zinc-950 dark:via-[#09090b_70%,_#3f3f46_70%] dark:to-zinc-700">
+      <div
+        ref={boardRef}
+        className="via-zinc-white h-full bg-gradient-to-r from-white via-[white_70%,_#EEEFF2_70%] to-[#EEEFF2] bg-[length:6px_100%] dark:from-zinc-950 dark:via-[#09090b_70%,_#3f3f46_70%] dark:to-zinc-700"
+      >
         {stickerList.map(({ url, top, left, rotate, scale }, index) => (
-          <img
+          // <FollowerPointerCard key={url + index} className="z-50">
+          <StickerImg
             key={url + index}
-            src={url}
-            className={cn(
-              'absolute w-14 select-none opacity-0 transition-all hover:z-50 hover:!scale-125 lg:w-16 lg:opacity-100',
-              {
-                // 默认屏幕展示前 5 个贴纸
-                'opacity-100': index < 5,
-                // md 屏幕展示前 7 个贴纸
-                'md:opacity-100': index < 7,
-              },
-            )}
+            containerRef={boardRef}
+            url={url}
+            index={index}
             style={{ transform: `rotate(${rotate}deg)`, scale, top, left }}
           />
+          // </FollowerPointerCard>
         ))}
       </div>
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-background"></div>

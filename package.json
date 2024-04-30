@@ -28,6 +28,7 @@
     "@tsparticles/slim": "^3.0.3",
     "@vercel/og": "^0.6.2",
     "afdian": "^1.0.1",
+    "any-touch": "^2.2.0",
     "buymeacoffee.js": "^2.0.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
