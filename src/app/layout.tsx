@@ -1,3 +1,7 @@
+import dayjs from 'dayjs'
+import isLeapYear from 'dayjs/plugin/isLeapYear'
+import isoWeek from 'dayjs/plugin/isoWeek'
+import isoWeeksInYear from 'dayjs/plugin/isoWeeksInYear'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
@@ -7,6 +11,10 @@ import { ThemeProvider } from '@/components/ThemeProvider'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
+
+dayjs.extend(isoWeek)
+dayjs.extend(isLeapYear)
+dayjs.extend(isoWeeksInYear)
 
 const title = '启封 Hayden'
 const description = '启封 Hayden 的个人网站'

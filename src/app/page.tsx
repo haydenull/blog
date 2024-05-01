@@ -19,14 +19,9 @@ export default function Home() {
       <div className="flex flex-col gap-10 bg-background px-4 py-8 text-foreground md:flex-row md:gap-6 md:px-16">
         {/* 个人信息 */}
         <div className="flex flex-1 flex-col gap-4">
-          <Image
-            priority
-            className="inset-0 rounded-full border"
-            src="/assets/avatar.png"
-            alt="avatar"
-            width={120}
-            height={120}
-          />
+          <div className="relative inset-0 size-16 overflow-hidden rounded-full border sm:size-24 md:size-28">
+            <Image priority fill src="/assets/avatar.png" alt="avatar" />
+          </div>
           <h1 className="text-4xl font-semibold">启封 Hayden</h1>
           <p className="text-muted-foreground">
             A front-end developer with a passion for using technology to increase personal efficiency and productivity
