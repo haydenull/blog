@@ -1,21 +1,31 @@
+'use client'
+
 import dayjs from 'dayjs'
+import isLeapYear from 'dayjs/plugin/isLeapYear'
+import isoWeek from 'dayjs/plugin/isoWeek'
+import isoWeeksInYear from 'dayjs/plugin/isoWeeksInYear'
 
 import { cn } from '@/lib/utils'
-import { getWeeklyFrontMatterList } from '@/lib/weekly'
+import type { WeeklyFrontMatter } from '@/types/weekly'
 
-import BentoCard from './BentoCard'
+import BentoCard from '../BentoCard'
 
-const Weekly = () => {
-  const weeklyFrontMatterList = getWeeklyFrontMatterList()
-  const latestWeekly = weeklyFrontMatterList?.[0]
-  // 有周记的周
-  const hasWeeklyWeeks = weeklyFrontMatterList.map((item) => item.week)
+dayjs.extend(isoWeek)
+dayjs.extend(isLeapYear)
+dayjs.extend(isoWeeksInYear)
+
+const Card = ({
+  latestWeekly,
+  hasWeeklyWeeks,
+}: {
+  latestWeekly: WeeklyFrontMatter
+  /** 有周记的周 */
+  hasWeeklyWeeks: number[]
+}) => {
   // 今年总计的周数
   const totalWeeks = dayjs().isoWeeksInYear()
   // 当前周数
   const currentWeek = dayjs().isoWeek()
-
-  if (!latestWeekly) return null
 
   const { slug, week, episode } = latestWeekly
 
@@ -58,4 +68,4 @@ const Weekly = () => {
   )
 }
 
-export default Weekly
+export default Card
