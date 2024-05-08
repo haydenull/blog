@@ -265,10 +265,13 @@
   @apply !mb-0.5;
 }
 .atk-list .atk-comment .atk-main .atk-header .atk-nick {
-  @apply !text-base;
+  @apply !text-sm;
 }
 .atk-list .atk-comment .atk-main .atk-header .atk-date {
   @apply !text-xs !text-muted-foreground;
+}
+.atk-list .atk-comment .atk-main .atk-body .atk-content {
+  @apply !text-base !text-foreground;
 }
 .atk-list .atk-comment .atk-main .atk-footer {
   @apply !mt-0.5 md:opacity-0 transition-all;

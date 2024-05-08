@@ -13,15 +13,17 @@ export default function Blog({ params }: { params: { slug: string } }) {
 
   return (
     <PageContainer className="bg-grid-small-zinc-200 dark:bg-grid-small-zinc-800">
-      <article className="prose m-auto w-full max-w-[880px] px-4 py-6 md:px-20">
-        <Cover url={frontMatter.cover} alt={frontMatter.title} />
-        <DateAndReadingTime date={frontMatter.date} updateDate={frontMatter.updatedDate} readingTime={readingTime} />
-        <h1 className="mt-10 text-[2.5rem] font-semibold text-foreground">{frontMatter.title}</h1>
-        <Description description={frontMatter.description} />
-        <Markdown markdownText={content} />
+      <div className="m-auto w-full max-w-[880px] px-4 py-6 md:px-20">
+        <article className="prose">
+          <Cover url={frontMatter.cover} alt={frontMatter.title} />
+          <DateAndReadingTime date={frontMatter.date} updateDate={frontMatter.updatedDate} readingTime={readingTime} />
+          <h1 className="mt-10 text-[2.5rem] font-semibold text-foreground">{frontMatter.title}</h1>
+          <Description description={frontMatter.description} />
+          <Markdown markdownText={content} />
+        </article>
         <EditLink filePath={`content/blogs/${params.slug}.md`} />
         <ArtalkComment pageKey={`/blog/${frontMatter.slug}`} pageTitle={frontMatter.title} />
-      </article>
+      </div>
     </PageContainer>
   )
 }
