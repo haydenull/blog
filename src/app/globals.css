@@ -101,6 +101,9 @@
   .prose li::marker {
     @apply font-semibold;
   }
+  .prose li p {
+    @apply inline-block my-1;
+  }
   .prose ul ul, .prose ol ol, .prose ul ol, .prose ol ul {
     @apply ml-6 my-1;
   }
