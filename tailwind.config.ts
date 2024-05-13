@@ -102,12 +102,17 @@ const config = {
           '0%': { opacity: '0.5', transform: 'translateY(40px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
+        breath: {
+          '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.2)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'meteor-effect': 'meteor 5s linear infinite',
         'fade-in-down': 'fade-in-down 0.5s ease-in-out',
+        breath: 'breath 8s ease-in-out infinite',
       },
     },
   },

@@ -16,9 +16,10 @@ export default function Home() {
       </div>
 
       {/* 主体内容 */}
-      <div className="flex flex-col gap-10 bg-background px-4 py-8 text-foreground md:flex-row md:gap-6 md:px-16">
+      {/* <div className="flex flex-col gap-10 bg-background px-4 py-8 text-foreground md:flex-row md:gap-6 md:px-16"> */}
+      <div className="m-auto max-w-[450px] md:max-w-[800px] md:grid-cols-2">
         {/* 个人信息 */}
-        <div className="flex flex-1 flex-col gap-4">
+        {/* <div className="flex flex-1 flex-col gap-4">
           <div className="relative inset-0 size-16 overflow-hidden rounded-full border sm:size-24 md:size-28">
             <Image priority fill src="/assets/avatar.png" alt="avatar" />
           </div>
@@ -27,7 +28,7 @@ export default function Home() {
             A front-end developer with a passion for using technology to increase personal efficiency and productivity
             💡.
           </p>
-        </div>
+        </div> */}
         {/* Bento */}
         <Bento />
       </div>

@@ -18,7 +18,24 @@ import Weekly from './Weekly'
 
 const Bento = () => {
   return (
-    <div className="grid min-w-[300px] grid-cols-2 grid-rows-[repeat(8,_150px)] items-stretch gap-4 md:w-[400px] md:min-w-[380px] md:grid-rows-[repeat(8,_175px)] lg:w-[600px] lg:min-w-[760px] lg:grid-cols-4 xl:w-[820px] ">
+    <div className="m-auto grid grid-cols-2 grid-rows-[repeat(8,_150px)] items-stretch gap-4 md:grid-cols-4 md:grid-rows-[repeat(8,_175px)]">
+      {/* 介绍 */}
+      <BentoCard className="col-span-2 flex flex-col justify-center">
+        <div className="flex flex-col items-center">
+          <p className="text-foreground">
+            Hi there! 👋 <b>I&apos;m Hayden</b>, a front-end developer with a passion for using technology to increase
+            personal efficiency and productivity.
+          </p>
+        </div>
+      </BentoCard>
+      {/* 头像 */}
+      <BentoCard className="col-span-2 flex items-center justify-center">
+        <div className="sm:24 relative inset-0 flex size-20 rounded-full border md:size-28">
+          <div className="absolute size-full animate-breath rounded-full bg-[#c9bfcf]"></div>
+          <div className="absolute size-[90%] animate-breath rounded-full bg-[#c9bfcf]"></div>
+          <img src="/assets/avatar.png" alt="avatar" className="absolute z-10 h-full w-full rounded-full" />
+        </div>
+      </BentoCard>
       {/* Quote */}
       <BentoCard className="relative col-span-2 flex-col items-center justify-center overflow-hidden bg-black dark:bg-black">
         <div className="absolute inset-0 h-full w-full">
