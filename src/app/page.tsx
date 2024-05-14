@@ -7,7 +7,7 @@ import Bento from './components/bento'
 
 export default function Home() {
   return (
-    <main className="relative">
+    <main className="relative px-6">
       {/* 顶部方格背景 */}
       <div>
         {/* <GridBackground className="absolute -z-10 h-28 md:h-40" /> */}

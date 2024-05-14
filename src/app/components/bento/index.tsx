@@ -18,7 +18,7 @@ import Weekly from './Weekly'
 
 const Bento = () => {
   return (
-    <div className="m-auto grid grid-cols-2 grid-rows-[repeat(8,_150px)] items-stretch gap-4 md:grid-cols-4 md:grid-rows-[repeat(8,_175px)]">
+    <div className="m-auto grid grid-cols-2 grid-rows-[repeat(10,_150px)] items-stretch gap-4 md:grid-cols-4 md:grid-rows-[repeat(5,_175px)]">
       {/* 介绍 */}
       <BentoCard className="col-span-2 flex flex-col justify-center">
         <div className="flex flex-col items-center">
