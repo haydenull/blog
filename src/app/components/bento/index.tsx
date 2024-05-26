@@ -7,6 +7,7 @@ import {
 } from '@tabler/icons-react'
 
 import GithubCalendar from '@/components/GithubCalendar'
+import Ripple from '@/components/ui/ripple'
 import { SparklesCore } from '@/components/ui/sparkles-core'
 
 import AiFaDian from './AiFaDian'
@@ -30,10 +31,9 @@ const Bento = () => {
       </BentoCard>
       {/* 头像 */}
       <BentoCard className="col-span-2 flex items-center justify-center">
-        <div className="sm:24 relative inset-0 flex size-20 rounded-full border md:size-28">
-          <div className="absolute size-full animate-breath rounded-full bg-[#c9bfcf]"></div>
-          <div className="absolute size-[90%] animate-breath rounded-full bg-[#c9bfcf]"></div>
-          <img src="/assets/avatar.png" alt="avatar" className="absolute z-10 h-full w-full rounded-full" />
+        <div className="relative size-20 md:size-24">
+          <Ripple />
+          <img src="/assets/avatar.png" alt="avatar" className="absolute z-10 size-full rounded-full" />
         </div>
       </BentoCard>
       {/* Quote */}
