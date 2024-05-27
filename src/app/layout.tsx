@@ -4,6 +4,7 @@ import isoWeek from 'dayjs/plugin/isoWeek'
 import isoWeeksInYear from 'dayjs/plugin/isoWeeksInYear'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Script from 'next/script'
 
 import Header from '@/components/Header'
 import { ThemeProvider } from '@/components/ThemeProvider'
@@ -66,6 +67,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         ) : null}
         <link href="https://artalk.haydenhayden.com/dist/Artalk.css" rel="stylesheet" />
         <script async src="https://artalk.haydenhayden.com/dist/Artalk.js"></script>
+        {/* microsoft clarity */}
+        <Script strategy="afterInteractive">
+          {`(function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window, document, "clarity", "script", "miiif83aff");`}
+        </Script>
       </head>
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
