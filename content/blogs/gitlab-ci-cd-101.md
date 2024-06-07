@@ -2,6 +2,7 @@
 title: GitLab CI/CD 101
 description: GitLab CI/CD 入门指南。
 date: 2024-06-05
+updatedDate: 2024-06-07
 cover: https://pocket.haydenhayden.com/blog/202406061538928.jpg
 ---
 
@@ -34,6 +35,12 @@ Stage 又由 Job 组成，**Job** 是 Pipeline 的最小执行单元，它定义
 而 **Runner** 是 GitLab CI/CD 的执行者，它负责执行 Job 中定义的任务，Runner 可以是 GitLab 提供的共享 Runner，也可以是用户自己搭建的私有 Runner。
 
 ![](https://pocket.haydenhayden.com/blog/202406061557825.png?x-oss-process=image/resize,w_1000,m_lfit)
+
+### 执行顺序
+
+- **Stage**: 按照定义的顺序执行，只有上一个 Stage 的任务执行成功后，才会执行下一个 Stage 的任务。
+- **Job**: 同一个 Stage 中的 Job 是并行执行的。
+- 使用 [needs](https://docs.gitlab.com/ee/ci/yaml/index.html#needs) 可以控制 Job 的执行顺序。
 
 ### 创建一个 Pipeline
 
@@ -224,6 +231,38 @@ test1:
 > [!warning]
 > GitLab CI/CD Components 是 GitLab 16.0 版本新增的功能。
 
+### needs 与 dependencies
+
+`needs` 用于指定 job 之间的依赖关系，即一个 job 依赖于另一个 job 的执行结果。他可以改变 job 的执行顺序。
+
+```yaml{15-16}
+job1:
+  stage: test
+  script:
+    - echo "Running job1"
+
+job2:
+  stage: test
+  script:
+    - echo "Running job2"
+
+job3:
+  stage: build
+  script:
+    - echo "Running job3"
+  needs:
+    - job1
+```
+
+上述配置中，job1 job2 属于 test stage, job3 属于 build stage。正常情况下 job3 需要等 job1 与 job2 执行完毕后才能执行。但是我们给 job3 添加了 needs: - job1, 这样 job3 只需要等 job1 执行完毕后就可以执行了。
+
+> [!note]
+> `needs` 的值只能是之前 stage 里定义的 job，但是从 14.1 版本开始开启 `:ci_same_stage_job_needs` 后可以支持同一 stage 里的 job。
+
+`dependencies` 用于指定 job 需要下载哪些 job 的 artifacts，其值也必须是之前 stage 里定义的 job。未指定时默认下载之前 stage 的所有 job 的 artifacts。
+
+`needs` 默认会下载指定 job 的 artifacts，所以不要同时使用 `needs` 和 `dependencies`。
+
 ## 常见场景
 
 ### 判断包管理器并缓存依赖
@@ -247,22 +286,22 @@ build-app:
         corepack prepare pnpm@latest-8 --activate;
         PACKAGE_MANAGER_VERSION="pnpm $(pnpm --version)";
         pnpm config set store-dir .pkg-cache;
-        INSTALL_CMD="pnpm install";
+        INSTALL_CMD="pnpm install --frozen-lockfile";
         BUILD_CMD="pnpm run build:$ENV";
-        echo "pnpm-lock.yaml" > .common-ci-pkg-cache-key.txt;
+        cat pnpm-lock.yaml > .common-ci-pkg-cache-key.txt;
       elif [ -f "yarn.lock" ]; then
         PACKAGE_MANAGER_VERSION="yarn $(yarn --version)";
-        yarn config set yarn-offline-mirror .pkg-cache;
+        yarn config set yarn-offline-mirror $PWD/.pkg-cache;
         yarn config set yarn-offline-mirror-pruning true;
-        INSTALL_CMD="yarn install";
+        INSTALL_CMD="yarn install --frozen-lockfile";
         BUILD_CMD="yarn run build:$ENV";
-        echo "yarn.lock" > .common-ci-pkg-cache-key.txt;
+        cat yarn.lock > .common-ci-pkg-cache-key.txt;
       elif [ -f "package-lock.json" ]; then
         PACKAGE_MANAGER_VERSION="npm $(npm --version)";
         npm ci --cache .pkg-cache --prefer-offline;
         INSTALL_CMD="npm install";
         BUILD_CMD="npm run build:$ENV";
-        echo "package-lock.json" > .common-ci-pkg-cache-key.txt;
+        cat package-lock.json > .common-ci-pkg-cache-key.txt;
       else
         echo -e "${TXT_RED} ERROR: 未找到包管理器文件" && exit 1;
       fi;
@@ -277,6 +316,9 @@ build-app:
     paths:
       - .pkg-cache
 ```
+
+> [!tip]
+> `yarn config set yarn-offline-mirror $PWD/.pkg-cache` 这里的路径需要加上 `$PWD`。
 
 ## 参考资料
 - [GitLab CI CD Tutorial for Beginners](https://www.youtube.com/watch?v=qP8kir2GUgo&t=2439s)
