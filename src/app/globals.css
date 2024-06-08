@@ -120,7 +120,7 @@
     @apply md:inline-block md:m-0;
   }
   .prose blockquote {
-    @apply border-l-4 border-colorful-500 dark:border-colorful-600 pl-4 pr-1 py-1 bg-colorful-50 dark:bg-colorful-950 dark:bg-opacity-70 rounded-tr rounded-br my-7;
+    @apply border-l-4 border-colorful-500 dark:border-colorful-600 pl-4 pr-1 py-1 bg-colorful-50 dark:bg-colorful-950/50 rounded-tr rounded-br my-7;
   }
   .prose video {
     @apply mx-auto rounded shadow-md;
@@ -134,6 +134,9 @@
   }
   .prose .callout .callout-title .callout-title__icon svg {
     @apply w-6 h-6;
+  }
+  .prose .callout .callout-content {
+    @apply my-3;
   }
   .prose .callout .callout-content p {
     @apply my-2 mx-1;

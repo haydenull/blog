@@ -58,12 +58,21 @@ const TYPE_KEYS = Object.keys(TYPE)
 const remarkCallout: Plugin = () => {
   return (tree) => {
     visit(tree, 'blockquote', (node: Node, index, parent) => {
-      const children = (node as Parent).children
-      // const values = children.map((child) => toString(child))
-      // const value = values.join('\n') // 保留原始的换行符
+      const nodes = (node as Parent).children
+      const rawFirstNode = nodes[0]
+      const [firstLine, ...remainingLines] = toString(rawFirstNode).split('\n')
+      // const content = remainingLines.map((line) => `<p>${line}</p>`).join('\n')
 
-      const [firstLine, ...remainingLines] = toString(children[0]).split('\n')
-      const content = remainingLines.map((line) => `<p>${line}</p>`).join('\n')
+      const firstChildOfFirstNode =
+        // @ts-expect-error children correct
+        rawFirstNode.children[0].type === 'text'
+          ? {
+              // @ts-expect-error children correct
+              ...rawFirstNode.children[0],
+              // @ts-expect-error children correct
+              value: rawFirstNode.children[0].value.split('\n').slice(1).join('\n'),
+            }
+          : undefined
 
       const match = firstLine.match(/\[!(\w+)\]\s*(.*)?/)
       if (match && typeof index === 'number') {
@@ -72,16 +81,6 @@ const remarkCallout: Plugin = () => {
         if (TYPE_KEYS.includes(type)) {
           const { icon, title: defaultTitle } = TYPE[type as keyof typeof TYPE]
           const _title = title?.trim() || defaultTitle
-          // parent.children[index] = {
-          //   type: 'html',
-          //   value: `<div class="callout callout-${type}">
-          //     <div class="callout-title">
-          //       <span class="callout-title__icon">${icon}</span>
-          //       <span class="callout-title__text">${_title}</span>
-          //     </div>
-          //     <div class="callout-content">${content}</div>
-          //   </div>`,
-          // }
           // @ts-expect-error type correct
           parent.children[index] = {
             type: 'div',
@@ -106,7 +105,18 @@ const remarkCallout: Plugin = () => {
               {
                 type: 'div',
                 data: { hProperties: { className: 'callout-content' } },
-                children: [{ type: 'html', value: content }, ...children.slice(1)],
+                // children: [{ type: 'html', value: content }, ...children.slice(1)],
+                children: [
+                  {
+                    type: 'paragraph',
+                    children: [
+                      firstChildOfFirstNode,
+                      // @ts-expect-error children correct
+                      ...rawFirstNode.children.slice(1),
+                    ],
+                  },
+                  ...nodes.slice(1),
+                ],
               },
             ],
           }

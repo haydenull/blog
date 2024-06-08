@@ -15,6 +15,8 @@ const CodeBlock = ({
   highlightLines?: number[]
   language: string
 }) => {
+  // fix: 移除末尾空行 https://github.com/react-syntax-highlighter/react-syntax-highlighter/issues/443
+  const trimmedText = text.trim()
   return (
     <details className="code-block relative rounded bg-zinc-900" open>
       <summary className="cursor-pointer px-8 pb-3 pt-3 text-sm text-zinc-500">{language}</summary>
@@ -33,9 +35,9 @@ const CodeBlock = ({
         }}
         {...props}
       >
-        {text}
+        {trimmedText}
       </SyntaxHighlighter>
-      <CopyButton text={text} />
+      <CopyButton text={trimmedText} />
     </details>
   )
 }
