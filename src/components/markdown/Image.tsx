@@ -24,7 +24,13 @@ const Image = ({ src = '', alt = '', ...props }: { src?: string; alt?: string })
         </div>
       )}
       {/* <img src={src} alt={alt} {...props} onClick={toggleFullscreen} className="cursor-zoom-in dark:opacity-80" /> */}
-      <ProgressiveImage src={src} alt={alt} onClick={toggleFullscreen} className="cursor-zoom-in dark:opacity-80" />
+      <ProgressiveImage
+        {...props}
+        src={src}
+        alt={alt}
+        onClick={toggleFullscreen}
+        className="cursor-zoom-in dark:opacity-80"
+      />
       {/* <div className="relative">
         <NextImageWithBlur src={src} alt={alt} />
       </div> */}
