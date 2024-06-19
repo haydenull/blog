@@ -298,8 +298,7 @@ build-app:
         cat yarn.lock > .common-ci-pkg-cache-key.txt;
       elif [ -f "package-lock.json" ]; then
         PACKAGE_MANAGER_VERSION="npm $(npm --version)";
-        npm ci --cache .pkg-cache --prefer-offline;
-        INSTALL_CMD="npm install";
+        INSTALL_CMD="npm ci --cache .pkg-cache --prefer-offline";
         BUILD_CMD="npm run build:$ENV";
         cat package-lock.json > .common-ci-pkg-cache-key.txt;
       else
