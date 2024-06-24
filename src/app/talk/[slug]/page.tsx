@@ -5,7 +5,7 @@ import Cover from '@/components/article/Cover'
 import DateAndReadingTime from '@/components/article/DateAndReadingTime'
 import Description from '@/components/article/Description'
 import Markdown from '@/components/markdown'
-import { getTalkBySlug } from '@/lib/talk'
+import { getTalkBySlug, getTalkFrontMatterList } from '@/lib/talk'
 
 // TOC https://gist.github.com/sobelk/16fe68ff5520b2d5e2b6d406e329e0de
 export default function Talk({ params }: { params: { slug: string } }) {
@@ -115,4 +115,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       ],
     },
   }
+}
+
+export function generateStaticParams() {
+  const talkFrontMatterList = getTalkFrontMatterList()
+  return talkFrontMatterList.map((frontMatter) => ({ slug: frontMatter.slug }))
 }

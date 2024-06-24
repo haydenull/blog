@@ -5,7 +5,7 @@ import Cover from '@/components/article/Cover'
 import DateAndReadingTime from '@/components/article/DateAndReadingTime'
 import Description from '@/components/article/Description'
 import Markdown from '@/components/markdown'
-import { getBlogBySlug } from '@/lib/blog'
+import { getBlogBySlug, getBlogFrontMatterList } from '@/lib/blog'
 
 // TOC https://gist.github.com/sobelk/16fe68ff5520b2d5e2b6d406e329e0de
 export default function Blog({ params }: { params: { slug: string } }) {
@@ -66,4 +66,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       ],
     },
   }
+}
+
+export function generateStaticParams() {
+  const blogFrontMatterList = getBlogFrontMatterList()
+  return blogFrontMatterList.map((frontMatter) => ({ slug: frontMatter.slug }))
 }
