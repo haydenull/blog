@@ -231,6 +231,9 @@
   .toc-container a.toc-h3 {
     @apply flex items-center mt-2 gap-1 before:inline-block before:w-1 before:h-1 before:rounded-full before:bg-zinc-300 dark:before:bg-zinc-700;
   }
+  .toc-container a::after {
+    @apply hidden;
+  }
   /* ========= toc end ========= */
 }
 

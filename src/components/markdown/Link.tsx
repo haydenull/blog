@@ -8,7 +8,15 @@ const Link = ({ text, href, className, ...props }: { text: string; href?: string
     return (
       <a
         {...props}
-        className={cn(className, 'break-all text-colorful-500 hover:underline dark:text-colorful-400')}
+        className={cn(
+          className,
+          `relative left-0 break-all after:absolute after:-bottom-[2px] after:left-0 after:h-[2px] after:w-full
+          after:bg-colorful-500 after:transition-all hover:text-colorful-900 hover:after:h-[calc(100%+2px)]
+          hover:after:bg-colorful-500/30 dark:after:bg-colorful-800 dark:hover:text-colorful-50
+          dark:hover:after:bg-colorful-600/50 [@media(hover:none)]:underline [@media(hover:none)]:decoration-colorful-500
+          [@media(hover:none)]:underline-offset-4 [@media(hover:none)]:after:hidden
+          dark:[@media(hover:none)]:decoration-colorful-800`,
+        )}
         href={href}
       >
         {text}
