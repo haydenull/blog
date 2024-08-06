@@ -137,3 +137,7 @@ Cheers，收费软件，App Store 可下载。
 ![](https://pocket.haydenhayden.com/blog/202408061328307.png)
 
 UnPlay，支持安卓手机投屏。
+
+## 参考资料
+
+- [AppleTV 开启新的生活体验](https://5km.studio/blog/appletv-start-new-life-experience#a54cd88cb48b)
