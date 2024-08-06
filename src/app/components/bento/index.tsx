@@ -75,7 +75,10 @@ const Bento = () => {
           </div>
           <p className="relative mt-1 text-black group-hover:text-white dark:text-foreground">@haydenut</p>
         </div>
-        <button className="relative w-[70px] rounded-full bg-[#ff0000] py-1.5 text-xs font-semibold text-white group-hover:bg-white group-hover:text-[#ff0000] ">
+        <button
+          className="relative w-[70px] rounded-full bg-[#ff0000] py-1.5 text-xs font-semibold text-white group-hover:bg-white
+            group-hover:text-[#ff0000]"
+        >
           Follow
         </button>
       </BentoCard>
@@ -107,12 +110,15 @@ const Bento = () => {
           </div>
           <p className="relative mt-1 text-black group-hover:text-white dark:text-foreground">启封Hayden</p>
         </div>
-        <button className="relative w-[70px] rounded-full bg-[#FB7299] py-1.5 text-xs font-semibold text-white group-hover:bg-white group-hover:text-[#FB7299] ">
+        <button
+          className="relative w-[70px] rounded-full bg-[#FB7299] py-1.5 text-xs font-semibold text-white group-hover:bg-white
+            group-hover:text-[#FB7299]"
+        >
           关注
         </button>
       </BentoCard>
       {/* Github */}
-      <BentoCard className="col-span-2 flex flex-row items-center">
+      <BentoCard className="col-span-2 flex flex-row items-center" url="https://github.com/haydenull">
         <div className="flex h-full flex-col justify-between">
           <div>
             <div className="flex h-[40px] w-[40px] items-center justify-center rounded-md bg-[#333] ">
