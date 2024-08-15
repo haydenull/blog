@@ -9,7 +9,7 @@ export async function GET() {
     title: SEO.title,
     description: SEO.description,
     site_url: SEO.url.href,
-    feed_url: `${SEO.url.href}feed.xml`,
+    feed_url: `${SEO.url.href}/feed.xml`,
     language: 'zh-CN',
     image_url: `${SEO.url.href}/assets/avatar.png`,
     generator: 'PHP 9.0',
@@ -21,11 +21,14 @@ export async function GET() {
 
   articles.forEach(
     ({ title, type, slug, description = SEO.title, cover = `${SEO.url.href}/assets/avatar.png`, date }) => {
+      const url = `${SEO.url.href}/${type}/${slug}`
       feed.item({
         title,
         guid: `${type}-${slug}`,
-        url: `${SEO.url.href}/${type}/${slug}`,
-        description,
+        url,
+        description: `${description}
+
+<p><a href="${url}">点击阅读全文</a></p>`,
         date: new Date(date),
         enclosure: {
           url: cover,
