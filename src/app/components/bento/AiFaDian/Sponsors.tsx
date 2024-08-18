@@ -29,6 +29,7 @@ const Sponsors = async () => {
 async function getSponsors() {
   try {
     const res = await afdian.querySponsor(1)
+    if (res.ec !== 200) return []
     return res.data.list?.sort((a, b) => Number(b.all_sum_amount) - Number(a.all_sum_amount)).slice(0, 5)
   } catch (error) {
     return []

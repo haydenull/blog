@@ -89,11 +89,17 @@
   .prose p {
     @apply text-base leading-7 my-7 break-words;
   }
+  .prose ul + section > *, .prose ol + section > * {
+    @apply mt-0 mb-1;
+  }
   .prose ul {
     @apply list-disc list-inside my-8;
   }
   .prose ol {
     @apply list-decimal list-inside my-8;
+  }
+  .prose ul:has(+ section), .prose ol:has(+ section) {
+    @apply mb-0 mt-5;
   }
   .prose li {
     @apply text-base leading-7 my-1;
