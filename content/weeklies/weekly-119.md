@@ -5,14 +5,6 @@ week: 34
 episode: 119
 ---
 
-<!--
-1. ray.so 工具, favicon 生成
-2. kill the newsletter
-3. Atomic Habit 读书笔记
-4. nextjs boilerplate
-5. react scheduler
- -->
-
 ## Raycast 开源工具箱 ray.so
 
 https://ray.so/
