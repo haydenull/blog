@@ -44,6 +44,8 @@ VPN 的目的是在公共网络上建立一个安全的连接，保护数据在�
 
 ## 《黑客与画家》读书笔记
 
+<img src="https://pocket.haydenhayden.com/blog/202409171811248.png" alt="黑客与画家" width="300" />
+
 1. **为什么书呆子不受欢迎**
 
 <section>
