@@ -18,7 +18,8 @@
         "tabler",
         "tailwindcss",
         "tsparticles",
-        "typecheck"
+        "typecheck",
+        "weapp"
     ],
     "ignoreWords": [],
     "import": []
