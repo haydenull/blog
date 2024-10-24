@@ -13,6 +13,11 @@ export async function GET() {
     language: 'zh-CN',
     image_url: `${SEO.url.href}/assets/avatar.png`,
     generator: 'PHP 9.0',
+    custom_elements: [
+      {
+        follow_challenge: [{ feedId: '63533985596378114' }, { userId: '57608387296963584' }],
+      },
+    ],
   })
 
   const blogs = getBlogFrontMatterList()?.map((item) => ({ ...item, type: 'blog' }))
