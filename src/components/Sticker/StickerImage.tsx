@@ -18,7 +18,7 @@ function StickerImg({
   url: string
   index: number
   className?: string
-  containerRef: React.RefObject<HTMLDivElement>
+  containerRef: React.RefObject<HTMLDivElement | null>
   styleInfo?: StickerStyleInfo
   onStyleChange?: (styleInfo: StickerStyleInfo) => void
 }) {

@@ -8,7 +8,8 @@ import Markdown from '@/components/markdown'
 import { getBlogBySlug, getBlogFrontMatterList } from '@/lib/blog'
 
 // TOC https://gist.github.com/sobelk/16fe68ff5520b2d5e2b6d406e329e0de
-export default function Blog({ params }: { params: { slug: string } }) {
+export default async function Blog(props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params
   const { frontMatter, content, readingTime } = getBlogBySlug(params.slug)
 
   return (
@@ -28,7 +29,8 @@ export default function Blog({ params }: { params: { slug: string } }) {
   )
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
+export async function generateMetadata(props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params
   const { frontMatter, content } = getBlogBySlug(params.slug)
   const { title, cover, description = '' } = frontMatter
   return {

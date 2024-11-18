@@ -8,7 +8,8 @@ import Markdown from '@/components/markdown'
 import { getTalkBySlug, getTalkFrontMatterList } from '@/lib/talk'
 
 // TOC https://gist.github.com/sobelk/16fe68ff5520b2d5e2b6d406e329e0de
-export default function Talk({ params }: { params: { slug: string } }) {
+export default async function Talk(props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params
   const { frontMatter, content } = getTalkBySlug(params.slug)
 
   return (
@@ -77,7 +78,8 @@ export default function Talk({ params }: { params: { slug: string } }) {
   )
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
+export async function generateMetadata(props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params
   const { frontMatter, content } = getTalkBySlug(params.slug)
   const { title, cover, description = '' } = frontMatter
   return {

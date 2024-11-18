@@ -8,7 +8,8 @@ import Markdown from '@/components/markdown'
 import { getWeeklyBySlug, getWeeklyFrontMatterList } from '@/lib/weekly'
 
 // TOC https://gist.github.com/sobelk/16fe68ff5520b2d5e2b6d406e329e0de
-export default function Weekly({ params }: { params: { slug: string } }) {
+export default async function Weekly(props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params
   const { frontMatter, content } = getWeeklyBySlug(params.slug)
 
   return (
@@ -35,7 +36,8 @@ export default function Weekly({ params }: { params: { slug: string } }) {
   )
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
+export async function generateMetadata(props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params
   const { frontMatter, content } = getWeeklyBySlug(params.slug)
   const { title, cover, description = '' } = frontMatter
   return {

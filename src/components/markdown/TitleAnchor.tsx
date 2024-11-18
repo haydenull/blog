@@ -1,12 +1,14 @@
 import { IconLink } from '@tabler/icons-react'
 import { slug } from 'github-slugger'
-import React from 'react'
+import React, { type JSX } from 'react'
 
 function extractTextFromNode(node: React.ReactNode): string {
   if (typeof node === 'string') {
     return node
   } else if (React.isValidElement(node)) {
-    return React.Children.toArray(node.props.children).map(extractTextFromNode).join('')
+    return React.Children.toArray((node as { props: { children: React.ReactNode } }).props.children)
+      .map(extractTextFromNode)
+      .join('')
   } else if (Array.isArray(node)) {
     return node.map(extractTextFromNode).join('')
   } else {
@@ -24,7 +26,8 @@ const TitleAnchor = ({ title, level, ...props }: { title: React.ReactNode; level
       <a
         id={slugStr}
         href={`#${slugStr}`}
-        className="before:invisibl absolute -ml-6 flex items-center opacity-0 transition-opacity before:block before:h-20 before:content-[''] sm:group-hover:opacity-100"
+        className="before:invisibl absolute -ml-6 flex items-center opacity-0 transition-opacity before:block before:h-20
+          before:content-[''] sm:group-hover:opacity-100"
       >
         <IconLink className="w-5" />
       </a>
