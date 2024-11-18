@@ -6,7 +6,7 @@ import { useEffect, useRef } from 'react'
 
 const ArtalkComment = ({ pageKey, pageTitle }: { pageKey: string; pageTitle: string }) => {
   const { theme } = useTheme()
-  const artalkRef = useRef<ArtalkType>(undefined)
+  const artalkRef = useRef<ArtalkType>()
 
   // 设置 Artalk 的主题
   useEffect(() => {
