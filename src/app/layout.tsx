@@ -65,8 +65,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             data-website-id="1d3a1731-2c59-434b-bf52-b2b36b7e90da"
           ></script>
         ) : null}
-        <link href="https://artalk.haydenhayden.com/dist/Artalk.css" rel="stylesheet" />
-        <script async src="https://artalk.haydenhayden.com/dist/Artalk.js"></script>
         {/* microsoft clarity */}
         <Script strategy="afterInteractive">
           {`(function(c,l,a,r,i,t,y){
