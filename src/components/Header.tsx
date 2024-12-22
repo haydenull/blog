@@ -13,11 +13,11 @@ const navItems: NavItem[] = [
     link: '/blog',
     icon: <IconBook className="h-5 w-5" />,
   },
-  {
-    name: '周刊',
-    link: '/weekly',
-    icon: <IconNews className="h-5 w-5" />,
-  },
+  // {
+  //   name: '周刊',
+  //   link: '/weekly',
+  //   icon: <IconNews className="h-5 w-5" />,
+  // },
   {
     name: '分享',
     link: '/talk',
