@@ -24,8 +24,8 @@ const Bento = () => {
       <BentoCard className="col-span-2 flex flex-col justify-center">
         <div className="flex flex-col items-center">
           <p className="text-foreground">
-            Hi there! 👋 <b>I&apos;m Hayden</b>, a front-end developer with a passion for using technology to increase
-            personal efficiency and productivity.
+            Hi there! 👋 <b>I&apos;m Jaychouzzz</b>, a back-end developer with a passion for using technology to
+            increase personal efficiency and productivity.
           </p>
         </div>
       </BentoCard>
