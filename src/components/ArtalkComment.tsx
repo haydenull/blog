@@ -22,7 +22,7 @@ const ArtalkComment = ({ pageKey, pageTitle }: { pageKey: string; pageTitle: str
         el: node,
         pageKey,
         pageTitle,
-        server: 'https://artalk.haydenhayden.com',
+        server: 'https://artalk.chuanfang.org',
         site: 'blog',
         darkMode: theme === 'dark',
       })
