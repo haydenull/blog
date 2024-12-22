@@ -8,15 +8,16 @@ const PROJECTS = [
     category: 'Logseq Plugin',
     projects: [
       {
-        title: 'Agenda',
-        repo: 'https://github.com/haydenull/logseq-plugin-agenda',
-        description: 'A calendar, task manager and daily planner plugin for logseq.',
+        title: 'MusicToolKit',
+        repo: 'https://github.com/nichuanfang/music-tool-kit',
+        description: 'A music tool.',
         icon: <IconCalendarBolt className="size-11" />,
       },
       {
-        title: 'Logseq Excalidraw Plugin',
-        repo: 'https://github.com/haydenull/logseq-plugin-excalidraw',
-        description: 'A logseq plugin that integrates Excalidraw into logseq. Support both dashboard and slides mode.',
+        title: 'trakt',
+        repo: 'https://github.com/nichuanfang/trakt',
+        description:
+          "trakt is a tool for trakt.tv, it can auto update your movie/episode watch history from trakt.tv, and save your movie/episode aliyunpan's download url to turso database, and you can deploy it to vercel.com",
         icon: <SimpleIconsExcalidraw />,
       },
     ],
@@ -26,7 +27,10 @@ const PROJECTS = [
 export default function Project() {
   return (
     <LampContainer>
-      <h1 className="mt-0 animate-fade-in-down bg-gradient-to-br from-zinc-300 to-violet-950 bg-clip-text py-4 text-center text-4xl font-medium tracking-tight text-transparent">
+      <h1
+        className="mt-0 animate-fade-in-down bg-gradient-to-br from-zinc-300 to-violet-950 bg-clip-text py-4 text-center text-4xl
+          font-medium tracking-tight text-transparent"
+      >
         My Project Space
       </h1>
       <div>
@@ -37,7 +41,8 @@ export default function Project() {
               {category.projects.map((project, index) => (
                 <div
                   key={index}
-                  className="flex max-w-[400px] items-center rounded-lg bg-zinc-950 px-4 py-2 opacity-70 shadow-md hover:bg-zinc-900 hover:bg-opacity-60 hover:opacity-100"
+                  className="flex max-w-[400px] items-center rounded-lg bg-zinc-950 px-4 py-2 opacity-70 shadow-md hover:bg-zinc-900
+                    hover:bg-opacity-60 hover:opacity-100"
                 >
                   <a
                     href={project.repo}
