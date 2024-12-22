@@ -28,6 +28,6 @@ export function getApiUrl(path?: string) {
 
 /** 跳转到 Google 搜索, 同时使用指定网站 https://haydenhayden.com */
 export const navigateToGoogleSearch = (text: string) => {
-  const encodedText = encodeURIComponent(`site:haydenhayden.com ${text}`)
+  const encodedText = encodeURIComponent(`site:chuanfang.org ${text}`)
   window.open(`https://www.google.com/search?q=${encodedText}`, '_blank')
 }
