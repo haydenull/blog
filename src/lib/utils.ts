@@ -16,17 +16,17 @@ export function getReadingTime(article: string) {
 }
 
 export function getBaseUrl() {
-  if (typeof window !== 'undefined') return ''
+  const isServer = typeof window === 'undefined'
   const vc = process.env.VERCEL_URL
   if (vc) return `https://${vc}`
-  return 'http://test.haydenhayden.com:3000'
+  return isServer ? 'https://blog.chuanfang.com' : ''
 }
 
 export function getApiUrl(path?: string) {
   return `${getBaseUrl()}${path || ''}`
 }
 
-/** 跳转到 Google 搜索, 同时使用指定网站 https://haydenhayden.com */
+/** 跳转到 Google 搜索, 同时使用指定网站 https://chuanfang.org */
 export const navigateToGoogleSearch = (text: string) => {
   const encodedText = encodeURIComponent(`site:chuanfang.org ${text}`)
   window.open(`https://www.google.com/search?q=${encodedText}`, '_blank')
