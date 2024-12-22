@@ -5,7 +5,7 @@ import { LampContainer } from '@/components/ui/lamp'
 
 const PROJECTS = [
   {
-    category: 'Logseq Plugin',
+    category: 'Tools',
     projects: [
       {
         title: 'MusicToolKit',
@@ -16,8 +16,7 @@ const PROJECTS = [
       {
         title: 'trakt',
         repo: 'https://github.com/nichuanfang/trakt',
-        description:
-          "trakt is a tool for trakt.tv, it can auto update your movie/episode watch history from trakt.tv, and save your movie/episode aliyunpan's download url to turso database, and you can deploy it to vercel.com",
+        description: 'trakt is a tool for trakt.tv',
         icon: <SimpleIconsExcalidraw />,
       },
     ],
