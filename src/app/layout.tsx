@@ -29,10 +29,10 @@ export const metadata: Metadata = {
     title,
     description,
     type: 'article',
-    url: `https://haydenhayden.com`,
+    url: `https://blog.chuanfang.org`,
     images: [
       {
-        url: `https://haydenhayden.com/api/og`,
+        url: `https:/blog.chuanfang.org/api/og`,
         width: 1280,
         height: 720,
         alt: title,
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     description,
     images: [
       {
-        url: `https://haydenhayden.com/api/og`,
+        url: `https://blog.chuanfang.org/api/og`,
         width: 1280,
         height: 720,
         alt: title,

@@ -11,10 +11,10 @@ export async function GET(req: Request) {
   // /api/og?title=Hello&description=你好
 
   const { searchParams } = new URL(req.url)
-  const title = searchParams.get('title') ?? '启封 Hayden'
+  const title = searchParams.get('title') ?? 'Jaychouzzz'
   const description =
     searchParams.get('description') ??
-    'A front-end developer with a passion for using technology to increase personal efficiency and productivity 💡.'
+    'A back-end developer with a passion for using technology to increase personal efficiency and productivity 💡.'
 
   const avatarImg = await fetch(new URL('../../../../public/assets/avatar.png', import.meta.url)).then((res) =>
     res.arrayBuffer(),
@@ -41,14 +41,14 @@ export async function GET(req: Request) {
             {/* @ts-expect-error src 的类型正确 */}
             <img tw="w-full h-full" src={avatarImg} />
           </div>
-          <span tw="text-[38px] text-zinc-700">启封 Hayden</span>
+          <span tw="text-[38px] text-zinc-700">Jaychouzzz</span>
         </div>
         <div tw="flex flex-col text-left">
           <h1 tw="text-left text-[74px] font-bold m-0 leading-none">{title}</h1>
           {description ? <p tw="text-left text-[40px] text-zinc-500 m-0 mt-[20px]">{description}</p> : null}
         </div>
         <div tw="flex justify-end">
-          <span tw="text-[36px] text-violet-500">HaydenHayden.com</span>
+          <span tw="text-[36px] text-violet-500">Chuanfang.org</span>
         </div>
       </div>
     ),
