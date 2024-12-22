@@ -1,9 +1,9 @@
 export const SEO = {
-  title: '启封 Hayden 的个人网站',
+  title: 'Jaychouzzz 的个人网站',
   description:
-    'A front-end developer with a passion for using technology to increase personal efficiency and productivity 💡.',
+    'A back-end developer with a passion for using technology to increase personal efficiency and productivity 💡.',
   url: {
-    href: 'https://haydenhayden.com',
+    href: 'https://chuanfang.org',
     pathname: '/',
   },
   image: {
