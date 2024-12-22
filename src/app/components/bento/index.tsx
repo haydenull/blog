@@ -124,7 +124,7 @@ const Bento = () => {
             <div className="flex h-[40px] w-[40px] items-center justify-center rounded-md bg-[#333] ">
               <IconBrandGithubFilled className="h-7 w-7 text-white" />
             </div>
-            <p className="mt-1 text-black dark:text-foreground">@haydenull</p>
+            <p className="mt-1 text-black dark:text-foreground">jaychouzzz</p>
           </div>
           <button className="w-[70px] rounded border bg-slate-50 py-1.5 text-xs font-semibold text-black dark:bg-[#333] dark:text-foreground">
             Follow
