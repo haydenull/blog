@@ -51,13 +51,13 @@ const Bento = () => {
         <p className="relative z-20 text-center text-3xl font-bold text-white">银河在上，文明永存</p>
       </BentoCard>
       {/* X */}
-      <BentoCard className="group bg-slate-100 dark:bg-slate-900" url="https://x.com/haydenull">
+      <BentoCard className="group bg-slate-100 dark:bg-slate-900" url="https://x.com/jayzhouzj">
         <div>
           <div className="relative flex h-[40px] w-[40px] items-center justify-center">
             <div className="absolute h-full w-full rounded-md bg-black transition-all duration-300 group-hover:scale-[10]"></div>
             <IconBrandX className="relative h-7 w-7 text-white transition-all group-hover:-ml-[12px]" />
           </div>
-          <p className="relative mt-1 text-black group-hover:text-white dark:text-foreground">@haydenull</p>
+          <p className="relative mt-1 text-black group-hover:text-white dark:text-foreground">@jayzhouzj</p>
         </div>
         <button className="relative w-[70px] rounded-full bg-black py-1.5 text-xs font-semibold group-hover:bg-white group-hover:text-black">
           Follow
@@ -66,14 +66,14 @@ const Bento = () => {
       {/* YouTube */}
       <BentoCard
         className="group bg-[#FFF0F0] dark:bg-[#461616]"
-        url="https://www.youtube.com/channel/UC36gTB1ejDVmRggqGUf1Z8Q"
+        url="https://www.youtube.com/channel/UC0MJyksCchhu8dThnMbJw4g"
       >
         <div>
           <div className="relative flex h-[40px] w-[40px] items-center justify-center   ">
             <div className="absolute h-full w-full rounded-md bg-[#ff0000] transition-all duration-300 group-hover:scale-[10]"></div>
             <IconBrandYoutubeFilled className="relative h-7 w-7 text-white transition-all group-hover:-ml-[12px]" />
           </div>
-          <p className="relative mt-1 text-black group-hover:text-white dark:text-foreground">@haydenut</p>
+          <p className="relative mt-1 text-black group-hover:text-white dark:text-foreground">@chouzzzjay9778</p>
         </div>
         <button
           className="relative w-[70px] rounded-full bg-[#ff0000] py-1.5 text-xs font-semibold text-white group-hover:bg-white
@@ -83,7 +83,7 @@ const Bento = () => {
         </button>
       </BentoCard>
       {/* Gmail */}
-      <BentoCard className="group bg-[#E0F7FA] dark:bg-[#103136]" url="hayden.chen.dev@gmail.com">
+      <BentoCard className="group bg-[#E0F7FA] dark:bg-[#103136]" url="f18326186224@gmail.com">
         <div>
           <div className="relative flex h-[40px] w-[40px] items-center justify-center">
             <div
@@ -95,20 +95,20 @@ const Bento = () => {
             ></div>
             <IconBrandGmail className="relative h-7 w-7 text-black transition-all group-hover:-ml-[12px]" />
           </div>
-          <p className="relative mt-1 text-black group-hover:text-black dark:text-foreground">hayden.chen.dev</p>
+          <p className="relative mt-1 text-black group-hover:text-black dark:text-foreground">jaychouzzz</p>
         </div>
         <button className="relative w-[70px] rounded-full bg-black py-1.5 text-xs font-semibold text-white ">
           GMail
         </button>
       </BentoCard>
       {/* Bilibili */}
-      <BentoCard className="group bg-white" url="https://space.bilibili.com/13306410">
+      <BentoCard className="group bg-white" url="https://space.bilibili.com/49696076">
         <div>
           <div className="relative flex h-[40px] w-[40px] items-center justify-center">
             <div className="absolute h-full w-full rounded-md bg-[#FB7299] transition-all duration-300 group-hover:scale-[10]"></div>
             <IconBrandBilibili className="relative h-7 w-7 text-white transition-all group-hover:-ml-[12px]" />
           </div>
-          <p className="relative mt-1 text-black group-hover:text-white dark:text-foreground">启封Hayden</p>
+          <p className="relative mt-1 text-black group-hover:text-white dark:text-foreground">甜甜的KKK</p>
         </div>
         <button
           className="relative w-[70px] rounded-full bg-[#FB7299] py-1.5 text-xs font-semibold text-white group-hover:bg-white
@@ -118,7 +118,7 @@ const Bento = () => {
         </button>
       </BentoCard>
       {/* Github */}
-      <BentoCard className="col-span-2 flex flex-row items-center" url="https://github.com/haydenull">
+      <BentoCard className="col-span-2 flex flex-row items-center" url="https://github.com/nichuanfang">
         <div className="flex h-full flex-col justify-between">
           <div>
             <div className="flex h-[40px] w-[40px] items-center justify-center rounded-md bg-[#333] ">
@@ -135,15 +135,15 @@ const Bento = () => {
         </div>
       </BentoCard>
       {/* 近期博客 x1 */}
-      <Blog />
+      {/* <Blog /> */}
       {/* 近期周刊 x1 */}
-      <Weekly />
+      {/* <Weekly /> */}
       {/* RSS */}
-      <RSS />
+      {/* <RSS /> */}
       {/* Buy Me A Coffee */}
-      <Buymeacoffee />
+      {/* <Buymeacoffee /> */}
       {/* 爱发电 */}
-      <AiFaDian />
+      {/* <AiFaDian /> */}
     </div>
   )
 }

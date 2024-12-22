@@ -17,8 +17,8 @@ dayjs.extend(isoWeek)
 dayjs.extend(isLeapYear)
 dayjs.extend(isoWeeksInYear)
 
-const title = '启封 Hayden'
-const description = '启封 Hayden 的个人网站'
+const title = '个人博客'
+const description = 'jaychouzzz 的个人网站'
 export const metadata: Metadata = {
   title,
   description,

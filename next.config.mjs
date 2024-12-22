@@ -9,7 +9,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'pocket.haydenhayden.com',
+        hostname: 'photo.chuanfang.org',
         port: '',
         pathname: '/blog/**',
       },
