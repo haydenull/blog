@@ -78,7 +78,7 @@ const remarkCallout: Plugin = () => {
       if (match && typeof index === 'number') {
         const [, type, title] = match
         // 检查类型是否在预定义的类型列表中
-        if (TYPE_KEYS.includes(type)) {
+        if (TYPE_KEYS.includes(type.toLowerCase())) {
           const { icon, title: defaultTitle } = TYPE[type as keyof typeof TYPE]
           const _title = title?.trim() || defaultTitle
           // @ts-expect-error type correct
