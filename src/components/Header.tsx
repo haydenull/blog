@@ -18,11 +18,11 @@ const navItems: NavItem[] = [
   //   link: '/weekly',
   //   icon: <IconNews className="h-5 w-5" />,
   // },
-  // {
-  //   name: '标签',
-  //   link: '/tags',
-  //   icon: <IconPodium className="h-5 w-5" />,
-  // },
+  {
+    name: '标签',
+    link: '/tags',
+    icon: <IconPodium className="h-5 w-5" />,
+  },
   {
     name: '分享',
     link: '/talk',
