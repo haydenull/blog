@@ -73,6 +73,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
           })(window, document, "clarity", "script", "miiif83aff");`}
         </Script>
+        <meta name="google-site-verification" content="2QAFCmTmgA4N-IQzRWGCDOZtuVoYgzoR4r4kp72KATw" />
       </head>
       <body>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
