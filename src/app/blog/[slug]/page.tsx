@@ -40,10 +40,10 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
       title,
       description,
       type: 'article',
-      url: `https://haydenhayden.com/weekly/${params.slug}`,
+      url: `https://blog.chuanfang.org/weekly/${params.slug}`,
       images: [
         {
-          url: `https://haydenhayden.com/api/og?title=${encodeURIComponent(title)}&description=${encodeURIComponent(
+          url: `https://blog.chuanfang.org/api/og?title=${encodeURIComponent(title)}&description=${encodeURIComponent(
             description,
           )}`,
           width: 1280,
@@ -58,7 +58,7 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
       description,
       images: [
         {
-          url: `https://haydenhayden.com/api/og?title=${encodeURIComponent(title)}&description=${encodeURIComponent(
+          url: `https://blog.chuanfang.org/api/og?title=${encodeURIComponent(title)}&description=${encodeURIComponent(
             description,
           )}`,
           width: 1280,

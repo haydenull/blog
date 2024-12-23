@@ -18,13 +18,24 @@ const ArtalkComment = ({ pageKey, pageTitle }: { pageKey: string; pageTitle: str
         artalkRef.current.destroy()
         artalkRef.current = undefined
       }
+      let artalkTheme
+      if (!theme || theme == 'system') {
+        const hour = new Date().getHours()
+        if (hour >= 6 && hour < 18) {
+          artalkTheme = 'light'
+        } else {
+          artalkTheme = 'dark'
+        }
+      } else {
+        artalkTheme = theme
+      }
       artalkRef.current = Artalk.init({
         el: node,
         pageKey,
         pageTitle,
         server: 'https://artalk.chuanfang.org',
         site: 'blog',
-        darkMode: theme === 'dark',
+        darkMode: artalkTheme === 'dark',
       })
     },
     [pageKey, pageTitle, theme],
