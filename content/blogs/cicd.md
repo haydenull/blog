@@ -3,6 +3,9 @@ title: GitLab CI/CD 101
 description: GitLab CI/CD 入门指南。
 date: 2024-06-05
 updatedDate: 2024-06-07
+tags:
+  - utils
+  - java
 cover: https://photo.chuanfang.org/api/v1/t/b35f60c88b73da878f80fbc16c26f3d26cea45c2/2aqbem44/fit_2560
 ---
 

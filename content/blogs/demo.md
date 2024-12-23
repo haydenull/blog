@@ -2,6 +2,8 @@
 title: Demo
 date: 2024-06-05
 cover: https://photo.chuanfang.org/api/v1/t/cc8c7372c7fc65a27e455babdac4c6a31b22ee4f/2aqbem44/fit_2560
+tags: 
+  - java
 draft: false
 ---
 
