@@ -76,7 +76,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="google-site-verification" content="2QAFCmTmgA4N-IQzRWGCDOZtuVoYgzoR4r4kp72KATw" />
       </head>
       <body>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+        <ThemeProvider attribute="class" disableTransitionOnChange>
           <>
             <Header />
             {children}
