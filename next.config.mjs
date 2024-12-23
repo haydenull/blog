@@ -11,7 +11,7 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'photo.chuanfang.org',
         port: '',
-        pathname: '/blog/**',
+        pathname: '/api/**',
       },
     ],
   },
