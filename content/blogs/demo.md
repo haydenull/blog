@@ -7,7 +7,7 @@ draft: false
 
 ## demo
 
-> [!warning]
+> [!WARNING]
 > GitLab CI/CD Components 是 GitLab 16.0 版本新增的功能。`code` 123
 >
 > new line
@@ -23,4 +23,12 @@ draft: false
 > [!IMPORTANT]
 >
 > 嘿嘿
+
+> [!TIP]
+>
+> 嘿嘿
+
+> [!WARNING]
+>
+> 这是警告信息
 

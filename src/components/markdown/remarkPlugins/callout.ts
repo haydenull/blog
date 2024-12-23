@@ -4,7 +4,7 @@ import type { Node, Parent } from 'unist'
 import { visit } from 'unist-util-visit'
 
 const TYPE = {
-  note: {
+  NOTE: {
     title: 'Note',
     icon: `<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-info-square-rounded" width="44" height="44" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -13,7 +13,7 @@ const TYPE = {
       <path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z" />
     </svg>`,
   },
-  tip: {
+  TIP: {
     title: 'Tip',
     icon: `<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bulb" width="44" height="44" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -22,7 +22,7 @@ const TYPE = {
       <path d="M9.7 17l4.6 0" />
     </svg>`,
   },
-  important: {
+  IMPORTANT: {
     title: 'Important',
     icon: `<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-crystal-ball" width="44" height="44" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -31,7 +31,7 @@ const TYPE = {
       <path d="M11 7a3 3 0 0 0 -3 3" />
     </svg>`,
   },
-  warning: {
+  WARNING: {
     title: 'Warning',
     icon: `<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-alert-square-rounded" width="44" height="44" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -40,7 +40,7 @@ const TYPE = {
       <path d="M12 16h.01" />
     </svg>`,
   },
-  caution: {
+  CAUTION: {
     title: 'Caution',
     icon: `<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-flame" width="44" height="44" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -78,13 +78,13 @@ const remarkCallout: Plugin = () => {
       if (match && typeof index === 'number') {
         const [, type, title] = match
         // 检查类型是否在预定义的类型列表中
-        if (TYPE_KEYS.includes(type.toLowerCase())) {
+        if (TYPE_KEYS.includes(type)) {
           const { icon, title: defaultTitle } = TYPE[type as keyof typeof TYPE]
           const _title = title?.trim() || defaultTitle
           // @ts-expect-error type correct
           parent.children[index] = {
             type: 'div',
-            data: { hProperties: { className: `callout callout-${type}` } },
+            data: { hProperties: { className: `callout callout-${type.toLowerCase()}` } },
             children: [
               {
                 type: 'div',
