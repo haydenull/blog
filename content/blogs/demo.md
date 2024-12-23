@@ -11,3 +11,16 @@ draft: false
 > GitLab CI/CD Components 是 GitLab 16.0 版本新增的功能。`code` 123
 >
 > new line
+
+最后的记录是多少呢 
+
+是吧
+
+哈哈哈
+
+> [!IMPORTANT]
+>
+> 嘿嘿一点都不是你的好吧
+
+重点是吧
+
