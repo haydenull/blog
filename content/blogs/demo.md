@@ -18,7 +18,7 @@ draft: false
 
 哈哈哈
 
-> [!IMPORTANT]
+> [!important]
 >
 > 嘿嘿一点都不是你的好吧
 
@@ -26,7 +26,7 @@ draft: false
 
 接下来放置空的测试案例
 
-> [!CAUTION]
+> [!caution]
 >
 > 多对多
 
