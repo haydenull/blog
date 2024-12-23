@@ -21,7 +21,7 @@ const navItems: NavItem[] = [
   // {
   //   name: '标签',
   //   link: '/tags',
-  //   icon: <IconPodium className="h-4 w-4" />,
+  //   icon: <IconPodium className="h-5 w-5" />,
   // },
   {
     name: '分享',
