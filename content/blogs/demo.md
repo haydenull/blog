@@ -1,7 +1,7 @@
 ---
 title: Demo
 date: 2024-06-05
-cover: https://photo.chuanfang.org/api/v1/t/19afef7c979161413175b754fcb7340d5c15d2d3/2aqbem44/fit_2560
+cover: https://photo.chuanfang.org/api/v1/t/cc8c7372c7fc65a27e455babdac4c6a31b22ee4f/2aqbem44/fit_2560
 draft: false
 ---
 
