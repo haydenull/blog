@@ -185,7 +185,7 @@ const STICKERS = [
     url: 'stickers/202404292048103.png',
   },
 ]
-/** 随机选取8个贴纸 */
+/** 随机选取8个贴纸  */
 function generateRandomStickers() {
   const stickers = STICKERS.map((sticker) => ({
     ...generateRandomPosition(),
