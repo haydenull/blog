@@ -32,3 +32,47 @@ draft: false
 >
 > 这是警告信息
 
+返回接口是正常的好吧
+
+以下为配置
+
+```typescript
+import Icons from 'unplugin-icons/webpack'
+// import withPlaiceholder from "@plaiceholder/next"
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  // output: 'standalone',
+  transpilePackages: ["@plaiceholder/ui"],
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'photo.chuanfang.org',
+        port: '',
+        pathname: '/api/**',
+      },
+    ],
+  },
+  webpack(config) {
+    config.plugins.push(
+      Icons({
+        compiler: 'jsx',
+        jsx: 'react'
+      })
+    )
+
+    return config
+  }
+}
+
+export default nextConfig
+
+```
+
+但是配置错误就麻烦了
+
+> [!TIP]
+>
+> 有时候报错 需要重启macos
+
