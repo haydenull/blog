@@ -1,3 +1,3 @@
 export function getTagsList() {
-  return 'tags'
+  return ['iosd', 'sdfg', '哈哈哈']
 }

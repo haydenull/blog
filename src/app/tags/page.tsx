@@ -8,16 +8,18 @@ export default function Blog() {
   return (
     <main className="px-6">
       <PageContainer>
-        <h1 className="mt-20 px-2 text-4xl font-semibold md:px-10">欢迎来到我的博客</h1>
-        <p className="mt-6 px-2 text-muted-foreground md:px-10">
-          在这里，你可以找到我关于编程、技术和其他主题的所有博客文章。我希望我的文章能够帮助你解决问题，启发你的思考，或者至少让你在阅读时感到愉快。我会不定期更新博客，所以请经常回来查看新的内容。如果你有任何问题或者建议，欢迎留言。
-        </p>
-        {/* 文章列表 */}
-        {/* <div className="m-auto my-16 grid max-w-[450px] gap-6 md:max-w-[800px] md:grid-cols-2">
-          {blogFrontMatterList.map((frontMatter) => (
-            <PostCard key={frontMatter.slug} frontMatter={frontMatter} />
-          ))}
-        </div> */}
+        <h1 className="mt-20 px-2 text-4xl font-semibold md:px-10">标签</h1>
+
+        {/* 标签列表 */}
+        <div className="mt-8 px-2 md:px-10">
+          <div className="flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <span key={tag} className="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700 hover:bg-gray-200">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
       </PageContainer>
     </main>
   )
