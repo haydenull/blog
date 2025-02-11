@@ -255,7 +255,7 @@
   --at-color-bg: hsl(0 0% 100%) !important;
 }
 .artalk.atk-dark-mode, .atk-layer-wrap.atk-dark-mode {
-  --at-color-main:  #a78bfa !important;
+  --at-color-main: #6543b3 !important;
   --at-color-bg: rgb(24 24 27) !important;
 }
 .atk-main-editor {
