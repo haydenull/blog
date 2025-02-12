@@ -2,7 +2,7 @@
 title: 2024 年终总结
 description: 2024 年终总结
 author: Haydenull
-date: 2024-12-29
+date: 2025-02-11
 cover: https://pocket.haydenhayden.com/blog/202502111905974.jpg
 tags:
   - Personal Review
